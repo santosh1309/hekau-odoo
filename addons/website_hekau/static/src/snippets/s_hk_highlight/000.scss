@@ -1,0 +1,310 @@
+// Hekau Highlight — Figma "Frame 1686557851" (desktop 1200x480 panel,
+// mobile 358x812). Panel glow and border come from the Figma export.
+
+.s_hk_highlight {
+    .hk-highlight-panel {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        min-height: 480px;
+        padding: 37px 50px;
+        border-radius: 16px;
+        background: url("#{$hk-img-from-snippet}/svc/highlight_panel.webp") center / 100% 100% no-repeat, $hk-bg;
+    }
+
+    .hk-highlight-copy {
+        position: relative;
+        flex: 0 1 564px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+    }
+
+    // These Figma texts use the font's automatic optical size.
+    .hk-highlight-title {
+        font-variation-settings: normal;
+        margin: 0;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.3;
+        letter-spacing: -0.8px;
+        color: #FFFFFF;
+
+        // BPA variant: 32px Black title with a bold 16px paragraph below
+        &.hk-highlight-title-xl {
+            font-weight: 900;
+            font-size: 32px;
+
+            // Figma's DM Sans Black runs wider than the web font: the default
+            // optical size on a 550px measure gives the same line breaks.
+            @include hk-desktop {
+                max-width: 550px;
+                font-variation-settings: "opsz" 14;
+            }
+        }
+    }
+
+    .hk-highlight-text {
+        margin: 24px 0 0;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: .12px;
+        color: #CED1D9;
+    }
+
+    .hk-highlight-btn {
+        height: 44px;
+        margin-top: 44px;
+        border-radius: 24px;
+    }
+
+    // Hand-drawn arrow + note (Figma: arrow at 286,373 and text at 360,392
+    // from the panel's top-left; the arrow svg has 2px of padding).
+    .hk-highlight-note {
+        position: absolute;
+        left: 234px;
+        top: 334px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin: 0;
+
+        img { width: 60px; height: 54px; }
+
+        span {
+            width: 154px;
+            padding-top: 21px;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: .12px;
+            color: #FFFFFF;
+        }
+    }
+
+    .hk-highlight-tiles {
+        flex: none;
+        display: grid;
+        grid-template-columns: repeat(2, 189px);
+        grid-auto-rows: 193px;
+        gap: 20px;
+        align-self: flex-start;
+    }
+
+    .hk-highlight-tile {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 14px 0;
+        border-radius: 7px;
+        background: url("#{$hk-img-from-snippet}/svc/highlight_tile.svg") center / 100% 100% no-repeat;
+        text-align: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: .6px solid rgba(#E3E8EE, .15);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+    }
+
+    .hk-tile-value {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        margin: 0;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 1.3;
+        letter-spacing: -0.8px;
+        color: #DAD5EC;
+
+        small {
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+    }
+
+    .hk-tile-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        margin: 0;
+
+        img { width: 55px; height: 55px; }
+    }
+
+    .hk-tile-label {
+        margin: 7px 0 0;
+        max-width: 161px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: $hk-text;
+
+        &.hk-tile-label-lg {
+            margin-top: 1px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #FFFFFF;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .hk-highlight-panel { padding: 37px 32px; }
+        .hk-highlight-note { left: 200px; }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-highlight-panel {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+        .hk-highlight-copy { flex: none; width: 100%; padding-top: 32px; padding-bottom: 80px; }
+        .hk-highlight-tiles { align-self: center; }
+    }
+
+    // Figma mobile: 358px panel, copy then note then 2x2 tiles of 152x176.
+    @include hk-mobile {
+        .hk-highlight-panel {
+            gap: 32px;
+            min-height: 0;
+            padding: 0 19px 36px;
+            background-image: url("#{$hk-img-from-snippet}/svc/highlight_panel_m.webp");
+        }
+
+        .hk-highlight-copy { padding: 32px 0 0; }
+
+        .hk-highlight-title,
+        .hk-highlight-title.hk-highlight-title-xl {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        .hk-highlight-text {
+            margin-top: 8px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: .12px;
+        }
+
+        .hk-tile-label.hk-tile-label-lg {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.5;
+            color: $hk-text;
+        }
+
+        .hk-highlight-note {
+            position: static;
+            align-self: center;
+            gap: 14px;
+            margin-top: 32px;
+
+            img { margin-top: 2px; }
+            span { padding-top: 14px; }
+        }
+
+        .hk-highlight-tiles {
+            grid-template-columns: repeat(2, minmax(0, 152px));
+            grid-auto-rows: 176px;
+            gap: 16px;
+            align-self: stretch;
+            justify-content: center;
+        }
+
+        .hk-highlight-tile { padding: 0; }
+
+        .hk-tile-label { margin-top: 0; max-width: 150px; }
+
+        // Icon tiles (Figma BPA page): 160px high, label 106px from the top,
+        // 56px of panel below them.
+        .hk-highlight-panel:has(.hk-tile-icon) { padding-bottom: 56px; }
+        .hk-highlight-tiles:has(.hk-tile-icon) { grid-auto-rows: 160px; }
+
+        .hk-tile-icon {
+            align-items: flex-start;
+            height: 106px;
+            padding-top: 32px;
+        }
+
+        .hk-tile-icon + .hk-tile-label {
+            max-width: 112px;
+            line-height: 1.4;
+            color: #FFFFFF;
+        }
+    }
+}
+
+// About Us story banner (Figma "Frame 1686557851"): the panel without tiles,
+// 1200x460 with its own artwork (mobile 358x500).
+.s_hk_highlight.hk-highlight-banner {
+    .hk-highlight-panel {
+        min-height: 460px;
+        padding: 60px 50px;
+        background-image: url("#{$hk-img-from-snippet}/about/banner.webp");
+    }
+
+    .hk-highlight-copy {
+        flex: 0 1 925px;
+        padding-top: 0;
+    }
+
+    // Figma's lines break as with the default optical size on an 880px measure
+    .hk-highlight-title {
+        max-width: 880px;
+        font-variation-settings: "opsz" 14;
+    }
+
+    .hk-highlight-text {
+        max-width: 564px;
+        margin-top: 24px;
+        font-weight: 500;
+        letter-spacing: .12px;
+        color: $hk-text;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-highlight-copy { flex: none; padding: 0; }
+    }
+
+    @include hk-mobile {
+        .hk-highlight-panel {
+            min-height: 500px;
+            padding: 32px 20px;
+            background-image: url("#{$hk-img-from-snippet}/about/banner_m.webp");
+        }
+
+        .hk-highlight-copy { flex: none; padding: 0; }
+
+        .hk-highlight-title.hk-highlight-title-xl {
+            max-width: 290px;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .hk-highlight-text {
+            margin-top: 24px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+    }
+}

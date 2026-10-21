@@ -1,0 +1,86 @@
+// Hekau Vision — Figma About Us "Frame 5016": 456px squares art and two
+// stacked 560x200 cards, 80px apart (mobile: art above the cards).
+
+.s_hk_vision {
+    .hk-vision-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 80px;
+        max-width: 1096px;
+        margin: 40px auto 0;
+    }
+
+    .hk-vision-art {
+        display: block;
+        flex: none;
+        width: 456px;
+        height: 456px;
+    }
+
+    .hk-vision-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        width: 560px;
+    }
+
+    .hk-vision-card {
+        min-height: 200px;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: $hk-surface;
+    }
+
+    .hk-vision-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: .2px;
+        color: $hk-white;
+
+        img {
+            flex: none;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .hk-vision-text {
+        margin: 24px 0 0;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $hk-muted;
+    }
+
+    @include media-breakpoint-down(xl) {
+        .hk-vision-row { gap: 40px; }
+        .hk-vision-art { width: 360px; height: 360px; }
+        .hk-vision-cards { width: auto; flex: 1 1 auto; }
+    }
+
+    @include hk-mobile {
+        .hk-vision-row {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 52px; // Figma: heading frame padded 20px below
+        }
+
+        .hk-vision-art {
+            width: 100%;
+            max-width: 358px;
+            height: auto;
+        }
+
+        .hk-vision-cards {
+            gap: 20px;
+            width: 100%;
+            max-width: 358px;
+        }
+    }
+}

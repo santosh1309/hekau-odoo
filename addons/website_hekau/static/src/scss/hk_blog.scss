@@ -1,0 +1,376 @@
+//==============================================================================
+// Blog — Figma Dev Handoff "Blogs Page" (199:10870, mobile 223:16029): the
+// newest post featured over the hero animation, the others listed below; and
+// the blog post page in the Hekau colours.
+//==============================================================================
+
+.hk-blog-index {
+    position: relative;
+
+    // Page grid behind the list (Figma "Frame 1": from y=163, two 900px tiles)
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 163px;
+        left: 0;
+        right: 0;
+        height: 1800px;
+        background:
+            url("#{$hk-img}/bg/grid_b.svg") center top / 1440px 900px repeat,
+            url("#{$hk-img}/bg/grid_a.svg") center top / 1440px 900px repeat;
+        pointer-events: none;
+
+        @include hk-mobile { display: none; }
+    }
+
+    > section { position: relative; z-index: 1; }
+
+    // Figma: list from x=121, featured copy from x=133
+    .hk-blog-container { max-width: 1198px + 2 * 24px; }
+
+    a { text-decoration: none; }
+
+    // Cover pictures (website_blog's record cover: editable in the builder)
+    .hk-blog-cover {
+        position: relative;
+        display: block;
+        flex: none;
+        overflow: hidden;
+
+        .o_record_cover_container {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+        }
+
+        .o_record_cover_image {
+            transition: transform .6s $hk-ease-out-cubic;
+        }
+
+        &:hover .o_record_cover_image { transform: scale(1.03); }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Featured post: copy 617px at x=133, image 500x288 at x=807, from y=155
+//------------------------------------------------------------------------------
+
+.hk-blog-hero {
+    position: relative;
+    padding-top: 155px;
+
+    .hk-container { position: relative; z-index: 1; }
+}
+
+.hk-blog-featured {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 12px;
+
+    .hk-blog-cover-featured {
+        width: 500px;
+        height: 288px;
+    }
+}
+
+.hk-blog-featured-copy {
+    display: flex;
+    flex: 0 1 617px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hk-blog-kicker {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 2.97px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.hk-blog-featured-title {
+    margin: 15px 0 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+
+.hk-blog-meta {
+    margin: 15px 0 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $hk-text;
+}
+
+.hk-blog-featured-teaser {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 15px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $hk-text;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.hk-blog-read {
+    height: 44px;
+    margin-top: 15px;
+    padding: 0 32px;
+}
+
+.hk-blog-title-link {
+    color: #FFFFFF;
+
+    &:hover { color: $hk-yellow; }
+}
+
+.hk-blog-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0 12px;
+}
+
+.hk-blog-filter-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+
+//------------------------------------------------------------------------------
+// List: 461x299 image, 80px gap, 606px copy centred on it; 100px between posts
+//------------------------------------------------------------------------------
+
+.hk-blog-list-section { padding-top: 186px; }
+
+.hk-blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.hk-blog-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    .hk-blog-cover {
+        width: 461px;
+        height: 299px;
+    }
+}
+
+.hk-blog-row-copy {
+    flex: 0 1 606px;
+    min-width: 0;
+
+    .hk-blog-meta {
+        margin-top: 24px;
+        color: #97989F;
+    }
+}
+
+.hk-blog-category {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #6481E5;
+
+    &:hover { color: $hk-lavender; }
+}
+
+.hk-blog-row .hk-blog-title-link {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.hk-blog-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 41px;
+    color: inherit;
+}
+
+.hk-blog-arrow {
+    flex: none;
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+    transition: transform .3s $hk-ease-out-cubic;
+}
+
+.hk-blog-title-link:hover .hk-blog-arrow { transform: translate(3px, -3px); }
+
+.hk-blog-teaser {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin: 12px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #C0C5D0;
+}
+
+.hk-blog-empty {
+    padding: 40px 0;
+    color: $hk-muted;
+    text-align: center;
+}
+
+.hk-blog-pager {
+    margin-top: 60px;
+
+    .page-link {
+        border-color: $hk-line-soft;
+        background-color: $hk-surface;
+        color: $hk-muted;
+    }
+
+    .page-item.active .page-link {
+        border-color: $hk-blue;
+        background-color: $hk-blue;
+        color: $hk-white;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .hk-blog-featured .hk-blog-cover-featured { width: 420px; height: 242px; }
+    .hk-blog-row { gap: 40px; }
+    .hk-blog-row .hk-blog-cover { width: 400px; height: 260px; }
+}
+
+// Figma mobile: image above the copy, 358px wide
+@include hk-mobile {
+    .hk-blog-hero { padding-top: 176px; }
+
+    .hk-blog-featured {
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 0;
+
+        .hk-blog-cover-featured {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 358 / 206;
+        }
+    }
+
+    .hk-blog-featured-copy { flex: none; }
+
+    .hk-blog-kicker {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2.6px;
+    }
+
+    .hk-blog-featured-title {
+        margin-top: 16px;
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .hk-blog-meta {
+        margin-top: 16px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .hk-blog-featured-teaser {
+        margin-top: 16px;
+        font-size: 15px;
+        -webkit-line-clamp: 3;
+    }
+
+    .hk-blog-read { margin-top: 24px; }
+
+    .hk-blog-filter { padding: 0; }
+
+    .hk-blog-filter-title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .hk-blog-list-section { padding-top: 120px; }
+
+    .hk-blog-list { gap: 44px; }
+
+    .hk-blog-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+
+        .hk-blog-cover {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 358 / 232;
+        }
+    }
+
+    .hk-blog-row-copy { flex: none; }
+
+    .hk-blog-category {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .hk-blog-row .hk-blog-title-link { margin-top: 12px; }
+
+    .hk-blog-title {
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    .hk-blog-arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hk-blog-teaser {
+        font-size: 14px;
+        line-height: 21px;
+        -webkit-line-clamp: 5;
+    }
+
+    .hk-blog-row-copy .hk-blog-meta { margin-top: 16px; }
+}
+
+//------------------------------------------------------------------------------
+// Blog post page (website_blog layout) in the Hekau colours
+//------------------------------------------------------------------------------
+
+.website_blog {
+    #o_wblog_post_main,
+    .o_wblog_post_page_cover,
+    #o_wblog_post_top {
+        color: $hk-text;
+    }
+
+    .o_wblog_post_content_field,
+    .o_wblog_read_text {
+        color: $hk-text;
+    }
+
+    .o_wblog_post_title .o_wblog_post_name,
+    .o_wblog_post_name { color: #FFFFFF; }
+
+    .breadcrumb a { color: $hk-lavender; }
+}

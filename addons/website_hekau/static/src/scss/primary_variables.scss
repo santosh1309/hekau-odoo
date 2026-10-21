@@ -1,0 +1,63 @@
+//------------------------------------------------------------------------------
+// Hekau — design tokens wired into Odoo's website palette system.
+// Loaded after website/static/src/scss/primary_variables.scss, so plain
+// (non-!default) assignments here override Odoo's defaults.
+//------------------------------------------------------------------------------
+
+// Colours from the Figma file.
+// o-color-4 is the page background (colour combination 1), o-color-5 the
+// "inverse" colour, as in Odoo's own dark palettes.
+$o-color-palettes: map-merge($o-color-palettes, (
+    'hekau': (
+        'o-color-1': #2D29DF, // primary blue (buttons, CTA band)
+        'o-color-2': #F2D964, // accent yellow ("Let's Talk", highlights)
+        'o-color-3': #111126, // card surface
+        'o-color-4': #05051B, // page background
+        'o-color-5': #FEFEFE, // light text / light sections
+        'body': 'o-color-4',
+        'menu': 1,
+        'footer': 1,
+        'copyright': 1,
+    ),
+));
+
+// Fonts. URLs are left out on purpose: the module loads DM Sans (with its
+// optical-size axis) and Montserrat from Google Fonts' CSS2 API in the page
+// <head>, which Odoo's own font loader cannot request.
+$o-theme-font-configs: map-merge($o-theme-font-configs, (
+    'DM Sans': (
+        'family': ('DM Sans', sans-serif),
+    ),
+    'Montserrat': (
+        'family': ('Montserrat', sans-serif),
+    ),
+));
+
+$o-website-values-palettes: (
+    (
+        'color-palettes-name': 'hekau',
+
+        'font': 'DM Sans',
+        'headings-font': 'DM Sans',
+        'navbar-font': 'DM Sans',
+        'buttons-font': 'DM Sans',
+
+        'header-template': 'default',
+        'header-links-style': 'default',
+        'menu-shadow-class': '',
+        'footer-template': 'default',
+        'link-underline': 'never',
+
+        'btn-border-radius': 2rem,
+        'btn-border-radius-sm': 2rem,
+        'btn-border-radius-lg': 2rem,
+    ),
+);
+
+// Heading sizes used across the design (base 16px).
+$o-theme-h1-font-size-multiplier: (40 / 16);
+$o-theme-h2-font-size-multiplier: (32 / 16);
+$o-theme-h3-font-size-multiplier: (28 / 16);
+$o-theme-h4-font-size-multiplier: (20 / 16);
+$o-theme-h5-font-size-multiplier: (18 / 16);
+$o-theme-h6-font-size-multiplier: 1;

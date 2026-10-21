@@ -1,0 +1,113 @@
+// Hekau Projects — Figma "Frame 1565" (desktop) / "Frame 1686558517" (mobile).
+
+.s_hk_projects {
+    .hk-projects-head {
+        --hk-line-inset: -124px; // the gold line spans the 1160px section
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 20px;
+
+        > div {
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .hk-projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 440px);
+        justify-content: center;
+        gap: 32px;
+        margin-top: 60px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-projects-grid { grid-template-columns: minmax(0, 440px); }
+    }
+
+    // Figma mobile: centred heading, 358px cards 20px apart, full-width button.
+    @include hk-mobile {
+        .hk-projects-head {
+            padding: 20px 0 0;
+            text-align: center;
+        }
+
+        .hk-projects-grid {
+            grid-template-columns: minmax(0, 358px);
+            gap: 20px;
+            margin-top: 44px; // 20px heading padding + 24px gap
+        }
+
+        .hk-projects-all {
+            display: flex;
+            width: 100%;
+            max-width: 358px;
+            margin: 20px auto 0;
+        }
+    }
+}
+
+.hk-project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: $hk-surface;
+    @include hk-inner-stroke($hk-line, 16px);
+
+    .hk-project-img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        background: #FFFFFF;
+    }
+
+    .hk-project-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 24px;
+        padding: 16px 24px 24px;
+
+        > div {
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: normal;
+        color: $hk-white;
+    }
+
+    p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.4;
+        color: $hk-text;
+    }
+
+    .hk-arrow-btn {
+        width: 36px;
+        height: 36px;
+
+        img { width: 21px; height: 21px; }
+    }
+
+    // Figma mobile cards have no arrow button.
+    @include hk-mobile {
+        .hk-project-img { border-radius: 12px; }
+        .hk-arrow-btn { display: none; }
+    }
+}

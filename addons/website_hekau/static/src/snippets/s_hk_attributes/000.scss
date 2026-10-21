@@ -1,0 +1,159 @@
+// Hekau Attributes — Figma Web Application page "Frame 7829" (1100x806 panel;
+// mobile 390px wide, rings above a vertical list).
+
+.s_hk_attributes {
+    .hk-attr-panel {
+        overflow: hidden;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px;
+
+        // Figma "Ellipse 2" (240x80 #EECD34, blurred) at the top-left corner
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: -250px;
+            left: -250px;
+            width: 740px;
+            height: 580px;
+            background: url("#{$hk-img-from-snippet}/bg/glow_testimonial.svg") center / 100% 100% no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    .hk-attr-head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .hk-attr-title {
+        font-variation-settings: normal; // automatic optical size, as in Figma
+        max-width: 600px;
+        margin: 0;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 45px;
+        letter-spacing: -0.224px;
+        color: #FCFCFC;
+    }
+
+    .hk-attr-lead {
+        margin: 16px 0 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $hk-text;
+    }
+
+    // Diagram: 883x524 (the art svg has 20px of padding around it)
+    .hk-attr-diagram {
+        position: relative;
+        width: 883px;
+        height: 524px;
+        margin-top: 20px;
+    }
+
+    .hk-attr-art {
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        width: 923px;
+        height: 564px;
+    }
+
+    .hk-attr-rings { display: none; }
+
+    .hk-attr-list {
+        position: absolute;
+        left: 583px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            @extend .hk-pill;
+            width: 300px;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .hk-attr-diagram { transform: scale(.9); transform-origin: 0 0; margin-bottom: -52px; }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-attr-diagram { transform: scale(.7); margin-bottom: -157px; }
+    }
+
+    // Figma mobile: centred heading, 300px rings, lead, 240px pills 20px apart.
+    @include hk-mobile {
+        .hk-container { padding-inline: 0; }
+
+        .hk-attr-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 16px;
+            border-radius: 0;
+            text-align: center;
+
+            &::before { left: -234px; }
+        }
+
+        .hk-attr-head { align-items: center; }
+
+        .hk-attr-title {
+            font-size: 22px;
+            line-height: 35px;
+            letter-spacing: -0.176px;
+        }
+
+        .hk-attr-diagram {
+            display: contents;
+            transform: none;
+        }
+
+        .hk-attr-art { display: none; }
+
+        .hk-attr-rings {
+            display: block;
+            order: 2;
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .hk-attr-lead {
+            order: 3;
+            margin-top: 32px;
+        }
+
+        .hk-attr-list {
+            position: static;
+            order: 4;
+            gap: 20px;
+            margin-top: 20px;
+
+            li {
+                width: 240px;
+                padding: 0 16px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// Figma spacing around this panel (Web Application page)
+.s_hk_partners + .s_hk_attributes {
+    @include hk-mobile { padding-top: 44px; }
+}
+
+.s_hk_attributes + .s_hk_features {
+    @include hk-mobile { padding-top: 88px; }
+}

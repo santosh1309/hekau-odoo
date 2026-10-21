@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Blog listing: Figma Dev Handoff "Blogs Page" (desktop 1440px, mobile
+         390px). The newest post is featured over the hero animation, the
+         others are listed below (image left, category, title, teaser, author
+         and date). Posts are written in Website > Blog as usual. -->
+    <template id="blog_listing" name="Hekau Blog Listing">
+        <t t-set="hk_first_page" t-value="not tag and not date_begin and not search and pager['page']['num'] == 1"/>
+        <t t-set="hk_featured" t-value="posts[:1] if hk_first_page else posts[:0]"/>
+        <t t-set="hk_list" t-value="posts[1:] if hk_first_page else posts"/>
+        <div class="hk-blog-index">
+            <section class="hk-blog-hero">
+                <div class="hk-hero-art hk-deco o_not_editable" aria-hidden="true">
+                    <div class="hk-hero-stage">
+                        <span class="hk-hero-ellipse"/>
+                        <span class="hk-hero-panel"/>
+                    </div>
+                    <span class="hk-hero-fade"/>
+                </div>
+                <div class="hk-container hk-blog-container">
+                    <t t-foreach="hk_featured" t-as="blog_post">
+                        <article class="hk-blog-featured" name="blog_post">
+                            <div class="hk-blog-featured-copy">
+                                <p class="hk-blog-kicker">Featured Post</p>
+                                <a t-att-href="blog_post.website_url" class="hk-blog-title-link">
+                                    <h1 class="hk-blog-featured-title" t-field="blog_post.name"/>
+                                </a>
+                                <t t-call="website_hekau.blog_post_meta"/>
+                                <p class="hk-blog-featured-teaser" t-field="blog_post.teaser"/>
+                                <a t-att-href="blog_post.website_url" class="hk-btn hk-btn-primary hk-blog-read">Read Article</a>
+                            </div>
+                            <t t-call="website_blog.post_cover_image" _link_classes.f="hk-blog-cover hk-blog-cover-featured"/>
+                        </article>
+                    </t>
+                    <div t-if="not hk_featured" class="hk-blog-filter">
+                        <h1 class="hk-blog-filter-title">
+                            <t t-if="search">Results for “<t t-out="search"/>”</t>
+                            <t t-else="">Blog</t>
+                        </h1>
+                        <a t-if="tag or date_begin or search" href="/blog" class="hk-btn hk-btn-primary">All Posts</a>
+                    </div>
+                </div>
+            </section>
+            <section class="hk-blog-list-section">
+                <div class="hk-container hk-blog-container">
+                    <div t-if="not posts" class="hk-blog-empty">
+                        <p>No blog post yet.</p>
+                        <p groups="website.group_website_designer">Click on “New” in the top-right corner to write your first blog post.</p>
+                    </div>
+                    <div class="hk-blog-list">
+                        <t t-foreach="hk_list" t-as="blog_post">
+                            <article class="hk-blog-row" name="blog_post">
+                                <t t-call="website_blog.post_cover_image" _link_classes.f="hk-blog-cover"/>
+                                <div class="hk-blog-row-copy">
+                                    <a t-if="blog_post.tag_ids" class="hk-blog-category"
+                                       t-att-href="blog_url(tag=tags_list([], blog_post.tag_ids[0].id))"
+                                       t-out="blog_post.tag_ids[0].name"/>
+                                    <a t-att-href="blog_post.website_url" class="hk-blog-title-link">
+                                        <h2 class="hk-blog-title" t-field="blog_post.name"/>
+                                        <img class="hk-blog-arrow" src="/website_hekau/static/src/img/icons/arrow_up_right.svg" alt="" width="25" height="25"/>
+                                    </a>
+                                    <p class="hk-blog-teaser" t-field="blog_post.teaser"/>
+                                    <t t-call="website_hekau.blog_post_meta"/>
+                                </div>
+                            </article>
+                        </t>
+                    </div>
+                    <t t-call="website.pager" classname.f="hk-blog-pager justify-content-center" extraLinkClass.f="post_link"/>
+                </div>
+            </section>
+        </div>
+    </template>
+
+    <template id="blog_post_meta" name="Hekau Blog Post Author and Date">
+        <p class="hk-blog-meta">
+            <span t-out="blog_post.author_name"/><t t-if="blog_post.published_date">, <span t-field="blog_post.published_date" t-options="{'widget': 'date', 'format': 'long', 'date_only': True}"/></t>
+        </p>
+    </template>
+
+    <template id="blog_post_short" inherit_id="website_blog.blog_post_short" name="Hekau Blog Posts" priority="99">
+        <!-- The design has no blog navigation bar or "latest post" banner -->
+        <xpath expr="//div[@id='o_wblog_blog_top']" position="replace"/>
+        <xpath expr="//t[@t-call='website_blog.blogs_nav']" position="replace"/>
+        <xpath expr="//section[@id='o_wblog_index_content']" position="replace">
+            <t t-call="website_hekau.blog_listing"/>
+        </xpath>
+    </template>
+
+    <!-- Projects and call to action below every blog page (editable area) -->
+    <template id="blog_footer_blocks" inherit_id="website_blog.index" name="Hekau Blog Footer Blocks">
+        <xpath expr="//div[@id='oe_structure_blog_footer']" position="attributes">
+            <attribute name="class">oe_structure</attribute>
+        </xpath>
+        <xpath expr="//div[@id='oe_structure_blog_footer']" position="inside">
+            <t t-call="website_hekau.s_hk_projects"/>
+            <t t-call="website_hekau.s_hk_cta"/>
+        </xpath>
+    </template>
+
+</odoo>

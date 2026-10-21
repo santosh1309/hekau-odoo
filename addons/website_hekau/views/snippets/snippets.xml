@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- "Hekau" category in the website builder's Blocks panel. Every Hekau
+         section is a block, so new pages can be assembled by drag and drop and
+         keep the design (each block carries its own spacing and mobile layout). -->
+    <template id="snippets" inherit_id="website.snippets" name="Hekau Blocks">
+        <xpath expr="//snippets[@id='snippet_groups']/t[@snippet-group='intro']" position="before">
+            <t snippet-group="hekau" t-snippet="website.s_snippet_group" string="Hekau"
+                t-thumbnail="/website_hekau/static/src/img/snippets_thumbs/thumb_hekau.svg"/>
+        </xpath>
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="website_hekau.s_hk_hero" string="Hekau Hero" group="hekau">
+                <keywords>hekau, hero, banner, intro, headline, animation</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_partners" string="Hekau Partners" group="hekau">
+                <keywords>hekau, partners, clients, logos, brands, marquee</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_why" string="Hekau Why Partner" group="hekau">
+                <keywords>hekau, why, features, benefits, animation, cards</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_stats" string="Hekau Stats" group="hekau">
+                <keywords>hekau, stats, numbers, figures, counters</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_services" string="Hekau Services" group="hekau">
+                <keywords>hekau, services, cards, offers</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_domains" string="Hekau Domains" group="hekau">
+                <keywords>hekau, domains, industries, sectors</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_projects" string="Hekau Projects" group="hekau">
+                <keywords>hekau, projects, portfolio, case studies, cards</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_testimonials" string="Hekau Testimonials" group="hekau">
+                <keywords>hekau, testimonials, reviews, quotes, clients, carousel</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_cta" string="Hekau Call to Action" group="hekau">
+                <keywords>hekau, call to action, cta, contact, appointment</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_service_hero" string="Hekau Service Hero" group="hekau">
+                <keywords>hekau, hero, service, banner, title, intro</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_highlight" string="Hekau Highlight" group="hekau">
+                <keywords>hekau, highlight, figures, numbers, tiles, statement</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_attributes" string="Hekau Attributes" group="hekau">
+                <keywords>hekau, attributes, qualities, diagram, list</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_ai_intro" string="Hekau Pyramid Intro" group="hekau">
+                <keywords>hekau, intro, pyramid, points, statement</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_features" string="Hekau Features" group="hekau">
+                <keywords>hekau, features, benefits, cards, values</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_process" string="Hekau Process" group="hekau">
+                <keywords>hekau, process, steps, timeline, how it works</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_page_hero" string="Hekau Page Intro" group="hekau">
+                <keywords>hekau, intro, hero, about, headline, illustration</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_team" string="Hekau Team" group="hekau">
+                <keywords>hekau, team, founders, people, members, bio</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_vision" string="Hekau Vision" group="hekau">
+                <keywords>hekau, vision, mission, values, cards</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_project_list" string="Hekau Project List" group="hekau">
+                <keywords>hekau, projects, portfolio, case studies, filter, work</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_case_hero" string="Hekau Case Hero" group="hekau">
+                <keywords>hekau, case study, project, cover, hero, facts</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_case_text" string="Hekau Case Text" group="hekau">
+                <keywords>hekau, case study, text, paragraphs, article</keywords>
+            </t>
+            <t t-snippet="website_hekau.s_hk_case_figure" string="Hekau Case Image" group="hekau">
+                <keywords>hekau, case study, image, picture, caption</keywords>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

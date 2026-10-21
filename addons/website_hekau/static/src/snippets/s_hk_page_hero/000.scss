@@ -1,0 +1,248 @@
+// Hekau Page Intro — Figma About Us "Frame 1589" (with the "Rectangle 1" panel
+// and "Ellipse 1" glow behind it) and Projects "Frame 1686558532" (over the
+// hero animation). Both: badge, title and text next to an illustration.
+
+.s_hk_page_hero {
+    position: relative;
+
+    .hk-page-hero-row {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hk-page-hero-copy {
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .hk-page-hero-title {
+        margin: 0;
+        color: $hk-white;
+    }
+
+    .hk-page-hero-text {
+        font-size: 16px;
+        line-height: 1.4;
+
+        p { margin: 0; }
+        p + p { margin-top: 22px; } // Figma: an empty line between paragraphs
+    }
+
+    .hk-page-hero-img {
+        display: block;
+        flex: none;
+        max-width: none;
+        height: auto;
+    }
+
+    .hk-page-hero-mobile-art { display: none; }
+}
+
+//------------------------------------------------------------------------------
+// About Us: content at y=212, icon at 889,275 (the image has 40px of padding)
+//------------------------------------------------------------------------------
+
+.s_hk_page_hero.hk-page-hero-about {
+    padding-top: 212px;
+
+    .hk-page-hero-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    // 798x646 gradient ellipse at 416,-143 (svg padded by 200px)
+    .hk-page-hero-glow {
+        position: absolute;
+        top: -343px;
+        left: 50%;
+        width: 1198px;
+        height: 1046px;
+        margin-left: -504px;
+        background: url("#{$hk-img-from-snippet}/about/hero_glow.svg") center / 100% 100% no-repeat;
+    }
+
+    // 1225x700 translucent panel at 108,32
+    .hk-page-hero-panel {
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        width: calc(100% - 32px);
+        max-width: 1225px;
+        height: 700px;
+        transform: translateX(-50%);
+        border-radius: 16px;
+        background: rgba($hk-bg, .3);
+    }
+
+    .hk-page-hero-row { max-width: 984px + 2 * 24px; }
+
+    .hk-page-hero-copy { width: 520px; }
+
+    .hk-page-hero-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 45px;
+        letter-spacing: .56px;
+    }
+
+    .hk-page-hero-text {
+        max-width: 460px;
+        line-height: 22px;
+        color: $hk-text;
+    }
+
+    .hk-page-hero-img {
+        width: 357px;
+        margin: 23px 0 -40px 101px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-page-hero-copy { width: auto; flex: 1 1 auto; }
+        .hk-page-hero-img { width: 280px; margin-left: 24px; }
+    }
+
+    // Figma mobile: centred copy from y=176 over the hero animation, the icon
+    // 32px below the text.
+    @include hk-mobile {
+        padding-top: 176px;
+
+        .hk-page-hero-bg { display: none; }
+
+        .hk-page-hero-mobile-art {
+            display: block;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .hk-page-hero-row {
+            flex-direction: column;
+            align-items: center;
+            padding-inline: 16px;
+            text-align: center;
+        }
+
+        .hk-page-hero-copy {
+            width: 100%;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hk-page-hero-title { line-height: 39px; }
+
+        .hk-page-hero-text {
+            max-width: none;
+            margin-top: 16px;
+            font-size: 15px;
+            line-height: 21px;
+
+            p + p { margin-top: 21px; }
+        }
+
+        .hk-page-hero-img {
+            width: 357px;
+            max-width: calc(100% + 40px);
+            margin: -8px 0 -40px;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Projects: 1080px row from y=126, copy centred on the 456px squares art
+//------------------------------------------------------------------------------
+
+.s_hk_page_hero.hk-page-hero-work {
+    padding-top: 126px;
+
+    .hk-page-hero-row { max-width: 1080px + 2 * 24px; }
+
+    .hk-page-hero-copy {
+        width: 624px;
+        margin-top: 78px;
+    }
+
+    .hk-page-hero-title {
+        width: 640px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .hk-page-hero-text {
+        max-width: 460px;
+        color: $hk-muted;
+    }
+
+    .hk-page-hero-img { width: 456px; }
+
+    @include media-breakpoint-down(xl) {
+        .hk-page-hero-copy { width: auto; flex: 1 1 auto; }
+        .hk-page-hero-title { width: auto; }
+        .hk-page-hero-img { width: 360px; margin-left: 24px; }
+    }
+
+    // Figma mobile: copy from y=176 (left aligned), squares 358px 32px below
+    @include hk-mobile {
+        padding-top: 176px;
+
+        .hk-page-hero-row {
+            flex-direction: column;
+            align-items: stretch;
+            padding-inline: 16px;
+        }
+
+        .hk-page-hero-copy { margin-top: 0; padding-right: 8px; }
+
+        .hk-badge {
+            padding: 7px 15px;
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        .hk-page-hero-title {
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        .hk-page-hero-text { font-size: 14px; }
+
+        .hk-page-hero-img {
+            width: 100%;
+            max-width: 358px;
+            margin: 32px auto 0;
+        }
+    }
+}
+
+// The hero animation behind these intros keeps its 900px (768px) Figma frame
+.s_hk_page_hero,
+.s_hk_case_hero,
+.hk-blog-hero {
+    .hk-hero-art {
+        bottom: auto;
+        height: 900px;
+        pointer-events: none;
+
+        @include hk-mobile { height: 768px; }
+
+        // Past 1440px the page grid continues around the 1440x900 stage
+        @media (min-width: 1441px) {
+            background:
+                url("#{$hk-img-from-snippet}/bg/grid_b.svg") center top / 1440px 900px repeat,
+                url("#{$hk-img-from-snippet}/bg/grid_a.svg") center top / 1440px 900px repeat,
+                $hk-bg;
+        }
+    }
+
+    @include hk-mobile {
+        .hk-hero-stage { --hk-hero-scale: 0.8535; }
+        .hk-hero-fade { height: 256px; }
+    }
+}

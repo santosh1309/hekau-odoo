@@ -1,0 +1,96 @@
+// Hekau Call to Action — Figma "Frame 1563" (desktop 1160x300, mobile 390x240).
+
+.s_hk_cta {
+    .hk-cta-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 44px;
+        min-height: 300px;
+        padding: 32px 24px;
+        overflow: hidden;
+        border-radius: 12px;
+        background-color: $hk-blue;
+        text-align: center;
+
+        // Figma groups 1577 (vertical lines) and 1578 (horizontal lines),
+        // #7A77F5 at 35%, anchored 142.5px above the box.
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: -142.5px;
+            height: 816px;
+            pointer-events: none;
+        }
+
+        &::before {
+            left: -215.25px;
+            width: 1435.5px;
+            background: url("#{$hk-img-from-snippet}/bg/cta_grid_a.svg") 0 0 / 100% 100% no-repeat;
+        }
+
+        &::after {
+            left: -220.25px;
+            width: 1440px;
+            background: url("#{$hk-img-from-snippet}/bg/cta_grid_b.svg") 0 0 / 100% 100% no-repeat;
+        }
+
+        > * { position: relative; z-index: 1; }
+    }
+
+    .hk-cta-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 562px;
+        color: #FCFCFC;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.5;
+        letter-spacing: -0.224px;
+        color: #FCFCFC;
+    }
+
+    p {
+        @include hk-opsz-9;
+        margin: 0;
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    // Figma mobile: edge-to-edge 240px band, 24px title, 200x40 button.
+    @include hk-mobile {
+        .hk-container { padding-inline: 0; }
+
+        .hk-cta-box {
+            min-height: 240px;
+            padding: 24px 20px;
+            border-radius: 0;
+        }
+
+        .hk-cta-copy { gap: 8px; }
+
+        h2 {
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 23px;
+        }
+
+        .hk-btn-light {
+            height: 40px;
+            min-width: 200px;
+            font-size: 15px;
+        }
+    }
+}

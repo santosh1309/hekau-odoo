@@ -1,0 +1,19 @@
+# Local settings with passwords — copy config/odoo.conf.example to config/odoo.conf
+config/odoo.conf
+
+# Design sources (large binary files; kept on the PC, not in Git)
+design/
+
+# Python / editor clutter
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Backups and dumps
+*.zip
+*.dump
+*.sql

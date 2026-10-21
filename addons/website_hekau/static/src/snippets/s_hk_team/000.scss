@@ -1,0 +1,109 @@
+// Hekau Team — Figma About Us "Frame 1594": two members side by side, each a
+// 235x300 photo next to a 329px card (mobile: photo above a full-width card).
+
+// Bold 28px section title of the About Us page (mobile: DM Sans Bold 22px with
+// `.hk-h2-dm`, otherwise the Montserrat style of `.hk-h2-sm`).
+.hk-h2.hk-h2-bold {
+    @include hk-desktop { font-weight: 700; }
+}
+
+.hk-h2.hk-h2-dm {
+    @include hk-mobile {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 35px;
+        letter-spacing: -0.176px;
+    }
+}
+
+.s_hk_team {
+    .hk-team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        margin-top: 40px;
+    }
+
+    .hk-member {
+        display: flex;
+        align-items: flex-start;
+        width: 564px;
+    }
+
+    .hk-member-photo {
+        flex: none;
+        width: 235px;
+        height: 300px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .hk-member-card {
+        flex: 1 1 auto;
+        min-height: 296px;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: $hk-surface;
+    }
+
+    .hk-member-name {
+        margin: 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: .2px;
+        color: $hk-white;
+    }
+
+    .hk-member-role {
+        margin: 4px 0 0;
+        font-size: 16px;
+        line-height: 22px;
+        color: $hk-muted;
+    }
+
+    .hk-member-bio {
+        margin: 24px 0 0;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $hk-text;
+    }
+
+    // Figma mobile: 358px column; 260px photo area, card padded 12/20px
+    @include hk-mobile {
+        .hk-team-grid {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 52px; // Figma: heading frame padded 20px below
+        }
+
+        .hk-member {
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            max-width: 358px;
+        }
+
+        .hk-member-photo {
+            width: 100%;
+            height: 260px;
+
+            img {
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+
+        .hk-member-card {
+            min-height: 0;
+            padding: 12px 20px 20px;
+        }
+    }
+}

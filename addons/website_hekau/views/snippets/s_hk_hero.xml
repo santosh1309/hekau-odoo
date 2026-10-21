@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Hero with the Figma "Background Animation": a still layer (grid + light
+         rays), the blue/gold glow spinning on its centre (90deg per 4s), a dark
+         panel fading in and out, and a fade to navy at the bottom. -->
+    <template id="s_hk_hero" name="Hekau Hero">
+        <section class="s_hk_hero" data-name="Hekau Hero">
+            <div class="hk-hero-art hk-deco o_not_editable" aria-hidden="true">
+                <div class="hk-hero-stage">
+                    <span class="hk-hero-ellipse"/>
+                    <span class="hk-hero-panel"/>
+                </div>
+                <span class="hk-hero-fade"/>
+            </div>
+            <div class="hk-hero-content">
+                <h1>Custom Technology That Turns <span class="hk-gradient-text">Big Brands</span> <br/>Into Your Competitors</h1>
+                <p class="hk-hero-text">Enterprise-grade technology shouldn’t be out of reach for SMBs and startups. At Hekau, we’re changing that with industry-specific, custom IT solutions.</p>
+                <a href="/contactus" class="hk-btn hk-btn-quote">Quote Us</a>
+            </div>
+        </section>
+    </template>
+
+</odoo>

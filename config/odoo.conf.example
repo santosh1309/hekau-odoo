@@ -1,0 +1,39 @@
+[options]
+; ---------------------------------------------------------------------------
+; Paths — must match the volume mounts in docker-compose.yml.
+; Odoo's own core addons are added automatically; list only your extra dirs.
+; To add OCA repos later:  addons_path = /mnt/extra-addons,/mnt/extra-addons/oca-web
+; (a listed directory with no modules in it is skipped with a warning in the log)
+; ---------------------------------------------------------------------------
+addons_path = /mnt/extra-addons
+data_dir = /var/lib/odoo
+http_interface = 0.0.0.0
+
+; ---------------------------------------------------------------------------
+; Database connection (same values as the db service in docker-compose.yml).
+; Keeping them here means `docker compose exec odoo odoo ...` commands work
+; without retyping connection flags.
+; ---------------------------------------------------------------------------
+db_host = db
+db_port = 5432
+db_user = odoo
+db_password = odoo
+
+; ---------------------------------------------------------------------------
+; Master password — protects the Database Manager at /web/database/manager
+; (create / duplicate / drop / backup databases). Change it.
+; ---------------------------------------------------------------------------
+admin_passwd = change-this-master-password
+
+; ---------------------------------------------------------------------------
+; Development settings
+; ---------------------------------------------------------------------------
+; workers = 0 → single multi-threaded process. Required for --dev=reload and
+; for attaching a Python debugger. Never use 0 in production.
+workers = 0
+max_cron_threads = 1
+log_level = info
+list_db = True
+
+; Demo data is OFF by default in Odoo 20. To get demo data in a new database,
+; tick "Demo data" on the create-database screen, or pass --with-demo on the CLI.

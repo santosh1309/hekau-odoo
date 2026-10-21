@@ -1,0 +1,128 @@
+// Hekau Pyramid Intro — Figma AI Solutions page "Frame 7829" (1100x698 panel;
+// mobile 358x595 with the pyramid narrowed to 326px).
+
+.s_hk_ai_intro {
+    .hk-intro-panel {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+
+        // Figma "Ellipse 2" glow behind the badge
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: -250px;
+            left: 50%;
+            width: 740px;
+            height: 580px;
+            margin-left: -370px;
+            background: url("#{$hk-img-from-snippet}/bg/glow_testimonial.svg") center / 100% 100% no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    .hk-intro-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .hk-intro-title {
+        max-width: 779px;
+        margin: 0;
+        font-family: "Inter", "DM Sans", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.5;
+        letter-spacing: .48px;
+        color: #FCFCFC;
+    }
+
+    // Pyramid 440x440, 44px below the heading; the points sit 84px down it.
+    .hk-pyramid {
+        position: relative;
+        width: 440px;
+        height: 440px;
+        margin-top: 44px;
+    }
+
+    .hk-pyramid-art {
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        width: 480px;
+        height: 480px;
+    }
+
+    .hk-pyramid-list {
+        position: absolute;
+        left: 50%;
+        top: 84px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        width: 600px;
+        margin: 0 0 0 -300px;
+        padding: 0;
+        list-style: none;
+
+        li { @extend .hk-pill; }
+    }
+
+    // The button overlaps the pyramid's base (Figma: 396px below its top;
+    // 356px on mobile).
+    .hk-intro-btn {
+        position: relative;
+        height: 44px;
+        margin-top: -44px;
+        border-radius: 24px;
+    }
+
+    @include hk-mobile {
+        .hk-intro-panel { padding: 20px 16px 0; }
+
+        .hk-intro-head { gap: 16px; }
+
+        // Figma: the 350px text box runs 12px past the panel padding
+        .hk-intro-title {
+            max-width: none;
+            margin-inline: -12px;
+            font-size: 18px;
+            letter-spacing: .36px;
+        }
+
+        .hk-pyramid {
+            width: 326px;
+            margin-top: 0;
+        }
+
+        .hk-pyramid-art {
+            left: -14.8px;
+            width: 355.6px;
+        }
+
+        .hk-pyramid-list {
+            gap: 28px;
+
+            li {
+                height: 36px;
+                padding: 0 26px;
+                font-size: 13.2px;
+            }
+        }
+
+        .hk-intro-btn {
+            width: 100%;
+            margin-top: -84px;
+            margin-bottom: 40px;
+        }
+    }
+}

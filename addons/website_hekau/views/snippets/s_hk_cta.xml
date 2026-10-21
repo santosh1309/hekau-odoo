@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Call to action (Figma "Frame 1563"): blue box with a line grid.
+         Full-bleed on mobile. -->
+    <template id="s_hk_cta" name="Hekau Call to Action">
+        <section class="s_hk_cta hk-section" data-name="Hekau Call to Action">
+            <div class="hk-container">
+                <div class="hk-cta-box">
+                    <div class="hk-cta-copy">
+                        <h2>Got An Idea?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <a href="/contactus" class="hk-btn hk-btn-light">Book an Appointment</a>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

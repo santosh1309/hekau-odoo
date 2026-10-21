@@ -1,0 +1,268 @@
+// Hekau Why Partner — Figma "Frame 5016" + "Hekau Animation" component.
+
+// Figma spring preset "Bouncy" (stiffness 600, damping 15, mass 1) over 1.25s.
+$hk-spring-bouncy: linear(0, 0.1735, 0.56, 0.9648, 1.2502, 1.3618, 1.3195, 1.1869, 1.0363, 0.9226, 0.8708, 0.8779, 0.9224, 0.9778, 1.0225, 1.0454, 1.0461, 1.0316, 1.0115, 0.9941, 0.9843, 0.9828, 0.9873, 0.9946, 1.0012, 1.0053, 1.0064, 1.005, 1.0025, 0.9999, 0.9982, 0.9977, 0.998, 0.9989, 0.9999, 1.0006, 1.0008, 1.0008, 1.0004, 1.0001, 0.9998, 0.9997, 0.9997, 0.9998, 0.9999, 1, 1.0001, 1.0001, 1);
+
+.s_hk_why {
+    .hk-why-row {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .hk-why-visual {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        min-width: 0;
+    }
+
+    .hk-why-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .hk-why-sub {
+        margin: 0;
+        font-size: 15px;
+        line-height: 21px;
+        color: $hk-text;
+    }
+
+    .hk-why-cards-wrap {
+        flex: none;
+        width: 520px;
+        min-width: 0;
+    }
+
+    .hk-why-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    @include media-breakpoint-down(xl) {
+        .hk-why-row { flex-direction: column; }
+        .hk-why-cards-wrap { width: 100%; max-width: 640px; }
+    }
+
+    // Figma mobile: title 22px + subtitle, 290px animation, then a swipeable
+    // row of 300x240 cards with a scroll indicator.
+    @include hk-mobile {
+        .hk-why-row { gap: 24px; }
+        .hk-why-visual { gap: 24px; }
+
+        .hk-why-cards-wrap { max-width: none; }
+
+        .hk-why-cards {
+            flex-direction: row;
+            gap: 16px;
+            margin-inline: -16px;
+            padding-inline: 16px;
+            scroll-padding-inline: 16px;
+            overflow-x: auto;
+        }
+    }
+}
+
+// Figma mobile: 64px from the partners strip (which keeps 32px below it).
+.s_hk_partners + .s_hk_why {
+    @include hk-mobile { padding-top: 64px; }
+}
+
+// --- Nested squares animation ------------------------------------------------
+
+.hk-squares-box {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+
+    @include hk-mobile {
+        width: 290px;
+        height: 290px;
+    }
+}
+
+.hk-squares {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-origin: 0 0;
+
+    @include hk-mobile { transform: scale(.725); }
+
+    > .hk-sq {
+        position: absolute;
+        aspect-ratio: 1;
+        border: 1px solid rgba($hk-lavender, .16); // measured from the Figma render
+    }
+
+    .hk-sq-1 { inset: 0; background: $hk-bg; }
+    .hk-sq-2 { top: 20px; left: 5%; right: 5%; background: linear-gradient(180deg, rgba(132, 129, 242, .03), rgba(76, 75, 140, .03)); }
+    .hk-sq-3 { top: 50px; left: 12.5%; right: 12.5%; background: linear-gradient(180deg, rgba(132, 129, 242, .06), rgba(76, 75, 140, .06)); }
+    .hk-sq-4 { top: 80px; left: 20%; right: 20%; background: linear-gradient(180deg, rgba(132, 129, 242, .1), rgba(76, 75, 140, .1)); }
+    .hk-sq-5 { top: 110px; left: 27.5%; right: 27.5%; background: linear-gradient(180deg, rgba(132, 129, 242, .12), rgba(76, 75, 140, .12)); }
+    .hk-sq-6 { top: 140px; left: 35%; right: 35%; border: 0; background: linear-gradient(180deg, rgba(132, 129, 242, .16), rgba(76, 75, 140, .16)); }
+    .hk-sq-7 { top: 162px; left: 40.5%; right: 40.5%; border: 0; background: linear-gradient(180deg, rgba(132, 129, 242, .25), rgba(76, 75, 140, .25)); }
+
+    .hk-sq-logo {
+        position: absolute;
+        top: 178.5px;
+        left: 178px;
+        width: 44px;
+        height: 44px;
+    }
+
+    // Figma "Group 1581" (pink cursor + Business) and "Group 1582" (Growth +
+    // purple cursor, mirrored). Positions are state 1 of the component.
+    .hk-sq-group {
+        position: absolute;
+        height: 48px;
+        animation: 4.4s infinite;
+    }
+
+    .hk-sq-business {
+        left: 278px;
+        top: 41.5px;
+        width: 114px;
+        animation-name: hk-sq-business;
+
+        .hk-cursor { left: 0; top: 0; }
+        .hk-tag {
+            left: 22px;
+            top: 22px;
+            width: 92px;
+            background: linear-gradient(90deg, rgba(230, 71, 255, .6), rgba(138, 43, 153, .4));
+        }
+    }
+
+    .hk-sq-growth {
+        left: 17px;
+        top: 248.5px;
+        width: 105px;
+        animation-name: hk-sq-growth;
+
+        .hk-cursor { left: 77px; top: 0; transform: scaleX(-1); }
+        .hk-tag {
+            left: 0;
+            top: 22px;
+            width: 83px;
+            background: linear-gradient(90deg, rgba(151, 71, 255, .6), rgba(91, 43, 153, .4));
+        }
+    }
+
+    .hk-cursor {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+    }
+
+    .hk-tag {
+        @include hk-opsz-9;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 26px;
+        border-radius: 24px;
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: .28px;
+        color: #F6F6F6;
+        white-space: nowrap;
+    }
+}
+
+// 3 states: [0.2s pause, 1.25s spring] x2, [0.25s pause, 1.25s spring] = 4.4s
+@keyframes hk-sq-business {
+    0%, 4.545% { translate: 0 0; animation-timing-function: $hk-spring-bouncy; }
+    32.955%, 37.5% { translate: -33px 28.5px; animation-timing-function: $hk-spring-bouncy; }
+    65.909%, 71.591% { translate: 7px 48.5px; animation-timing-function: $hk-spring-bouncy; }
+    100% { translate: 0 0; }
+}
+
+@keyframes hk-sq-growth {
+    0%, 4.545% { translate: 0 0; animation-timing-function: $hk-spring-bouncy; }
+    32.955%, 37.5% { translate: 25px -55.5px; animation-timing-function: $hk-spring-bouncy; }
+    65.909%, 71.591% { translate: -5px -85.5px; animation-timing-function: $hk-spring-bouncy; }
+    100% { translate: 0 0; }
+}
+
+// --- Cards -----------------------------------------------------------------
+
+.hk-why-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 190px;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid rgba($hk-blue, .15); // Figma stroke renders at ~15%
+    border-radius: 12px;
+    background-color: $hk-surface;
+
+    // Glow (Figma "Ellipse 1", rotated 180deg) anchored on the card's bottom-left.
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        left: -200px;
+        top: -195px;
+        width: 1050px;
+        height: 980px;
+        background: url("#{$hk-img-from-snippet}/bg/glow_why.svg") center / 100% 100% no-repeat;
+        transform: rotate(180deg);
+        pointer-events: none;
+    }
+
+    > * { position: relative; z-index: 1; }
+
+    .hk-why-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: .18px;
+        color: $hk-white;
+
+        img { flex: none; width: 36px; height: 36px; }
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.4;
+        color: $hk-text;
+    }
+
+    @include hk-mobile {
+        flex: none;
+        width: 300px;
+        min-height: 240px;
+        border: 0;
+
+        &::before { top: -170px; }
+
+        .hk-why-title {
+            align-items: flex-start;
+            font-size: 16px;
+            letter-spacing: .16px;
+        }
+
+        p { font-size: 14px; }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hk-squares .hk-sq-group { animation: none; }
+}

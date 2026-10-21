@@ -1,0 +1,48 @@
+# Odoo 20 Community — local development stack
+# Start:  docker compose up -d        Logs: docker compose logs -f odoo
+# Stop:   docker compose down         (add -v to also wipe databases + filestore)
+
+name: odoo20
+
+services:
+  db:
+    # Odoo 20 requires PostgreSQL 16 or newer.
+    # (Docker Hub's Odoo README still shows postgres:15 — that is too old for 20.0.)
+    image: postgres:16
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      # Lets you connect pgAdmin / DBeaver from your PC on localhost:5433.
+      # 5433 avoids clashing with a PostgreSQL already installed on the PC.
+      - "${DB_HOST_PORT:-5433}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  odoo:
+    image: odoo:20.0
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${ODOO_HOST_PORT:-8069}:8069"
+    volumes:
+      - odoo-data:/var/lib/odoo          # filestore (attachments) + sessions
+      - ./config:/etc/odoo               # odoo.conf lives here
+      - ./addons:/mnt/extra-addons       # your custom / OCA modules
+    # --dev features:
+    #   reload = auto-restart the server when a .py file changes
+    #   qweb   = live-reload QWeb templates
+    #   xml    = read view XML straight from disk (no module upgrade for view edits)
+    # Use --dev=all to also log tracebacks for access errors.
+    command: ["odoo", "--dev=reload,qweb,xml"]
+
+volumes:
+  db-data:
+  odoo-data:

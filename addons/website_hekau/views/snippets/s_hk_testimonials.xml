@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Client praises (Figma "Frame 1601"). Desktop: arrow buttons scroll the
+         cards (js/testimonials.js). Mobile: swipe, with the scroll indicator
+         (js/scroll_indicator.js). -->
+    <template id="s_hk_testimonials" name="Hekau Testimonials">
+        <section id="testimonials" class="s_hk_testimonials hk-section" data-name="Hekau Testimonials">
+            <div class="hk-container">
+                <div class="hk-testimonials-box">
+                    <div class="hk-testimonials-head">
+                        <span class="hk-badge">Client Praises</span>
+                        <h2 class="hk-h2">What are they <br class="hk-only-mobile"/>saying about us?</h2>
+                        <p class="hk-lead">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                    </div>
+                    <div class="hk-quotes hk-scroller" tabindex="0" aria-label="Client testimonials">
+                        <figure class="hk-quote m-0">
+                            <header>
+                                <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                <div>
+                                    <h3>Aditi Verma</h3>
+                                    <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                </div>
+                            </header>
+                            <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                        </figure>
+                        <figure class="hk-quote m-0">
+                            <header>
+                                <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                <div>
+                                    <h3>Aditi Verma</h3>
+                                    <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                </div>
+                            </header>
+                            <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                        </figure>
+                        <figure class="hk-quote m-0">
+                            <header>
+                                <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                <div>
+                                    <h3>Aditi Verma</h3>
+                                    <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                </div>
+                            </header>
+                            <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                        </figure>
+                    </div>
+                    <div class="hk-scroll-indicator hk-only-mobile" aria-hidden="true"><span/></div>
+                    <div class="hk-quotes-nav hk-only-desktop">
+                        <button type="button" class="hk-arrow-btn hk-arrow-prev" aria-label="Previous testimonial"><img src="/website_hekau/static/src/img/icons/arrow_right_16.svg" alt="" width="16" height="16"/></button>
+                        <button type="button" class="hk-arrow-btn hk-arrow-next" aria-label="Next testimonial"><img src="/website_hekau/static/src/img/icons/arrow_right_16.svg" alt="" width="16" height="16"/></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

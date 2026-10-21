@@ -1,0 +1,241 @@
+// Hekau Process — Figma "Desktop - 5" (steps "Component 540": 48px number,
+// 4px bar, card 180px tall, one step every 220px). In Figma the steps scroll
+// inside a 600px window; here the heading stays put while the page scrolls.
+
+.s_hk_process {
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 20px;
+
+    // Figma "Group 1604": 36px grid of #1D1D31 lines over the navy background
+    &::before {
+        content: "";
+        position: absolute;
+        inset: var(--hk-process-top, 140px) 0 0;
+        z-index: -1;
+        background:
+            linear-gradient(90deg, $hk-line-soft 1px, transparent 1px) 0 0 / 36px 36px,
+            linear-gradient($hk-line-soft 1px, transparent 1px) 0 23px / 36px 36px,
+            $hk-bg;
+        pointer-events: none;
+    }
+
+    // The steps column runs 20px past the 1160px content width (Figma x=768).
+    .hk-process-row {
+        display: grid;
+        grid-template-columns: 548px 552px;
+        justify-content: space-between;
+        align-items: start;
+        margin-right: -20px;
+    }
+
+    .hk-process-head {
+        position: sticky;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        // Figma "Ellipse 2" glow over the heading
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: -250px;
+            left: 169px - 250px;
+            width: 710px;
+            height: 570px;
+            background: url("#{$hk-img-from-snippet}/bg/glow_heading.svg") center / 100% 100% no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    .hk-h2 { text-align: left; }
+
+    .hk-process-lead {
+        @include hk-opsz-9;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.4;
+        color: #DFDFDF;
+    }
+
+    // Figma mobile: centred heading, steps below, 44px apart.
+    @include hk-mobile {
+        --hk-process-top: 0px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        margin-top: 64px;
+
+        .hk-process-row {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 44px;
+            margin-right: 0;
+        }
+
+        .hk-process-head {
+            position: relative;
+            top: auto;
+            gap: 8px;
+            text-align: center;
+
+            &::before { left: 50%; margin-left: -355px; }
+        }
+
+        .hk-h2.hk-h2-sm {
+            font-family: inherit;
+            font-weight: 600;
+            line-height: 35px;
+            letter-spacing: -0.176px;
+            text-align: center;
+        }
+    }
+}
+
+// After the "why" block the timeline starts 200px down (Figma main services).
+// The grid background starts 40px above the heading (Figma frame top), 64px
+// on mobile.
+#wrap > .s_hk_process[style*="--hk-pt:"] {
+    @include hk-desktop { --hk-process-top: calc(var(--hk-pt) - 40px); }
+}
+#wrap > .s_hk_process[style*="--hk-pt-m:"] {
+    @include hk-mobile {
+        margin-top: calc(var(--hk-pt-m) - 64px);
+        padding-top: 64px;
+    }
+}
+
+.hk-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// On mobile the projects strip follows 128px below the last step (Figma).
+.s_hk_process + .s_hk_projects {
+    @include hk-mobile { padding-top: 44px; }
+}
+
+.hk-step {
+    --hk-step-progress: 0;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 40px;
+
+    // grey 4px bar running down from the number, filled blue when active
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 22px;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        border-radius: 4px;
+        background-color: $hk-muted;
+    }
+
+    &::after {
+        background-color: $hk-blue;
+        transform: scaleY(var(--hk-step-progress));
+        transform-origin: 50% 0;
+        transition: transform .3s $hk-ease-out-cubic;
+    }
+
+    &:last-child { padding-bottom: 0; }
+
+    &.hk-active,
+    &:hover,
+    &:focus-within {
+        --hk-step-progress: 1;
+
+        .hk-step-num {
+            background-color: rgba(#A3A1FF, .2);
+
+            &::before { background-color: $hk-blue; }
+        }
+    }
+}
+
+.hk-step-num {
+    position: relative;
+    z-index: 1;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, .12);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .16px;
+    color: $hk-white;
+    transition: background-color .3s $hk-ease-out-cubic;
+
+    // 32px inner disc
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 8px;
+        border-radius: 20px;
+        background-color: $hk-surface;
+        transition: background-color .3s $hk-ease-out-cubic;
+    }
+}
+
+.hk-step-card {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 180px;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background:
+        linear-gradient($hk-surface, $hk-surface) padding-box,
+        linear-gradient(135deg, rgba($hk-blue, .15), rgba(#E4A951, .15)) border-box;
+
+    // Figma "Ellipse 1": blurred blue/gold glow, rotated 180deg
+    &::before {
+        content: "";
+        position: absolute;
+        left: -200px;
+        top: -200px;
+        width: 1050px;
+        height: 980px;
+        background: url("#{$hk-img-from-snippet}/bg/glow_why.svg") center / 100% 100% no-repeat;
+        transform: rotate(180deg);
+        pointer-events: none;
+    }
+
+    > * { position: relative; }
+}
+
+.hk-step-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: .18px;
+    color: $hk-white;
+
+    img { flex: none; width: 36px; height: 36px; }
+}
+
+.hk-step-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #CFCFCF;
+}

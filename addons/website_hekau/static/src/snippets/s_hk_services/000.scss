@@ -1,0 +1,249 @@
+// Hekau Services — Figma "Frame 1594" + "Component 527" (Default/Hover).
+
+.s_hk_services {
+    .hk-service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 340px);
+        justify-content: center;
+        gap: 16px;
+        margin-top: 60px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        .hk-service-grid { grid-template-columns: repeat(2, minmax(0, 340px)); }
+    }
+
+    // Figma mobile: heading at 1.4 line height, cards 340x300, 24px apart.
+    // Figma mobile: no heading glow here (the cards keep theirs).
+    @include hk-mobile {
+        .hk-section-head {
+            gap: 16px;
+            padding-top: 0;
+
+            &::before { display: none; }
+        }
+        .hk-section-head .hk-h2 { line-height: 31px; }
+        .hk-section-head .hk-lead { font-weight: 400; }
+
+        .hk-service-grid {
+            grid-template-columns: minmax(0, 340px);
+            gap: 24px;
+            margin-top: 32px;
+        }
+    }
+}
+
+.hk-service-card {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: $hk-surface;
+    color: inherit;
+    text-decoration: none;
+
+    $ease: .4s $hk-ease-out-cubic;
+
+    // Figma "Ellipse 2" glow, top-left
+    &::before {
+        content: "";
+        position: absolute;
+        top: -250px;
+        left: -250px;
+        width: 740px;
+        height: 580px;
+        background: url("#{$hk-img-from-snippet}/bg/glow_service.svg") center / 100% 100% no-repeat;
+        pointer-events: none;
+    }
+
+    // Figma "C1": 90x90 blue circle parked off the bottom-right corner; on
+    // hover it grows to 662x660 at (-259, -146) and fills the card.
+    .hk-service-circle {
+        position: absolute;
+        left: -259.2px;
+        top: -146.1px;
+        width: 661.9px;
+        height: 659.6px;
+        border-radius: 50%;
+        background-color: $hk-blue;
+        transform: translate(285.8px, 284.8px) scale(.1364);
+        transition: transform $ease;
+    }
+
+    .hk-service-head {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 280px;
+
+        img { width: 44px; height: 44px; }
+
+        h3 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.5;
+            letter-spacing: -0.16px;
+            color: #FFFFFF;
+
+            &.hk-nowrap { white-space: nowrap; }
+        }
+    }
+
+    &.hk-service-narrow .hk-service-head { width: 200px; }
+    &.hk-service-tight .hk-service-head { gap: 8px; }
+
+    .hk-service-text {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.4;
+        color: $hk-text;
+        transition: transform $ease;
+    }
+
+    // "Card Button": parked just below the card (Figma y=360), slides to y=304.
+    .hk-service-actions {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform $ease;
+
+        span:first-child {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.45;
+            color: #FFFFFF;
+        }
+    }
+
+    .hk-service-more {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 36px;
+        border-radius: 32px;
+        background: #FFFFFF;
+        color: $hk-blue;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        transition: color $ease;
+
+        &:hover { text-decoration: none; }
+    }
+
+    > :not(.hk-service-circle) { z-index: 1; }
+
+    @media (hover: hover) {
+        &:hover, &:focus-within {
+            .hk-service-circle { transform: none; }
+            .hk-service-text,
+            .hk-service-actions { transform: translateY(-56px); }
+            .hk-service-more { color: $hk-surface; }
+        }
+    }
+
+    // Figma mobile card: 300px tall, icon beside the title, text 32px below,
+    // button row always visible 20px from the bottom.
+    @include hk-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        height: 300px;
+        padding: 20px;
+
+        .hk-service-circle { display: none; }
+
+        .hk-service-head,
+        &.hk-service-narrow .hk-service-head {
+            position: relative; // stays above the glow
+            top: auto;
+            left: auto;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            width: auto;
+
+            img { flex: none; }
+
+            h3 {
+                font-size: 18px;
+                letter-spacing: -0.144px;
+
+                &.hk-nowrap { white-space: normal; }
+            }
+        }
+
+        .hk-service-text {
+            position: relative;
+            inset: auto;
+        }
+
+        .hk-service-actions {
+            top: auto;
+            bottom: 20px;
+        }
+    }
+}
+
+// Static variant (Figma Main Service page "Frame 1594"): no hover fill; the
+// text sits 168px down and "Learn More" becomes a 36px arrow button in the
+// bottom-right corner. Mobile keeps the regular card.
+.s_hk_services.hk-services-static {
+    @include hk-desktop {
+        .hk-service-card {
+            .hk-service-circle { display: none; }
+
+            .hk-service-head {
+                width: 280px;
+
+                h3 {
+                    font-weight: 600;
+                    letter-spacing: .2px;
+
+                    &.hk-nowrap { white-space: normal; }
+                }
+            }
+
+            .hk-service-text {
+                top: 168px;
+                bottom: auto;
+                color: #E5E5E7;
+            }
+
+            .hk-service-actions {
+                top: 300px;
+                justify-content: flex-end;
+
+                span:first-child { display: none; }
+            }
+
+            .hk-service-more {
+                width: 36px;
+                height: 36px;
+                padding: 0;
+                overflow: hidden;
+                font-size: 0;
+                color: transparent;
+                background: #FEFEFE url("#{$hk-img-from-snippet}/icons/arrow_right_16.svg") center / 20px 20px no-repeat;
+                transition: transform .3s $hk-ease-out-cubic;
+            }
+
+            &:hover .hk-service-more { transform: translateX(4px); }
+        }
+
+        .hk-service-card.hk-service-narrow .hk-service-head { width: 280px; }
+    }
+}

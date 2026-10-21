@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="starter_task_view_list" model="ir.ui.view">
+        <field name="name">starter.task.list</field>
+        <field name="model">starter.task</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="done" decoration-danger="days_left &lt; 0 and not done">
+                <field name="priority" widget="priority" nolabel="1"/>
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="deadline"/>
+                <field name="days_left" optional="show"/>
+                <field name="done" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="starter_task_view_form" model="ir.ui.view">
+        <field name="name">starter.task.form</field>
+        <field name="model">starter.task</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_mark_done" string="Mark Done" type="object"
+                            class="btn-primary" invisible="done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="What needs doing?"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                        <group>
+                            <field name="deadline"/>
+                            <field name="days_left"/>
+                            <field name="done"/>
+                        </group>
+                    </group>
+                    <field name="description" placeholder="Details..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="starter_task_view_search" model="ir.ui.view">
+        <field name="name">starter.task.search</field>
+        <field name="model">starter.task</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="user_id"/>
+                <filter name="open" string="Open" domain="[('done', '=', False)]"/>
+                <filter name="mine" string="My Tasks" domain="[('user_id', '=', uid)]"/>
+                <separator/>
+                <filter name="group_user" string="Assignee" context="{'group_by': 'user_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="starter_task_action" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">starter.task</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_open': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first task</p>
+        </field>
+    </record>
+
+    <menuitem id="starter_menu_root" name="Starter" sequence="90"/>
+    <menuitem id="starter_menu_tasks" name="Tasks" parent="starter_menu_root"
+              action="starter_task_action" sequence="10"/>
+
+</odoo>

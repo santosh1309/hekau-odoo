@@ -1,0 +1,104 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 7815">
+<g id="Ellipse 26">
+<circle cx="200" cy="200" r="200" fill="#05051B"/>
+<circle cx="200" cy="200" r="199.5" stroke="url(#paint0_linear_0_4)" stroke-opacity="0.15"/>
+</g>
+<g id="Ellipse 29">
+<circle cx="200" cy="200" r="180" fill="url(#paint1_linear_0_4)" fill-opacity="0.03"/>
+<circle cx="200" cy="200" r="179.5" stroke="url(#paint2_linear_0_4)" stroke-opacity="0.16"/>
+</g>
+<g id="Ellipse 28">
+<circle cx="200" cy="200" r="150" fill="url(#paint3_linear_0_4)" fill-opacity="0.06"/>
+<circle cx="200" cy="200" r="149.5" stroke="url(#paint4_linear_0_4)" stroke-opacity="0.2"/>
+</g>
+<g id="Ellipse 27">
+<circle cx="200" cy="200" r="120" fill="url(#paint5_linear_0_4)" fill-opacity="0.1"/>
+<circle cx="200" cy="200" r="119.5" stroke="url(#paint6_linear_0_4)" stroke-opacity="0.22"/>
+</g>
+<g id="Ellipse 22">
+<circle cx="200" cy="200" r="90" fill="url(#paint7_linear_0_4)" fill-opacity="0.12"/>
+<circle cx="200" cy="200" r="89.5" stroke="url(#paint8_linear_0_4)" stroke-opacity="0.25"/>
+</g>
+<circle id="Ellipse 25" cx="200" cy="200" r="60" fill="url(#paint9_linear_0_4)" fill-opacity="0.16"/>
+<circle id="Ellipse 24" cx="200" cy="200" r="38" fill="url(#paint10_linear_0_4)" fill-opacity="0.25"/>
+<circle id="Ellipse 23" cx="200" cy="200" r="32" fill="url(#paint11_linear_0_4)"/>
+<g id="Group 7816">
+<path id="Ellipse 30" d="M221.25 200C221.25 211.736 211.736 221.25 200 221.25C188.264 221.25 178.75 211.736 178.75 200C178.75 188.264 188.264 178.75 200 178.75C211.736 178.75 221.25 188.264 221.25 200Z" stroke-width="1.5" stroke="#FCFCFC"/>
+<mask id="stroke0_0_4" fill="white">
+<path d="M206.698 192.414C215.29 201.006 215.184 215.042 215.184 215.042C215.184 215.042 201.148 215.148 192.556 206.556C183.965 197.965 184.071 183.929 184.071 183.929C184.071 183.929 198.107 183.823 206.698 192.414Z"/>
+</mask>
+<path id="Ellipse 31" d="M206.698 192.414C215.29 201.006 215.184 215.042 215.184 215.042C215.184 215.042 201.148 215.148 192.556 206.556C183.965 197.965 184.071 183.929 184.071 183.929C184.071 183.929 198.107 183.823 206.698 192.414Z" stroke-width="3" stroke="#FCFCFC" mask="url(#stroke0_0_4)"/>
+<mask id="stroke1_0_4" fill="white">
+<path d="M206.586 206.698C197.994 215.29 183.958 215.184 183.958 215.184C183.958 215.184 183.852 201.148 192.444 192.556C201.035 183.965 215.071 184.071 215.071 184.071C215.071 184.071 215.177 198.107 206.586 206.698Z"/>
+</mask>
+<path id="Ellipse 32" d="M206.586 206.698C197.994 215.29 183.958 215.184 183.958 215.184C183.958 215.184 183.852 201.148 192.444 192.556C201.035 183.965 215.071 184.071 215.071 184.071C215.071 184.071 215.177 198.107 206.586 206.698Z" stroke-width="3" stroke="#FCFCFC" mask="url(#stroke1_0_4)"/>
+<mask id="stroke2_0_4" fill="white">
+<path d="M206 200C206 212.15 200 222 200 222C200 222 194 212.15 194 200C194 187.85 200 178 200 178C200 178 206 187.85 206 200Z"/>
+</mask>
+<path id="Ellipse 34" d="M206 200C206 212.15 200 222 200 222C200 222 194 212.15 194 200C194 187.85 200 178 200 178C200 178 206 187.85 206 200Z" stroke-width="3" stroke="#FCFCFC" mask="url(#stroke2_0_4)"/>
+<mask id="stroke3_0_4" fill="white">
+<path d="M200 194C212.15 194 222 200 222 200C222 200 212.15 206 200 206C187.85 206 178 200 178 200C178 200 187.85 194 200 194Z"/>
+</mask>
+<path id="Ellipse 33" d="M200 194C212.15 194 222 200 222 200C222 200 212.15 206 200 206C187.85 206 178 200 178 200C178 200 187.85 194 200 194Z" stroke-width="3" stroke="#FCFCFC" mask="url(#stroke3_0_4)"/>
+<path id="Ellipse 35" d="M202.5 178C202.5 179.381 201.381 180.5 200 180.5C198.619 180.5 197.5 179.381 197.5 178C197.5 176.619 198.619 175.5 200 175.5C201.381 175.5 202.5 176.619 202.5 178Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 36" d="M187.5 184C187.5 185.381 186.381 186.5 185 186.5C183.619 186.5 182.5 185.381 182.5 184C182.5 182.619 183.619 181.5 185 181.5C186.381 181.5 187.5 182.619 187.5 184Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 37" d="M180.5 200C180.5 201.381 179.381 202.5 178 202.5C176.619 202.5 175.5 201.381 175.5 200C175.5 198.619 176.619 197.5 178 197.5C179.381 197.5 180.5 198.619 180.5 200Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 38" d="M187.5 215C187.5 216.381 186.381 217.5 185 217.5C183.619 217.5 182.5 216.381 182.5 215C182.5 213.619 183.619 212.5 185 212.5C186.381 212.5 187.5 213.619 187.5 215Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 40" d="M213.5 184C213.5 185.381 214.619 186.5 216 186.5C217.381 186.5 218.5 185.381 218.5 184C218.5 182.619 217.381 181.5 216 181.5C214.619 181.5 213.5 182.619 213.5 184Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 41" d="M219.5 200C219.5 201.381 220.619 202.5 222 202.5C223.381 202.5 224.5 201.381 224.5 200C224.5 198.619 223.381 197.5 222 197.5C220.619 197.5 219.5 198.619 219.5 200Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 42" d="M213.5 215C213.5 216.381 214.619 217.5 216 217.5C217.381 217.5 218.5 216.381 218.5 215C218.5 213.619 217.381 212.5 216 212.5C214.619 212.5 213.5 213.619 213.5 215Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+<path id="Ellipse 39" d="M202.5 222C202.5 223.381 201.381 224.5 200 224.5C198.619 224.5 197.5 223.381 197.5 222C197.5 220.619 198.619 219.5 200 219.5C201.381 219.5 202.5 220.619 202.5 222Z" fill="#FCFCFC" stroke="#FCFCFC"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_4" x1="200" y1="0" x2="200" y2="400" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_4" x1="200" y1="20" x2="200" y2="380" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_4" x1="200" y1="20" x2="200" y2="380" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint3_linear_0_4" x1="200" y1="50" x2="200" y2="350" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint4_linear_0_4" x1="200" y1="50" x2="200" y2="350" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint5_linear_0_4" x1="200" y1="80" x2="200" y2="320" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint6_linear_0_4" x1="200" y1="80" x2="200" y2="320" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint7_linear_0_4" x1="200" y1="110" x2="200" y2="290" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint8_linear_0_4" x1="200" y1="110" x2="200" y2="290" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint9_linear_0_4" x1="200" y1="140" x2="200" y2="260" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint10_linear_0_4" x1="200" y1="162" x2="200" y2="238" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8481F2"/>
+<stop offset="1" stop-color="#4C4B8C"/>
+</linearGradient>
+<linearGradient id="paint11_linear_0_4" x1="200" y1="168" x2="200" y2="232" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0804A6"/>
+<stop offset="1" stop-color="#2D29DF"/>
+</linearGradient>
+</defs>
+</svg>

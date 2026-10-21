@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Featured projects (Figma "Frame 1565"). On mobile the "View All
+         Projects" button moves below the cards and spans the full width. -->
+    <template id="s_hk_projects" name="Hekau Projects">
+        <section id="projects" class="s_hk_projects hk-section" data-name="Hekau Projects">
+            <div class="hk-container hk-container-narrow">
+                <div class="hk-projects-head hk-glow-top">
+                    <div>
+                        <h2 class="hk-h2">See How We Bring Ideas to Life</h2>
+                        <p class="hk-lead">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                    </div>
+                    <a href="/projects" class="hk-btn hk-btn-primary hk-only-desktop">View All Projects</a>
+                </div>
+                <div class="hk-projects-grid">
+                    <article class="hk-project-card">
+                        <img class="hk-project-img" src="/website_hekau/static/src/img/project_placeholder.webp" alt="Project preview" width="440" height="220" loading="lazy"/>
+                        <div class="hk-project-body">
+                            <div>
+                                <h3>Project Name</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <a href="/projects" class="hk-arrow-btn" aria-label="Open project"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                        </div>
+                    </article>
+                    <article class="hk-project-card">
+                        <img class="hk-project-img" src="/website_hekau/static/src/img/project_placeholder.webp" alt="Project preview" width="440" height="220" loading="lazy"/>
+                        <div class="hk-project-body">
+                            <div>
+                                <h3>Project Name</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <a href="/projects" class="hk-arrow-btn" aria-label="Open project"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                        </div>
+                    </article>
+                </div>
+                <a href="/projects" class="hk-btn hk-btn-primary hk-projects-all hk-only-mobile">View All Projects</a>
+            </div>
+        </section>
+    </template>
+
+</odoo>

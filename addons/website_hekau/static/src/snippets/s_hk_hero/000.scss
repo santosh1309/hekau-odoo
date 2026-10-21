@@ -1,0 +1,263 @@
+// Hekau Hero — Figma "Home Page" hero + "Background Animation" component.
+// The art is laid out on a fixed 1440x900 stage (Figma coordinates) that is
+// centred, and scaled to 0.8535 on mobile (1229x768 in the 390px frame).
+
+// The animated art is shared by the Home hero, the service-page heroes, the
+// Projects intro, the case study hero and the blog listing.
+.s_hk_hero,
+.s_hk_service_hero,
+.s_hk_page_hero,
+.s_hk_case_hero,
+.hk-blog-hero {
+    .hk-hero-art {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .hk-hero-stage {
+        --hk-hero-scale: 1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1440px;
+        height: 900px;
+        margin-left: -720px;
+        transform: scale(var(--hk-hero-scale));
+        transform-origin: 50% 0;
+        background: url("#{$hk-img-from-snippet}/bg/hero_base.webp") 0 0 / 1440px 900px no-repeat;
+        // 1x screens get the 1440px export (half the download).
+        @media (max-resolution: 1dppx) {
+            background-image: url("#{$hk-img-from-snippet}/bg/hero_base_1440.webp");
+        }
+
+        @media (min-width: 1441px) {
+            -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 120px, #000 calc(100% - 120px), transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 120px, #000 calc(100% - 120px), transparent 100%);
+        }
+    }
+
+    // Figma "Ellipse 1": 798x646 blob, blur 200 (svg includes the blur margin),
+    // centre (815.5, 180.1) in every state; rotates -90deg every 4s, linear.
+    .hk-hero-ellipse {
+        position: absolute;
+        left: 815.5px - 599px;
+        top: 180.1px - 523.2px;
+        width: 1198px;
+        height: 1046.4px;
+        background: url("#{$hk-img-from-snippet}/bg/hero_ellipse.svg") center / 100% 100% no-repeat;
+        transform-origin: 599px 523.2px;
+        animation: hk-hero-spin 16s linear infinite;
+        will-change: transform;
+    }
+
+    // Figma "Rectangle 1": hidden in state 1, 30% navy panel in states 2-4.
+    .hk-hero-panel {
+        position: absolute;
+        left: 108px;
+        top: 40px;
+        width: 1225px;
+        height: 720px;
+        border-radius: 16px;
+        background-color: rgba(5, 5, 27, .3);
+        opacity: 0;
+        animation: hk-hero-panel 16s linear infinite;
+    }
+
+    // Figma "20842680 [Converted] 2": 300px fade to navy at the bottom.
+    .hk-hero-fade {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 300px;
+        background: linear-gradient(180deg, rgba(5, 5, 27, 0) 0%, $hk-bg 50%);
+    }
+}
+
+// Gold gradient used in hero titles ("Big Brands").
+.hk-gradient-text {
+    background-image: linear-gradient(98.83deg, #E4A951 70.571%, #F2D964 93.598%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.s_hk_hero {
+    position: relative;
+    min-height: 900px;
+    padding: 221px 24px 120px;
+    overflow: hidden;
+    background-color: $hk-bg;
+    text-align: center;
+
+    // Beyond 1440px the stage edges fade into the repeating page grid.
+    @media (min-width: 1441px) {
+        background:
+            url("#{$hk-img-from-snippet}/bg/grid_b.svg") center top / 1440px 900px repeat,
+            url("#{$hk-img-from-snippet}/bg/grid_a.svg") center top / 1440px 900px repeat,
+            $hk-bg;
+    }
+
+    .hk-hero-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin: 0;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 56px;
+        letter-spacing: -0.32px;
+        color: #FFFFFF;
+    }
+
+    .hk-hero-text {
+        @include hk-opsz-9;
+        max-width: 600px;
+        margin: -8px 0 0; // 24px to the title, 32px to the button
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: .18px;
+        color: $hk-text;
+    }
+
+    .hk-btn-quote {
+        width: 160px;
+        height: 40px;
+        padding: 0;
+        border: 1px solid $hk-blue-border;
+        border-radius: 24px;
+        background-color: $hk-blue;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: normal;
+
+        &:hover, &:focus-visible {
+            color: #FFFFFF;
+            background-color: lighten($hk-blue, 6%);
+            box-shadow: 0 6px 24px rgba($hk-blue, .5);
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        min-height: 820px;
+        padding-top: 180px;
+
+        h1 br { display: none; } // the desktop line break only fits at full width
+    }
+
+    // Figma mobile frame (390px): art 1229x768, title 32px at y=176, body 15px,
+    // 44px from the text to the button.
+    @include hk-mobile {
+        min-height: 768px;
+        padding: 176px 20px 96px;
+
+        .hk-hero-stage { --hk-hero-scale: 0.8535; }
+        .hk-hero-fade { height: 256px; }
+
+        .hk-hero-content { gap: 44px; }
+
+        // Figma mobile title: Inter Semi Bold, broken after "Big Brands".
+        h1 {
+            font-family: "Inter", "DM Sans", sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 45px;
+            letter-spacing: 0;
+
+            br { display: inline; }
+        }
+
+        .hk-hero-text {
+            margin-top: -20px; // 24px to the title
+            font-size: 15px;
+            line-height: 21px;
+            letter-spacing: 0;
+        }
+    }
+}
+
+@keyframes hk-hero-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+// 0-4s fade in (and grow 720->820), 4-12s visible, 12-16s fade out.
+@keyframes hk-hero-panel {
+    0% { opacity: 0; height: 720px; }
+    25% { opacity: 1; height: 820px; }
+    75% { opacity: 1; height: 820px; }
+    100% { opacity: 0; height: 720px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hk-hero-ellipse,
+    .hk-hero-panel { animation: none !important; }
+}
+
+// Main services variant (Figma "Main Service Page"): 36px ExtraBold title at
+// y=216, 16px text, "Check All Services"; the partners strip starts at 786.
+.s_hk_hero.hk-hero-services {
+    padding-top: 216px;
+
+    .hk-hero-content {
+        gap: 24px;
+        max-width: 640px;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 58px;
+        letter-spacing: -0.288px;
+    }
+
+    .hk-hero-text {
+        max-width: 560px;
+        margin: 0;
+        font-variation-settings: normal;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+
+    @include hk-mobile {
+        padding-top: 176px;
+
+        .hk-hero-content { gap: 24px; }
+
+        h1 {
+            font-family: inherit;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 45px;
+            letter-spacing: 0;
+        }
+
+        .hk-hero-text {
+            @include hk-opsz-9;
+            margin: 0;
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        .hk-btn-hero { margin-top: 20px; }
+    }
+}
+
+.s_hk_hero.hk-hero-services + .s_hk_partners {
+    margin-top: -114px;
+
+    @include hk-mobile { margin-top: -79px; }
+}

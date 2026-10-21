@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Partner logos (Figma "Brands Strip"): the row slides until its last logo
+         reaches the edge, then slides back (10s each way, linear). Logo sizes are
+         the desktop sizes; the strip scales them to 65% on mobile. -->
+    <template id="s_hk_partners" name="Hekau Partners">
+        <section class="s_hk_partners" data-name="Hekau Partners">
+            <div class="hk-section-head hk-glow-box">
+                <h2 class="hk-subhead">Our Long-Term Partners</h2>
+            </div>
+            <div class="hk-brands" aria-label="Partner logos">
+                <div class="hk-brands-track">
+                    <img src="/website_hekau/static/src/img/brands/yb_perfumes.png" alt="YB Perfumes" style="--w: 81px; --h: 80px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/the_arc.svg" alt="The Arc" style="--w: 133px; --h: 40px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/sare_jahan_se_acha.png" alt="Sare Jahan Se Acha" style="--w: 99px; --h: 80px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/quatch.png" alt="Quatch" style="--w: 48px; --h: 50px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/propellex.svg" alt="Propellex" style="--w: 159px; --h: 35px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/maxintel.png" alt="MaxIntel B2B" style="--w: 188px; --h: 50px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/inali_foundation.png" alt="Inali Foundation" style="--w: 92px; --h: 60px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/fybha.png" alt="FYHBA" style="--w: 179px; --h: 60px;" loading="lazy"/>
+                    <img src="/website_hekau/static/src/img/brands/f_brand.png" alt="Partner" style="--w: 45px; --h: 70px;" loading="lazy"/>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

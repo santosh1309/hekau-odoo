@@ -1,0 +1,135 @@
+// Hekau Features — Figma "Frame 1594" (service pages) and the values grid on
+// About Us ("Frame 5017"). Cards 340x360 (mobile 340x332), 16px apart.
+
+// Smaller section title used by most inner pages: 28px SemiBold (mobile
+// 22px Montserrat SemiBold).
+.hk-h2.hk-h2-sm {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 45px;
+    letter-spacing: -0.224px;
+
+    @include hk-mobile {
+        font-family: "Montserrat", sans-serif;
+        font-size: 22px;
+        line-height: 31px;
+        letter-spacing: 0;
+    }
+}
+
+.s_hk_features {
+    .hk-feature-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        max-width: 1052px;
+        margin: 60px auto 0;
+    }
+
+    @include hk-mobile {
+        .hk-section-head { padding-bottom: 0; }
+
+        .hk-feature-grid {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 32px;
+        }
+    }
+}
+
+.hk-feature-card {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 340px;
+    width: 340px;
+    height: var(--hk-card-h, 360px);
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $hk-surface;
+
+    // Figma "Ellipse 2": blurred blue glow in the top-left corner
+    &::before {
+        content: "";
+        position: absolute;
+        top: -250px;
+        left: -250px;
+        width: 740px;
+        height: 580px;
+        background: url("#{$hk-img-from-snippet}/bg/glow_service.svg") center / 100% 100% no-repeat;
+        pointer-events: none;
+    }
+
+    > * { position: relative; }
+
+    .hk-feature-icon {
+        display: block;
+        width: 44px;
+        height: 44px;
+    }
+
+    .hk-feature-title {
+        max-width: var(--hk-title-w, 300px);
+        margin: var(--hk-title-gap, 12px) 0 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: .18px;
+        color: $hk-white;
+    }
+
+    // Text starts 176px from the top of the card whatever the title length.
+    .hk-feature-text {
+        position: absolute;
+        top: var(--hk-text-top, 176px);
+        left: 20px;
+        right: 20px;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.4;
+        color: $hk-text;
+
+        strong, b { font-weight: 700; color: $hk-text; }
+    }
+
+    @include hk-mobile {
+        flex: none;
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        min-height: var(--hk-card-mh, 332px);
+
+        .hk-feature-text {
+            position: relative;
+            inset: auto;
+            margin-top: 32px;
+        }
+    }
+}
+
+// Figma mobile service pages: 108px between a panel and these cards' heading
+.s_hk_highlight + .s_hk_features,
+.s_hk_ai_intro + .s_hk_features {
+    @include hk-mobile { padding-top: 108px; }
+}
+
+// About Us values (Figma "Frame 5017"): 340x320 cards; on mobile the icon and
+// the title share a row and the text starts 96px from the top.
+.s_hk_features.hk-features-values .hk-feature-card {
+    @include hk-mobile {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr);
+        column-gap: 12px;
+        align-content: start;
+
+        .hk-feature-title {
+            align-self: center;
+            margin: 0;
+        }
+
+        .hk-feature-text {
+            grid-column: 1 / -1;
+            margin-top: 32px;
+        }
+    }
+}

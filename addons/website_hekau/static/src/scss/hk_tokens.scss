@@ -1,0 +1,81 @@
+//==============================================================================
+// Hekau design tokens and mixins — shared by the base styles and every block.
+// Values come from the Figma file "Hekau WIP" (desktop frames are 1440px,
+// mobile frames 390px).
+//==============================================================================
+
+// Image paths are relative to this folder: Odoo rewrites url() against the
+// stylesheet location before compiling.
+$hk-img: '../img';
+$hk-img-from-snippet: '../../img';
+
+// Colours
+$hk-bg: #05051B;
+$hk-surface: #111126;
+$hk-blue: #2D29DF;
+$hk-blue-border: #5C58F3;
+$hk-navy: #000026;          // compact nav bar
+$hk-lavender: #8481F2;
+$hk-yellow: #F2D964;
+$hk-praise: #F5E187;
+$hk-white: #FEFEFE;
+$hk-text: #EEEEEE;
+$hk-muted: #C0C0C5;
+$hk-muted-2: #A7A7AF;
+$hk-line: #4A4A5B;
+$hk-line-soft: #1D1D31;
+$hk-pill-border: #2B2A85;
+$hk-track: #61666C;
+$hk-avatar: #868686;
+
+// Layout
+$hk-section-gap: 160px;        // desktop spacing between sections
+$hk-section-gap-mobile: 128px; // mobile spacing between sections (64px frame padding on each side)
+
+// Motion (Figma prototype settings)
+$hk-ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);    // OUT_CUBIC
+$hk-ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1); // INOUT_CUBIC
+
+@mixin hk-opsz-9 { font-variation-settings: "opsz" 9; }
+
+// Figma strokes are drawn inside the frame and over its content; a CSS border
+// would add to the box size. This overlays the stroke instead.
+@mixin hk-inner-stroke($color, $radius) {
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        inset: 0;
+        border: 1px solid $color;
+        border-radius: $radius;
+        pointer-events: none;
+    }
+}
+
+// Translucent bar with backdrop blur. The blur lives on a pseudo-element:
+// backdrop-filter on the bar itself would trap Odoo's fixed-position
+// offcanvas/dropdowns inside it.
+@mixin hk-glass-bar($bg, $border-alpha: .17) {
+    position: relative;
+    isolation: isolate;
+    border: 1px solid rgba($hk-lavender, $border-alpha); // Figma stroke renders at ~17%
+    border-radius: 12px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        border-radius: inherit;
+        background-color: $bg;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        pointer-events: none;
+        transition: background-color .3s $hk-ease-in-out-cubic;
+    }
+}
+
+// Mobile-only / desktop-only content variants (the Figma mobile frames use
+// different copy in a few places).
+@mixin hk-mobile { @include media-breakpoint-down(md) { @content; } }
+@mixin hk-desktop { @include media-breakpoint-up(md) { @content; } }

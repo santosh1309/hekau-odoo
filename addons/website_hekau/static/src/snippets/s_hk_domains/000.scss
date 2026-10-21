@@ -1,0 +1,80 @@
+// Hekau Domains — Figma "Frame 5022" (desktop 567x400 map, mobile 366x300).
+
+.s_hk_domains {
+    .hk-domains-lead {
+        font-weight: 400;
+        @include hk-opsz-9;
+    }
+
+    .hk-domains-map {
+        position: relative;
+        width: 567px;
+        height: 400px;
+        margin: 60px auto 0;
+
+        ul { margin: 0; padding: 0; }
+    }
+
+    .hk-domains-rings {
+        position: absolute;
+        top: 0;
+        left: 86.5px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .hk-domain {
+        position: absolute;
+        left: var(--x, 0);
+        top: var(--y, 0);
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+        padding: 0 32px;
+        margin: 0;
+        // Figma stroke: inside, #2B2A85 -> #5A57FF top to bottom at 50%.
+        border: 1px solid transparent;
+        border-radius: 32px;
+        background:
+            linear-gradient($hk-surface, $hk-surface) padding-box,
+            linear-gradient(180deg, rgba($hk-pill-border, .5), rgba(#5A57FF, .5)) border-box
+            $hk-surface;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $hk-white;
+        white-space: nowrap;
+        list-style: none;
+    }
+
+    // Figma mobile: 300px rings, pills scaled to 31px / 12.4px text.
+    @include hk-mobile {
+        .hk-section-head .hk-lead { max-width: 358px; font-weight: 400; }
+
+        .hk-domains-map {
+            width: 366px;
+            height: 300px;
+            // 20px heading padding + 24px gap; centred on the screen even
+            // though the map is wider than the 358px column (Figma x=12).
+            margin: 44px 0 0 calc(50% - 183px);
+        }
+
+        .hk-domains-rings {
+            left: 42px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .hk-domain {
+            left: var(--mx, 0);
+            top: var(--my, 0);
+            height: 31px;
+            padding: 0 24.8px;
+            border-radius: 24.8px;
+            font-size: 12.4px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .hk-domains-map { transform: scale(.9); transform-origin: 50% 0; }
+    }
+}

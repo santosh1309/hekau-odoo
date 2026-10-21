@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Sample blog content from the Figma "Blogs Page" (placeholder copy):
+         created once, then managed in Website > Blog like any post. -->
+    <data noupdate="1">
+
+        <record id="website_blog.blog_blog_1" model="blog.blog">
+            <field name="name">Hekau Blog</field>
+            <field name="subtitle">Insights from the Hekau team.</field>
+        </record>
+
+        <record id="blog_author" model="res.partner">
+            <field name="name">Hekau Team</field>
+            <field name="email">info@hekau.com</field>
+        </record>
+
+        <record id="tag_electronics_communication" model="blog.tag">
+            <field name="name">Electronics and Communication</field>
+        </record>
+        <record id="tag_computer_science" model="blog.tag">
+            <field name="name">Computer Science</field>
+        </record>
+        <record id="tag_civil" model="blog.tag">
+            <field name="name">Civil</field>
+        </record>
+        <record id="tag_electrical_electronics" model="blog.tag">
+            <field name="name">Electrical and Electronics</field>
+        </record>
+        <record id="tag_ai" model="blog.tag">
+            <field name="name">Artificial Intelligence</field>
+        </record>
+
+        <record id="post_grid" model="blog.post">
+            <field name="name">Grid system for better Design User Interface</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="author_id" ref="blog_author"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_computer_science')])]"/>
+            <field name="teaser_manual">A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</field>
+            <field name="content" type="html"><section class="s_text_block pt40 pb40" data-snippet="s_text_block" data-name="Text"><div class="container s_allow_columns"><p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</p></div></section></field>
+            <field name="cover_properties">{&quot;background-image&quot;: &quot;url(/website_hekau/static/src/img/blog/grid_book.webp)&quot;, &quot;resize_class&quot;: &quot;o_record_has_cover o_half_screen_height&quot;, &quot;opacity&quot;: &quot;0.4&quot;}</field>
+            <field name="is_published" eval="True"/>
+            <field name="published_date">2022-08-20 12:00:00</field>
+        </record>
+
+        <record id="post_iot" model="blog.post">
+            <field name="name">IoT in Healthcare Devices</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="author_id" ref="blog_author"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_electronics_communication')])]"/>
+            <field name="teaser_manual">A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</field>
+            <field name="content" type="html"><section class="s_text_block pt40 pb40" data-snippet="s_text_block" data-name="Text"><div class="container s_allow_columns"><p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</p></div></section></field>
+            <field name="cover_properties">{&quot;background-image&quot;: &quot;url(/website_hekau/static/src/img/blog/iot.webp)&quot;, &quot;resize_class&quot;: &quot;o_record_has_cover o_half_screen_height&quot;, &quot;opacity&quot;: &quot;0.4&quot;}</field>
+            <field name="is_published" eval="True"/>
+            <field name="published_date">2022-08-20 11:00:00</field>
+        </record>
+
+        <record id="post_civil" model="blog.post">
+            <field name="name">The Role of Civil Engineers in Disaster Mitigation and Management</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="author_id" ref="blog_author"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_civil')])]"/>
+            <field name="teaser_manual">A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</field>
+            <field name="content" type="html"><section class="s_text_block pt40 pb40" data-snippet="s_text_block" data-name="Text"><div class="container s_allow_columns"><p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</p></div></section></field>
+            <field name="cover_properties">{&quot;background-image&quot;: &quot;url(/website_hekau/static/src/img/blog/civil.webp)&quot;, &quot;resize_class&quot;: &quot;o_record_has_cover o_half_screen_height&quot;, &quot;opacity&quot;: &quot;0.4&quot;}</field>
+            <field name="is_published" eval="True"/>
+            <field name="published_date">2022-08-20 10:00:00</field>
+        </record>
+
+        <record id="post_energy" model="blog.post">
+            <field name="name">The Future of Renewable Energy: Innovations in Power Generation</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="author_id" ref="blog_author"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_electrical_electronics')])]"/>
+            <field name="teaser_manual">A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</field>
+            <field name="content" type="html"><section class="s_text_block pt40 pb40" data-snippet="s_text_block" data-name="Text"><div class="container s_allow_columns"><p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</p></div></section></field>
+            <field name="cover_properties">{&quot;background-image&quot;: &quot;url(/website_hekau/static/src/img/blog/renewable.webp)&quot;, &quot;resize_class&quot;: &quot;o_record_has_cover o_half_screen_height&quot;, &quot;opacity&quot;: &quot;0.4&quot;}</field>
+            <field name="is_published" eval="True"/>
+            <field name="published_date">2022-08-20 09:00:00</field>
+        </record>
+
+        <record id="post_ml" model="blog.post">
+            <field name="name">Machine Learning in Predictive Analytics</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="author_id" ref="blog_author"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('tag_ai')])]"/>
+            <field name="teaser_manual">A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</field>
+            <field name="content" type="html"><section class="s_text_block pt40 pb40" data-snippet="s_text_block" data-name="Text"><div class="container s_allow_columns"><p>A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.</p></div></section></field>
+            <field name="cover_properties">{&quot;background-image&quot;: &quot;url(/website_hekau/static/src/img/blog/ml.webp)&quot;, &quot;resize_class&quot;: &quot;o_record_has_cover o_half_screen_height&quot;, &quot;opacity&quot;: &quot;0.4&quot;}</field>
+            <field name="is_published" eval="True"/>
+            <field name="published_date">2022-08-20 08:00:00</field>
+        </record>
+
+    </data>
+</odoo>

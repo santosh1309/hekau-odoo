@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Why partner with Hekau (Figma "Frame 5016" + "Hekau Animation").
+         The two cursor/tag groups move between three positions on a bouncy
+         spring (1.25s each, 0.2/0.2/0.25s pauses). On mobile the cards become a
+         swipeable row with a scroll indicator. -->
+    <template id="s_hk_why" name="Hekau Why Partner">
+        <section id="why-hekau" class="s_hk_why hk-section" data-name="Hekau Why Partner">
+            <div class="hk-container">
+                <div class="hk-why-row">
+                    <div class="hk-why-visual">
+                        <div class="hk-why-head">
+                            <h2 class="hk-h2">Why Partner With Hekau?</h2>
+                            <p class="hk-why-sub hk-only-mobile">Enterprise-grade technology shouldn’t be out of</p>
+                        </div>
+                        <div class="hk-squares-box hk-deco o_not_editable" aria-hidden="true">
+                            <div class="hk-squares">
+                                <span class="hk-sq hk-sq-1"/><span class="hk-sq hk-sq-2"/><span class="hk-sq hk-sq-3"/><span class="hk-sq hk-sq-4"/>
+                                <span class="hk-sq hk-sq-5"/><span class="hk-sq hk-sq-6"/><span class="hk-sq hk-sq-7"/>
+                                <img class="hk-sq-logo" src="/website_hekau/static/src/img/logo_mark_anim.svg" alt="" width="44" height="44"/>
+                                <div class="hk-sq-group hk-sq-business">
+                                    <img class="hk-cursor" src="/website_hekau/static/src/img/icons/cursor_pink.svg" alt="" width="28" height="28"/>
+                                    <span class="hk-tag">Business</span>
+                                </div>
+                                <div class="hk-sq-group hk-sq-growth">
+                                    <span class="hk-tag">Growth</span>
+                                    <img class="hk-cursor" src="/website_hekau/static/src/img/icons/cursor_purple.svg" alt="" width="28" height="28"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hk-why-cards-wrap">
+                        <div class="hk-why-cards hk-scroller">
+                            <div class="hk-why-card">
+                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_bulb.svg" alt="" width="36" height="36"/>Unique Tech Solutions</h3>
+                                <p>Automating vendor contracts benefits event companies. NGOs can better manage their inventory if their system has an access hierarchy. Hekau customises specific tech features to solve your unique business roadblocks.</p>
+                            </div>
+                            <div class="hk-why-card">
+                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_growth.svg" alt="" width="36" height="36"/>Growth Without Compromise</h3>
+                                <p>SMBs and startups shouldn’t have to sacrifice efficiency due to a limited budget. Our customised solutions have the same benefits as enterprise-grade technology— while remaining cost-effective.</p>
+                            </div>
+                            <div class="hk-why-card">
+                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_money.svg" alt="" width="36" height="36"/>Cost-Effective and Reliable</h3>
+                                <p>What you’re quoted is what you pay. We don’t burden you with unnecessary costs or unexpected add-ons. With failsafe mechanisms and periodic maintenance, we ensure your business reaches new heights long after our initial agreement.</p>
+                            </div>
+                        </div>
+                        <div class="hk-scroll-indicator hk-only-mobile" aria-hidden="true"><span/></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

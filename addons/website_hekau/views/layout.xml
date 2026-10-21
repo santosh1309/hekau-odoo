@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Fonts: DM Sans with its optical-size axis (the design uses opsz 9 and 14),
+         Montserrat (stat labels, mobile testimonials title) and Inter Semi Bold
+         (mobile hero title). Odoo's own loader only uses the old Google
+         Fonts API, which cannot serve the opsz axis. -->
+    <template id="layout_fonts" inherit_id="website.layout" name="Hekau Fonts">
+        <xpath expr="//head/meta[last()]" position="after">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Montserrat:wght@400;500;600&amp;family=Inter:wght@600;700&amp;display=swap"/>
+        </xpath>
+    </template>
+
+    <!-- Header call to action: "Let's Talk" (Figma nav bar). -->
+    <template id="header_call_to_action" inherit_id="website.header_call_to_action" name="Hekau Header CTA">
+        <xpath expr="//a[hasclass('btn_cta')]" position="replace">
+            <a href="/contactus" class="oe_unremovable btn btn_cta">Let’s Talk</a>
+        </xpath>
+    </template>
+
+    <!-- Mobile bar: Figma shows "Let's Talk" next to the menu button. -->
+    <template id="header_mobile_cta" inherit_id="website.template_header_mobile" name="Hekau Mobile Header CTA">
+        <xpath expr="//ul[hasclass('o_header_mobile_buttons_wrap')]" position="inside">
+            <t t-call="website.placeholder_header_call_to_action"/>
+        </xpath>
+    </template>
+
+    <!-- Footer: Figma "Fat Footer". Kept inside an editable structure. -->
+    <template id="footer" inherit_id="website.footer_custom" name="Hekau Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <section class="hk-footer" data-name="Hekau Footer">
+                    <div class="hk-container hk-container-wide">
+                        <div class="hk-footer-box">
+                            <div class="hk-footer-brand">
+                                <img src="/website_hekau/static/src/img/logo_mark.svg" alt="Hekau" width="44" height="44" loading="lazy"/>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                            </div>
+                            <nav class="hk-footer-links" aria-label="Footer">
+                                <ul>
+                                    <li><a href="/services">Services</a></li>
+                                    <li><a href="/projects">Projects</a></li>
+                                    <li><a href="/about-us">About Us</a></li>
+                                    <li><a href="/blog">Blogs</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="/terms">Terms and Conditions</a></li>
+                                    <li><a href="/privacy">Privacy Policy</a></li>
+                                </ul>
+                            </nav>
+                            <div class="hk-footer-contact">
+                                <strong>Contact Us</strong>
+                                <a href="mailto:info@hekau.com">info@hekau.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- The design has no copyright bar. -->
+    <template id="hide_copyright" inherit_id="website.layout" name="Hekau Hide Copyright">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="attributes">
+            <attribute name="class" add="d-none" separator=" "/>
+        </xpath>
+    </template>
+
+    <!-- The blog listing starts with the hero animation under the floating
+         nav bar, like the other Hekau pages (post pages keep the bar above
+         their title). -->
+    <template id="blog_header_overlay" inherit_id="website.layout" name="Hekau Blog Header Overlay">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_header_overlay' if main_object and main_object._name == 'blog.blog' else ''}" separator=" "/>
+        </xpath>
+    </template>
+
+</odoo>

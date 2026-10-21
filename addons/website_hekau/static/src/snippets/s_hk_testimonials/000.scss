@@ -1,0 +1,186 @@
+// Hekau Testimonials — Figma "Frame 1601" (desktop 1155px box, mobile 370px).
+
+.s_hk_testimonials {
+    .hk-testimonials-box {
+        position: relative;
+        max-width: 1155px;
+        margin: 0 auto;
+        padding: 40px 34.5px 41px 40.5px; // Figma: 1080px content, arrows on its right edge
+        overflow: hidden;
+        border-radius: 12px;
+        background-color: rgba($hk-bg, .3);
+        @include hk-inner-stroke(rgba($hk-line, .54), 12px);
+
+        // Figma "Ellipse 2" (240x80 #EECD34, blurred) on the box's top-left
+        // corner, drawn above the content as in Figma.
+        &::before {
+            content: "";
+            position: absolute;
+            top: -250px;
+            left: -250px;
+            width: 740px;
+            height: 580px;
+            z-index: 2;
+            background: url("#{$hk-img-from-snippet}/bg/glow_testimonial.svg") center / 100% 100% no-repeat;
+            pointer-events: none;
+        }
+
+        > * { position: relative; }
+    }
+
+    .hk-testimonials-head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .hk-quotes {
+        display: flex;
+        gap: 44px;
+        margin-top: 60px;
+    }
+
+    .hk-quote {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 580px;
+        min-height: 260px;
+        padding: 24px;
+        border-radius: 16px;
+        background-color: $hk-surface;
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            img {
+                flex: none;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: $hk-avatar;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                min-width: 0;
+            }
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: $hk-white;
+        }
+
+        .hk-quote-role {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.4;
+            color: $hk-text;
+        }
+
+        blockquote {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: $hk-text;
+            overflow-wrap: anywhere;
+        }
+    }
+
+    .hk-quotes-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-quote { width: #{"min(580px, 85%)"}; }
+    }
+
+    // Figma mobile: 370px box (10px from the screen edges), Montserrat
+    // heading, 320x500 cards with the avatar above the name, swipe indicator.
+    @include hk-mobile {
+        .hk-container { padding-inline: 10px; }
+
+        .hk-testimonials-box {
+            max-width: 370px;
+            padding: 20px 20px 50px;
+            @include hk-inner-stroke($hk-line, 12px);
+        }
+
+        .hk-badge {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .hk-h2 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 39px;
+            letter-spacing: 0;
+        }
+
+        .hk-lead {
+            @include hk-opsz-9;
+            font-weight: 400;
+            color: $hk-muted;
+        }
+
+        .hk-quotes {
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .hk-quote {
+            width: 320px;
+            min-height: 500px;
+            padding: 20px;
+            border-radius: 8px;
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+
+                img { width: 36px; height: 36px; }
+            }
+
+            h3 {
+                @include hk-opsz-9;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .hk-quote-role {
+                @include hk-opsz-9;
+                font-size: 14px;
+                color: $hk-muted-2;
+            }
+
+            blockquote {
+                @include hk-opsz-9;
+                font-size: 15px;
+                line-height: 1.5;
+                color: $hk-muted;
+            }
+        }
+
+        .hk-scroll-indicator { margin-top: 16px; }
+    }
+}
