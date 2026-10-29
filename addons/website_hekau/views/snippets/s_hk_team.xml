@@ -7,7 +7,7 @@
         <section class="s_hk_team hk-section" data-name="Hekau Team">
             <div class="hk-container">
                 <div class="hk-section-head hk-glow-top">
-                    <h2 class="hk-h2 hk-h2-sm hk-h2-bold hk-h2-dm">Our Dynamic Co-Founders</h2>
+                    <h2 class="hk-h2 hk-h2-sm hk-h2-bold hk-h2-dm">The people you’ll work with</h2>
                 </div>
                 <div class="hk-team-grid">
                     <article class="hk-member">
@@ -16,8 +16,8 @@
                         </div>
                         <div class="hk-member-card">
                             <h3 class="hk-member-name">Santosh Yadav</h3>
-                            <p class="hk-member-role">Co-Founder</p>
-                            <p class="hk-member-bio">As a co-founder, Santosh oversees the business side of Hekau, all the while providing support to the company using his experience in mechanical engineering. His years of involvement in sales and customer service grant him a unique perspective on the needs of Hekau’s clients.</p>
+                            <p class="hk-member-role">Director &amp; Co-Founder</p>
+                            <p class="hk-member-bio">Santosh leads digital infrastructure strategy and systems architecture at Hekau, working directly with founders and operations heads. An engineer by training, he started as a front-end developer and UX designer, then ran marketing and growth. So he looks at every system from three sides: how it’s built, how people use it, and what it does for revenue.</p>
                         </div>
                     </article>
                     <article class="hk-member">
@@ -27,7 +27,7 @@
                         <div class="hk-member-card">
                             <h3 class="hk-member-name">Anu Unni</h3>
                             <p class="hk-member-role">Co-Founder</p>
-                            <p class="hk-member-bio">After earning his engineering degree in 2014, Anu honed his skills by collaborating with international clients until he became a co-founder of Hekau in 2021. With over a decade of experience in IT, Anu has taken Hekau to new heights, overseeing critical projects to this day.</p>
+                            <p class="hk-member-bio">After earning his engineering degree in 2014, Anu spent years delivering software for international clients before co-founding Hekau in 2021. With over a decade in IT, he oversees Hekau’s critical projects and engineering quality.</p>
                         </div>
                     </article>
                 </div>

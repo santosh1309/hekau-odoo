@@ -171,3 +171,43 @@
         figcaption { font-size: 15px; }
     }
 }
+
+// Pictures with text in them (pull-quote cards) keep their own ratio.
+.s_hk_case_figure .hk-case-figure-natural {
+    max-width: 880px;
+    margin-inline: auto;
+}
+
+.s_hk_case_figure .hk-case-figure-natural img {
+    aspect-ratio: auto !important;
+    height: auto;
+    object-fit: contain;
+}
+
+// Section title above the groups (FAQ on How we work) and smaller group
+// titles for long documents (terms, privacy), on a reading-width column.
+.s_hk_case_text .hk-case-text:has(.hk-case-heading, .hk-case-h2-sm) { max-width: 880px + 2 * 24px; }
+
+.s_hk_case_text {
+    .hk-case-heading { margin: 0 0 40px; }
+
+    .hk-case-heading ~ .hk-case-group .hk-case-h2,
+    .hk-case-h2.hk-case-h2-sm {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .hk-case-heading ~ .hk-case-group + .hk-case-group { margin-top: 28px; }
+
+    @include hk-mobile {
+        .hk-case-heading { margin-bottom: 24px; }
+
+        .hk-case-heading ~ .hk-case-group .hk-case-h2,
+        .hk-case-h2.hk-case-h2-sm {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    }
+}

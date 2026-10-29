@@ -8,18 +8,18 @@
             <div class="hk-container hk-container-wide">
                 <div class="hk-panel hk-intro-panel">
                     <div class="hk-intro-head">
-                        <span class="hk-badge">Intro:</span>
-                        <h2 class="hk-intro-title">51% of businesses hesitate to get AI solutions due to the cost. Instead, they end up missing out on:</h2>
+                        <span class="hk-badge">Why most AI projects stall:</span>
+                        <h2 class="hk-intro-title">AI gets added, not embedded. Without clean, connected data underneath, it stays a smart assistant instead of a business tool. Built on the right foundation, it can:</h2>
                     </div>
                     <div class="hk-pyramid">
                         <img class="hk-pyramid-art hk-deco" src="/website_hekau/static/src/img/svc/ai_pyramid.svg" alt="" width="480" height="480"/>
                         <ul class="hk-pyramid-list">
-                            <li>Smoother workflow</li>
-                            <li>Lead generation &amp; customer retention</li>
-                            <li>Reduction of unnecessary operational costs.</li>
+                            <li>Flag margin risks before an order is confirmed</li>
+                            <li>Spot procurement issues early</li>
+                            <li>Surface bottlenecks automatically</li>
                         </ul>
                     </div>
-                    <a href="/contactus" class="hk-btn hk-btn-primary hk-intro-btn">Book a Free Consultation</a>
+                    <a href="/book-a-call" class="hk-btn hk-btn-primary hk-intro-btn">Book a free systems audit</a>
                 </div>
             </div>
         </section>

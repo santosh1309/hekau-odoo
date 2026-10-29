@@ -1,89 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Services grid (Figma "Frame 1594" + "Component 527" cards).
+    <!-- Services grid (Figma "Frame 1594" + "Component 527" cards): eight cards,
+         three per row with the last row centred.
          Hover (0.4s ease-out): the blue circle fills the card, text and button
-         slide up 56px, "Learn More" turns navy. On mobile the button row is
-         always visible. -->
+         slide up 56px, "Learn more" turns navy. On mobile the button row is
+         always visible. "View projects" opens the Projects page filtered to
+         the service (?filter= matches a filter key of the Project List). -->
     <template id="s_hk_services" name="Hekau Services">
         <section id="services" class="s_hk_services hk-section" data-name="Hekau Services">
             <div class="hk-container">
                 <div class="hk-section-head hk-glow-top">
-                    <h2 class="hk-h2">Services That Drive Innovation and Growth</h2>
-                    <p class="hk-lead hk-lead-15 hk-only-desktop">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <p class="hk-lead hk-lead-15 hk-only-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    <h2 class="hk-h2">What we build and fix</h2>
+                    <p class="hk-lead hk-lead-15">Eight ways we remove friction from a growing company, from one automation to a full ERP rollout. Every engagement starts with a free systems audit.</p>
                 </div>
                 <div class="hk-service-grid">
-                    <div class="hk-service-card hk-service-narrow">
-                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
-                        <div class="hk-service-head">
-                            <img src="/website_hekau/static/src/img/icons/svc_web.svg" alt="" width="44" height="44"/>
-                            <h3 class="hk-nowrap">Web Application Development</h3>
-                        </div>
-                        <p class="hk-service-text">Web applications are the backbone of any business. Hekau designs scalable, user-centric web apps that are functional and visually pleasing across all platforms.</p>
-                        <div class="hk-service-actions">
-                            <span>View Projects</span>
-                            <a class="hk-service-more" href="/web-application-development">Learn More</a>
-                        </div>
-                    </div>
                     <div class="hk-service-card">
                         <span class="hk-service-circle hk-deco" aria-hidden="true"/>
                         <div class="hk-service-head">
-                            <img src="/website_hekau/static/src/img/icons/svc_mobile.svg" alt="" width="44" height="44"/>
-                            <h3 class="hk-nowrap">Mobile Application Development</h3>
+                            <img src="/website_hekau/static/src/img/icons/svc_erp.svg" alt="" width="44" height="44"/>
+                            <h3>ERP, CRM &amp; CMS Implementation</h3>
                         </div>
-                        <p class="hk-service-text">Mobile apps serve as constant companions for both customers and employees — driving retention, boosting collaboration, and reinforcing brand loyalty across iOS and Android platforms.</p>
+                        <p class="hk-service-text">Operations, sales and your website on systems that share the same data. We implement ERP, CRM and CMS platforms, Odoo first, so nobody re-types an order again.</p>
                         <div class="hk-service-actions">
-                            <span>View Projects</span>
-                            <a class="hk-service-more" href="/mobile-application-development">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="hk-service-card hk-service-narrow">
-                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
-                        <div class="hk-service-head">
-                            <img src="/website_hekau/static/src/img/icons/svc_ux.svg" alt="" width="44" height="44"/>
-                            <h3 class="hk-nowrap">UX/UI Design</h3>
-                        </div>
-                        <p class="hk-service-text">With endless choices, customers return for intuitive experiences. We design interfaces that make every interaction effortless and goal-driven.</p>
-                        <div class="hk-service-actions">
-                            <span>View Projects</span>
-                            <a class="hk-service-more" href="/ux-ui-design">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="hk-service-card hk-service-narrow">
-                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
-                        <div class="hk-service-head">
-                            <img src="/website_hekau/static/src/img/icons/svc_cloud.svg" alt="" width="44" height="44"/>
-                            <h3>Cloud-Managed Services</h3>
-                        </div>
-                        <p class="hk-service-text">Cloud-powered businesses benefit from lower costs, on-demand scalability, and advanced security. Whether migrating or optimizing, we handle complexities so you can focus on growth.</p>
-                        <div class="hk-service-actions">
-                            <span>View Projects</span>
-                            <a class="hk-service-more" href="/cloud-managed-services">Learn More</a>
+                            <a class="hk-service-projects" href="/projects?filter=erp">View projects</a>
+                            <a class="hk-service-more" href="/erp-crm-implementation">Learn more</a>
                         </div>
                     </div>
                     <div class="hk-service-card">
                         <span class="hk-service-circle hk-deco" aria-hidden="true"/>
                         <div class="hk-service-head">
                             <img src="/website_hekau/static/src/img/icons/svc_bpa.svg" alt="" width="44" height="44"/>
-                            <h3>Business Process Automation</h3>
+                            <h3>Workflow &amp; Process Automation</h3>
                         </div>
-                        <p class="hk-service-text">Repetitive tasks will bog you down. Hekau automates the essential but time-consuming processes so you can turn your most creative endeavours into reality.</p>
+                        <p class="hk-service-text">Approvals, follow-ups, reports and data entry that run themselves. We automate the steps your team works around today, starting with the ones that cost the most time.</p>
                         <div class="hk-service-actions">
-                            <span>View Projects</span>
-                            <a class="hk-service-more" href="/business-process-automation">Learn More</a>
+                            <a class="hk-service-projects" href="/projects?filter=automation">View projects</a>
+                            <a class="hk-service-more" href="/business-process-automation">Learn more</a>
                         </div>
                     </div>
-                    <div class="hk-service-card hk-service-narrow hk-service-tight">
+                    <div class="hk-service-card">
+                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                        <div class="hk-service-head">
+                            <img src="/website_hekau/static/src/img/icons/svc_web.svg" alt="" width="44" height="44"/>
+                            <h3>Custom Web Applications &amp; B2B Portals</h3>
+                        </div>
+                        <p class="hk-service-text">Customer portals, vendor platforms and internal tools built around how your business actually works, not how a template assumes it does.</p>
+                        <div class="hk-service-actions">
+                            <a class="hk-service-projects" href="/projects?filter=apps">View projects</a>
+                            <a class="hk-service-more" href="/web-application-development">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="hk-service-card">
                         <span class="hk-service-circle hk-deco" aria-hidden="true"/>
                         <div class="hk-service-head">
                             <img src="/website_hekau/static/src/img/icons/svc_ai.svg" alt="" width="44" height="44"/>
-                            <h3>AI for business</h3>
+                            <h3>Secure In-House AI &amp; Data</h3>
                         </div>
-                        <p class="hk-service-text">AI solutions train on your business data and customer interactions. Use it to solve unique customer queries or get a personal assistant.</p>
+                        <p class="hk-service-text">AI that works on your own ERP and CRM data, inside your control. Flag margin risks and surface bottlenecks without sending data to public tools.</p>
                         <div class="hk-service-actions">
-                            <span>View Projects</span>
-                            <a class="hk-service-more" href="/ai-solutions">Learn More</a>
+                            <a class="hk-service-projects" href="/projects?filter=ai">View projects</a>
+                            <a class="hk-service-more" href="/ai-solutions">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="hk-service-card">
+                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                        <div class="hk-service-head">
+                            <img src="/website_hekau/static/src/img/icons/svc_mobile.svg" alt="" width="44" height="44"/>
+                            <h3>Mobile App Development</h3>
+                        </div>
+                        <p class="hk-service-text">Field apps, customer apps and on-site data capture for Android and iOS, connected to the systems your office already runs on.</p>
+                        <div class="hk-service-actions">
+                            <a class="hk-service-projects" href="/projects?filter=mobile">View projects</a>
+                            <a class="hk-service-more" href="/mobile-application-development">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="hk-service-card">
+                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                        <div class="hk-service-head">
+                            <img src="/website_hekau/static/src/img/icons/svc_ux.svg" alt="" width="44" height="44"/>
+                            <h3>UX &amp; Conversion-Focused Websites</h3>
+                        </div>
+                        <p class="hk-service-text">Websites that turn visitors into enquiries: clear navigation, focused calls to action and lead capture wired straight into your CRM.</p>
+                        <div class="hk-service-actions">
+                            <a class="hk-service-projects" href="/projects?filter=ux">View projects</a>
+                            <a class="hk-service-more" href="/ux-ui-design">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="hk-service-card">
+                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                        <div class="hk-service-head">
+                            <img src="/website_hekau/static/src/img/icons/svc_cloud.svg" alt="" width="44" height="44"/>
+                            <h3>Cloud-Managed Services</h3>
+                        </div>
+                        <p class="hk-service-text">Hosting, monitoring, backups and security for the systems you depend on, so your team never has to think about servers.</p>
+                        <div class="hk-service-actions">
+                            <a class="hk-service-projects" href="/projects?filter=cloud">View projects</a>
+                            <a class="hk-service-more" href="/cloud-managed-services">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="hk-service-card">
+                        <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                        <div class="hk-service-head">
+                            <img src="/website_hekau/static/src/img/icons/svc_rescue.svg" alt="" width="44" height="44"/>
+                            <h3>Project Rescue &amp; Dedicated Developers</h3>
+                        </div>
+                        <p class="hk-service-text">Vendor walked away mid-build? We audit the code, finish what’s missing and stay on, or add experienced developers to your own team.</p>
+                        <div class="hk-service-actions">
+                            <a class="hk-service-projects" href="/projects?filter=rescue">View projects</a>
+                            <a class="hk-service-more" href="/project-rescue">Learn more</a>
                         </div>
                     </div>
                 </div>

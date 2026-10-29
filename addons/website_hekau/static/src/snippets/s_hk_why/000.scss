@@ -1,7 +1,8 @@
 // Hekau Why Partner — Figma "Frame 5016" + "Hekau Animation" component.
 
-// Figma spring preset "Bouncy" (stiffness 600, damping 15, mass 1) over 1.25s.
-$hk-spring-bouncy: linear(0, 0.1735, 0.56, 0.9648, 1.2502, 1.3618, 1.3195, 1.1869, 1.0363, 0.9226, 0.8708, 0.8779, 0.9224, 0.9778, 1.0225, 1.0454, 1.0461, 1.0316, 1.0115, 0.9941, 0.9843, 0.9828, 0.9873, 0.9946, 1.0012, 1.0053, 1.0064, 1.005, 1.0025, 0.9999, 0.9982, 0.9977, 0.998, 0.9989, 0.9999, 1.0006, 1.0008, 1.0008, 1.0004, 1.0001, 0.9998, 0.9997, 0.9997, 0.9998, 0.9999, 1, 1.0001, 1.0001, 1);
+// Figma spring preset "Slow" (mass 1, stiffness 80, damping 20: no overshoot),
+// the easing of the "Hekau Animation" component, over its 1.25s.
+$hk-spring-slow: linear(0, 0.0319, 0.1048, 0.1955, 0.2905, 0.3823, 0.4671, 0.5432, 0.6103, 0.6687, 0.7191, 0.7623, 0.7991, 0.8305, 0.857, 0.8795, 0.8984, 0.9145, 0.928, 0.9394, 0.949, 0.957, 0.9638, 0.9696, 0.9744, 0.9785, 0.9819, 0.9847, 0.9872, 0.9892, 0.9909, 0.9924, 0.9936, 0.9946, 0.9954, 0.9962, 0.9968, 0.9973, 0.9977, 0.9981, 1);
 
 .s_hk_why {
     .hk-why-row {
@@ -181,16 +182,16 @@ $hk-spring-bouncy: linear(0, 0.1735, 0.56, 0.9648, 1.2502, 1.3618, 1.3195, 1.186
 
 // 3 states: [0.2s pause, 1.25s spring] x2, [0.25s pause, 1.25s spring] = 4.4s
 @keyframes hk-sq-business {
-    0%, 4.545% { translate: 0 0; animation-timing-function: $hk-spring-bouncy; }
-    32.955%, 37.5% { translate: -33px 28.5px; animation-timing-function: $hk-spring-bouncy; }
-    65.909%, 71.591% { translate: 7px 48.5px; animation-timing-function: $hk-spring-bouncy; }
+    0%, 4.545% { translate: 0 0; animation-timing-function: $hk-spring-slow; }
+    32.955%, 37.5% { translate: -33px 28.5px; animation-timing-function: $hk-spring-slow; }
+    65.909%, 71.591% { translate: 7px 48.5px; animation-timing-function: $hk-spring-slow; }
     100% { translate: 0 0; }
 }
 
 @keyframes hk-sq-growth {
-    0%, 4.545% { translate: 0 0; animation-timing-function: $hk-spring-bouncy; }
-    32.955%, 37.5% { translate: 25px -55.5px; animation-timing-function: $hk-spring-bouncy; }
-    65.909%, 71.591% { translate: -5px -85.5px; animation-timing-function: $hk-spring-bouncy; }
+    0%, 4.545% { translate: 0 0; animation-timing-function: $hk-spring-slow; }
+    32.955%, 37.5% { translate: 25px -55.5px; animation-timing-function: $hk-spring-slow; }
+    65.909%, 71.591% { translate: -5px -85.5px; animation-timing-function: $hk-spring-slow; }
     100% { translate: 0 0; }
 }
 

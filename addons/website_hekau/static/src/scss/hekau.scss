@@ -435,8 +435,8 @@ header#top {
             color: #F6F6F6;
             transition: color .2s ease;
 
-            &.active { color: #F6F6F6; }
-            &:hover, &:focus-visible { color: $hk-yellow; }
+            // Current page (or the section it sits under): gold, like hover
+            &.active, &:hover, &:focus-visible { color: $hk-yellow; }
         }
     }
 
@@ -498,9 +498,9 @@ header#top .btn_cta,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: auto;
     height: 40px;
-    padding: 10px;
+    padding: 10px 18px;
     border: 0;
     border-radius: 20px;
     background: transparent;
@@ -554,6 +554,12 @@ header#top .o_header_mobile {
         margin-right: 16px;
 
         > li { list-style: none; }
+
+        .btn_cta {
+            height: 36px;
+            padding: 8px 14px;
+            font-size: 14px;
+        }
     }
 
     // Hamburger: Figma "menu" icon (vuesax linear), white
@@ -574,7 +580,11 @@ header#top .o_header_mobile {
         .btn_cta { width: 100%; }
         color: $hk-white;
 
-        .nav-link { color: $hk-white; }
+        .nav-link {
+            color: $hk-white;
+
+            &.active, &:hover, &:focus-visible { color: $hk-yellow; }
+        }
         .border-top, .border-bottom { border-color: $hk-line-soft !important; }
         .btn-close { filter: invert(1); }
     }
@@ -612,7 +622,7 @@ footer#bottom {
     justify-content: space-between;
     gap: 32px;
     min-height: 200px;
-    padding: 40px 120px;
+    padding: 40px 80px;
     border: 1px solid $hk-line-soft;
     border-radius: 12px;
     background:
@@ -687,7 +697,7 @@ footer#bottom {
             line-height: 1.4;
         }
 
-        ul:first-child { width: 71px; }
+        ul:first-child { width: auto; }
 
         a { font-size: 12px; }
     }
@@ -701,11 +711,146 @@ footer#bottom {
     font-size: 14px;
     line-height: 1.4;
 
+    max-width: 240px;
+
     strong { font-weight: 600; color: $hk-white; }
     a { color: $hk-muted; text-decoration: none; }
     a:hover { color: $hk-yellow; }
 
-    @include hk-mobile { font-size: 12px; }
+    address {
+        margin: 0;
+        font-style: normal;
+        color: $hk-muted;
+    }
+
+    @include hk-mobile {
+        max-width: none;
+        font-size: 12px;
+    }
+}
+
+#footer .hk-footer-copy {
+    margin: 24px 0 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: $hk-muted-2;
+    text-align: center;
+
+    @include hk-mobile {
+        max-width: 350px;
+        margin: 20px auto 0;
+        font-size: 12px;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Squares art (Figma "Group 7822") with the animated logo tile in its centre
+// (Figma component "Logo Animation", F1 to F9: 0.3s pause, 0.3s ease-out
+// smart animate, eight steps = 4.8s; F6 to F9 replay F4 to F1). Every length
+// is in the tile's 120px Figma units: 1 unit = 1/1.2 cqw.
+//------------------------------------------------------------------------------
+
+.hk-squares-art {
+    position: relative;
+    aspect-ratio: 1;
+
+    > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hk-logo-anim {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 10%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    container-type: inline-size;
+    background: radial-gradient(216.2% 216.2% at -15% -85.8%, #2D29DF 45.2%, #0C0B55 100%);
+
+    > span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-origin: 0 0;
+        animation: 4.8s ease-out infinite;
+    }
+
+    // Each arm: a 9.4-unit stem and a cross bar turned -90deg from its side
+    .hk-logo-arm-1 { animation-name: hk-logo-arm-1; }
+    .hk-logo-arm-2 { animation-name: hk-logo-arm-2; }
+
+    .hk-logo-stem,
+    .hk-logo-bar {
+        position: absolute;
+        background: #FFFFFF;
+        animation: 4.8s ease-out infinite;
+    }
+
+    .hk-logo-stem {
+        left: 0;
+        top: 0;
+        width: 7.833cqw;
+        animation-name: hk-logo-stem;
+    }
+
+    .hk-logo-bar {
+        left: .133cqw;
+        transform-origin: 0 0;
+        rotate: -90deg;
+        animation-name: hk-logo-bar;
+    }
+}
+
+@keyframes hk-logo-arm-1 {
+    0%, 6.25% { translate: 45.842cqw 45.833cqw; rotate: 0.07deg; }
+    12.5%, 18.75% { translate: 47.45cqw 45cqw; rotate: 18deg; }
+    25%, 31.25% { translate: 34.092cqw 33.333cqw; rotate: 18deg; }
+    37.5%, 43.75% { translate: 34.1cqw 32.783cqw; rotate: 18deg; }
+    50%, 56.25% { translate: 34.1cqw 33.342cqw; rotate: 18deg; }
+    62.5%, 68.75% { translate: 34.1cqw 32.783cqw; rotate: 18deg; }
+    75%, 81.25% { translate: 34.092cqw 33.333cqw; rotate: 18deg; }
+    87.5%, 93.75% { translate: 47.45cqw 45cqw; rotate: 18deg; }
+    100% { translate: 45.842cqw 45.833cqw; rotate: 0.07deg; }
+}
+
+@keyframes hk-logo-arm-2 {
+    0%, 6.25% { translate: 53.675cqw 53.808cqw; rotate: -179.93deg; }
+    12.5%, 18.75% { translate: 52.45cqw 55cqw; rotate: -162deg; }
+    25%, 31.25% { translate: 65.992cqw 67.083cqw; rotate: -162deg; }
+    37.5%, 43.75% { translate: 66.008cqw 66.533cqw; rotate: -162deg; }
+    50%, 56.25% { translate: 66.008cqw 67.092cqw; rotate: -162deg; }
+    62.5%, 68.75% { translate: 66.008cqw 66.533cqw; rotate: -162deg; }
+    75%, 81.25% { translate: 65.992cqw 67.083cqw; rotate: -162deg; }
+    87.5%, 93.75% { translate: 52.45cqw 55cqw; rotate: -162deg; }
+    100% { translate: 53.675cqw 53.808cqw; rotate: -179.93deg; }
+}
+
+@keyframes hk-logo-stem {
+    0%, 6.25% { height: 7.833cqw; }
+    12.5%, 18.75% { height: 7.833cqw; }
+    25%, 31.25% { height: 7.833cqw; }
+    37.5%, 43.75% { height: 40.25cqw; }
+    50%, 56.25% { height: 40.25cqw; }
+    62.5%, 68.75% { height: 40.25cqw; }
+    75%, 81.25% { height: 7.833cqw; }
+    87.5%, 93.75% { height: 7.833cqw; }
+    100% { height: 7.833cqw; }
+}
+
+@keyframes hk-logo-bar {
+    0%, 6.25% { top: 4.333cqw; width: 1.525cqw; height: 7.667cqw; }
+    12.5%, 18.75% { top: 4.333cqw; width: 1.525cqw; height: 7.667cqw; }
+    25%, 31.25% { top: 4.333cqw; width: 1.525cqw; height: 7.667cqw; }
+    37.5%, 43.75% { top: 22.25cqw; width: 7.833cqw; height: 7.667cqw; }
+    50%, 56.25% { top: 22.25cqw; width: 7.833cqw; height: 25.683cqw; }
+    62.5%, 68.75% { top: 22.25cqw; width: 7.833cqw; height: 7.667cqw; }
+    75%, 81.25% { top: 4.333cqw; width: 1.525cqw; height: 7.667cqw; }
+    87.5%, 93.75% { top: 4.333cqw; width: 1.525cqw; height: 7.667cqw; }
+    100% { top: 4.333cqw; width: 1.525cqw; height: 7.667cqw; }
 }
 
 //------------------------------------------------------------------------------
@@ -715,4 +860,10 @@ footer#bottom {
 @media (prefers-reduced-motion: reduce) {
     header#top .btn_cta::before,
     .o_header_mobile .btn_cta::before { animation: none; }
+
+    // Hold the full logo (F4) in the squares art
+    .hk-logo-anim * {
+        animation-play-state: paused !important;
+        animation-delay: -1.8s !important;
+    }
 }

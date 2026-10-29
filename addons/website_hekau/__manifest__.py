@@ -5,23 +5,25 @@
 Implements the "Hekau WIP" Figma design on Odoo 20 Website:
 
 * Hekau colour palette and DM Sans / Montserrat typography (also selectable in the website builder)
-* Floating navigation bar, "Let's Talk" call to action and the fat footer
+* Floating navigation bar, "Book a free audit" call to action and the fat footer
 * Every page section is a website builder block (Blocks > Hekau): hero, partners,
   why-partner, stats, services, domains, projects, testimonials and call-to-action,
   each with its Figma desktop and mobile layout and animations
-* Pages assembled from those blocks: Home, Services and the six service pages,
-  About Us, Projects and a sample case study
+* Pages assembled from those blocks: Home, Services and the eight service pages,
+  About Us, How we work, Projects and nineteen case studies, Terms and Conditions
+* Contact page with an audit request form that creates a CRM lead (website_crm),
+  thank-you page with the System Disconnection Checklist, privacy policy
 * Blog listing (website_blog) in the Hekau design, with sample posts
 
 Page content stays editable in the website builder, and new pages can be built by
 dragging Hekau blocks.
     """,
-    'version': '20.0.4.0.0',
+    'version': '20.0.5.4.0',
     'category': 'Website/Website',
     'author': 'Hekau Business Solutions',
-    'website': 'https://hekau.com',
+    'website': 'https://www.hekautech.com',
     'license': 'LGPL-3',
-    'depends': ['website', 'website_blog'],
+    'depends': ['website', 'website_blog', 'website_crm'],
     'data': [
         'views/layout.xml',
         # Blocks (one template per section, registered under Blocks > Hekau)
@@ -53,6 +55,8 @@ dragging Hekau blocks.
         'views/pages/services.xml',
         'views/pages/about.xml',
         'views/pages/projects.xml',
+        'views/pages/how_we_work.xml',
+        'views/pages/odoo_pages.xml',
         # Blog (website_blog) listing in the Hekau design, with sample posts
         'views/blog.xml',
         'data/blog_data.xml',
@@ -73,6 +77,8 @@ dragging Hekau blocks.
             'website_hekau/static/src/js/process.js',
             'website_hekau/static/src/js/testimonials.js',
             'website_hekau/static/src/js/project_filter.js',
+            'website_hekau/static/src/js/booking.js',
+            'website_hekau/static/src/js/menu_active.js',
         ],
     },
     'post_init_hook': 'post_init_hook',

@@ -184,3 +184,69 @@
         .hk-scroll-indicator { margin-top: 16px; }
     }
 }
+
+.s_hk_testimonials .hk-quote header img { object-fit: cover; }
+
+// Initials in place of a photo
+.s_hk_testimonials .hk-quote-initials {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $hk-blue;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: .5px;
+}
+
+// One quote: the card spans the box; no arrows or swipe indicator.
+.s_hk_testimonials.hk-testimonials-single {
+    .hk-quotes { overflow: visible; }
+
+    .hk-quote {
+        flex: 1 1 auto;
+        width: auto;
+        max-width: 1080px;
+        min-height: 0;
+
+        blockquote {
+            font-size: 18px;
+            line-height: 29px;
+        }
+    }
+
+    .hk-quotes-nav,
+    .hk-scroll-indicator { display: none !important; }
+
+    @include hk-mobile {
+        .hk-testimonials-box { padding-bottom: 24px; }
+
+        .hk-quote {
+            width: 100%;
+
+            blockquote {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+// Two quotes: side by side on desktop (no arrows); swipe on mobile.
+.s_hk_testimonials.hk-testimonials-pair {
+    @include hk-desktop {
+        .hk-quotes { overflow: visible; }
+
+        .hk-quote {
+            flex: 1 1 0;
+            width: auto;
+            min-width: 0;
+        }
+
+        .hk-quotes-nav { display: none !important; }
+    }
+}

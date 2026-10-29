@@ -44,6 +44,12 @@
         color: $hk-white;
         white-space: nowrap;
         list-style: none;
+
+        // Pills on the right keep their right edge (Figma) and grow leftwards
+        &.hk-domain-end {
+            left: auto;
+            right: var(--r, 0);
+        }
     }
 
     // Figma mobile: 300px rings, pills scaled to 31px / 12.4px text.
@@ -71,6 +77,11 @@
             padding: 0 24.8px;
             border-radius: 24.8px;
             font-size: 12.4px;
+
+            &.hk-domain-end {
+                left: auto;
+                right: var(--mr, 0);
+            }
         }
     }
 

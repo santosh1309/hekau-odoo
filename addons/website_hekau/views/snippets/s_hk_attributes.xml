@@ -8,21 +8,21 @@
             <div class="hk-container hk-container-wide">
                 <div class="hk-panel hk-attr-panel">
                     <div class="hk-attr-head">
-                        <span class="hk-badge">Core Attributes</span>
-                        <h2 class="hk-attr-title">Web application development doesn’t end with designing a functional interface.</h2>
+                        <span class="hk-badge">Our standard</span>
+                        <h2 class="hk-attr-title">What every application we build has to be</h2>
                     </div>
-                    <p class="hk-attr-lead">Your application has to be:</p>
+                    <p class="hk-attr-lead">Working features are the minimum. Your application also has to be:</p>
                     <div class="hk-attr-diagram">
                         <img class="hk-attr-art hk-deco" src="/website_hekau/static/src/img/svc/attributes_art.svg" alt="" width="923" height="564"/>
                         <img class="hk-attr-rings hk-deco" src="/website_hekau/static/src/img/svc/attributes_rings.svg" alt="" width="360" height="360"/>
                         <ul class="hk-attr-list">
-                            <li>Scalable</li>
-                            <li>Fast-loading</li>
-                            <li>Business App Integrated</li>
-                            <li>Cross-Platform Responsive</li>
-                            <li>Inclusive &amp; Accessible</li>
-                            <li>SEO Friendly</li>
-                            <li>Secure Compliant</li>
+                            <li>Fast, even at peak traffic</li>
+                            <li>Secure, with role-based access</li>
+                            <li>Connected to your ERP and CRM</li>
+                            <li>Responsive on every device</li>
+                            <li>Accessible</li>
+                            <li>Easy to find on Google</li>
+                            <li>Easy to maintain and hand over</li>
                         </ul>
                     </div>
                 </div>

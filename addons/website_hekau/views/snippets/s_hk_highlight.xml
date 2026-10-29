@@ -9,26 +9,26 @@
             <div class="hk-container hk-container-wide">
                 <div class="hk-highlight-panel">
                     <div class="hk-highlight-copy">
-                        <h2 class="hk-highlight-title">Feature-packed custom mobile app designs. Build apps your customers like using, whether they are iOS or Android users.</h2>
-                        <a href="/contactus" class="hk-btn hk-btn-primary hk-highlight-btn">Become an App Owner</a>
-                        <p class="hk-highlight-note"><img class="hk-deco" src="/website_hekau/static/src/img/icons/doodle_arrow.svg" alt="" width="60" height="54"/><span>Start your journey today.</span></p>
+                        <h2 class="hk-highlight-title">Mobile apps that replace paper, phone calls and re-typed data.</h2>
+                        <a href="/book-a-call" class="hk-btn hk-btn-primary hk-highlight-btn">Book a free systems audit</a>
+                        <p class="hk-highlight-note"><img class="hk-deco" src="/website_hekau/static/src/img/icons/doodle_arrow.svg" alt="" width="60" height="54"/><span>Built for Android and iOS.</span></p>
                     </div>
                     <div class="hk-highlight-tiles">
                         <div class="hk-highlight-tile">
-                            <p class="hk-tile-value">89%</p>
-                            <p class="hk-tile-label">Of smartphone users’ time is spent on mobile apps</p>
+                            <p class="hk-tile-value">7 → 2<small>days</small></p>
+                            <p class="hk-tile-label">CSR campaign turnaround with the Inali Foundation app</p>
                         </div>
                         <div class="hk-highlight-tile">
-                            <p class="hk-tile-value">$35+<small>Billion</small></p>
-                            <p class="hk-tile-label">Is spent on and via mobile apps per quarter globally</p>
+                            <p class="hk-tile-value">1<small>login</small></p>
+                            <p class="hk-tile-label">Across web and mobile for Ragya’s listeners</p>
                         </div>
                         <div class="hk-highlight-tile">
-                            <p class="hk-tile-value">66%</p>
-                            <p class="hk-tile-label">Of business orders come from mobile apps</p>
+                            <p class="hk-tile-value">Real-time</p>
+                            <p class="hk-tile-label">Machine test results captured on the shop floor</p>
                         </div>
                         <div class="hk-highlight-tile">
-                            <p class="hk-tile-value">99%</p>
-                            <p class="hk-tile-label">Of mobile app revenues come from free apps</p>
+                            <p class="hk-tile-value">NFC</p>
+                            <p class="hk-tile-label">Collar tags that help volunteers find and care for street dogs</p>
                         </div>
                     </div>
                 </div>

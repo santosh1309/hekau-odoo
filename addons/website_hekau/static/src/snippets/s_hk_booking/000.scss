@@ -1,0 +1,76 @@
+// Hekau Booking — Calendly's booking calendar (js/booking.js) on a white card,
+// as Calendly draws it; the link inside is the fallback until it loads.
+
+.s_hk_booking {
+    .hk-booking-embed {
+        position: relative;
+        max-width: 1060px;
+        height: 720px;
+        margin: 44px auto 0;
+        overflow: hidden;
+        border-radius: 16px;
+        background-color: #FFFFFF;
+
+        // Calendly's iframe fills the card, above its loading dots (Calendly's
+        // own widget.css only styles them inside .calendly-inline-widget).
+        iframe {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .calendly-spinner {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            pointer-events: none;
+
+            > div {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $hk-blue;
+                animation: hk-booking-dot 1.4s ease-in-out infinite both;
+            }
+
+            > div:nth-child(1) { animation-delay: -.32s; }
+            > div:nth-child(2) { animation-delay: -.16s; }
+        }
+    }
+
+    .hk-booking-fallback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        height: 100%;
+        margin: 0;
+        padding: 24px;
+        font-size: 15px;
+        color: #4A4A5B;
+        text-align: center;
+
+        a { color: $hk-blue; text-decoration: underline; }
+    }
+
+    @include hk-mobile {
+        .hk-container { padding-inline: 12px; }
+
+        .hk-booking-embed {
+            height: 980px;
+            margin-top: 28px;
+            border-radius: 12px;
+        }
+    }
+}
+
+@keyframes hk-booking-dot {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}

@@ -8,10 +8,13 @@
             <div class="hk-container">
                 <div class="hk-cta-box">
                     <div class="hk-cta-copy">
-                        <h2>Got An Idea?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <h2>Where is your business losing time?</h2>
+                        <p>Book a free systems audit. We’ll map where your tools and teams disconnect, and tell you what’s worth fixing first.</p>
                     </div>
-                    <a href="/contactus" class="hk-btn hk-btn-light">Book an Appointment</a>
+                    <div class="hk-cta-actions">
+                        <a href="/book-a-call" class="hk-btn hk-btn-light">Book a free systems audit</a>
+                        <a href="/website_hekau/static/src/files/hekau-system-disconnection-checklist.pdf" class="hk-cta-link" download="">Or download the System Disconnection Checklist</a>
+                    </div>
                 </div>
             </div>
         </section>

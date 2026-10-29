@@ -3,6 +3,8 @@
 
 .s_hk_attributes {
     .hk-attr-panel {
+        --hk-attr-scale: 1;
+        container-type: inline-size; // the pill list's width follows the panel's
         overflow: hidden;
         max-width: 1100px;
         margin: 0 auto;
@@ -66,28 +68,45 @@
 
     .hk-attr-rings { display: none; }
 
+    // Pills on 80px rows centred on the hub line (the art's connectors end at
+    // their centres). All pills share the width of the longest text (300px as
+    // in Figma, up to the panel's inner edge), then text wraps; a two-line
+    // pill stays centred on its row.
     .hk-attr-list {
         position: absolute;
         left: 583px;
         top: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 36px;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr);
+        grid-auto-rows: 44px;
+        row-gap: 36px;
+        align-content: center;
+        width: max-content;
+        // Up to the panel's inner edge: 1020 - 583 = 437px at full size
+        max-width: calc(100cqw / var(--hk-attr-scale) - 583px);
         margin: 0;
         padding: 0;
         list-style: none;
 
         li {
             @extend .hk-pill;
-            width: 300px;
+            align-self: center;
+            height: auto;
+            min-height: 44px;
+            padding: 10px 24px;
+            text-align: center;
+            white-space: normal;
         }
     }
 
     @include media-breakpoint-down(xl) {
+        .hk-attr-panel { --hk-attr-scale: .9; }
         .hk-attr-diagram { transform: scale(.9); transform-origin: 0 0; margin-bottom: -52px; }
     }
 
     @include media-breakpoint-down(lg) {
+        .hk-attr-panel { --hk-attr-scale: .7; }
         .hk-attr-diagram { transform: scale(.7); margin-bottom: -157px; }
     }
 
@@ -137,12 +156,18 @@
         .hk-attr-list {
             position: static;
             order: 4;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
+            width: auto;
+            min-width: 240px;
+            max-width: 100%;
             margin-top: 20px;
 
+            // Equal widths, as in Figma (240px there; the longest item here)
             li {
-                width: 240px;
-                padding: 0 16px;
+                align-self: stretch;
+                padding: 10px 16px;
                 font-size: 15px;
             }
         }

@@ -7,23 +7,23 @@
         <section class="s_hk_features hk-section" data-name="Hekau Features">
             <div class="hk-container">
                 <div class="hk-section-head hk-glow-top">
-                    <h2 class="hk-h2 hk-h2-sm">Growth Partner for Startups and SMBs</h2>
+                    <h2 class="hk-h2 hk-h2-sm">Why growing companies implement with Hekau</h2>
                 </div>
                 <div class="hk-feature-grid">
                     <div class="hk-feature-card">
-                        <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_web_1.svg" alt="" width="44" height="44"/>
-                        <h3 class="hk-feature-title" style="--hk-title-w: 200px;">Scalability For Expanding Startups</h3>
-                        <p class="hk-feature-text">Woverload, features that don’t measure up, frustrated employees, and customers. Hekau’s scalable web apps automatically adjust to your current and future business needs. Limited scalability means you lose more customers.</p>
+                        <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_cloud_1.svg" alt="" width="44" height="44"/>
+                        <h3 class="hk-feature-title">The right platform, chosen honestly</h3>
+                        <p class="hk-feature-text">We start from how you work, not from a product. If the ERP, CRM or CMS you already pay for can do the job, we configure it before suggesting anything new, and use standard features before custom code, which keeps upgrades cheap.</p>
                     </div>
                     <div class="hk-feature-card">
-                        <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_web_2.svg" alt="" width="44" height="44"/>
-                        <h3 class="hk-feature-title" style="--hk-title-w: 280px;">Responsiveness SMBs Love</h3>
-                        <p class="hk-feature-text">Device and browser type affect the performance of web applications. Hekau gets this. Our team builds responsive web applications with devices and screens of all types and sizes in mind. This leads to minimum lag and fast-loading across all devices.</p>
+                        <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_bpa_2.svg" alt="" width="44" height="44"/>
+                        <h3 class="hk-feature-title">Your data comes with you</h3>
+                        <p class="hk-feature-text">Customers, products, open orders, contacts and website content move across before go-live, checked against your old system, so day one starts with real numbers.</p>
                     </div>
                     <div class="hk-feature-card">
                         <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_web_3.svg" alt="" width="44" height="44"/>
-                        <h3 class="hk-feature-title">Customized Web Apps For Your Industry</h3>
-                        <p class="hk-feature-text">Content platforms need features such as advanced text formatting. Corporate web apps benefit from role-based access for improved security. Hekau builds custom web solutions you can use to connect to CRMs, manage inventory, or generate support tickets.</p>
+                        <h3 class="hk-feature-title">Set up for US operations</h3>
+                        <p class="hk-feature-text">US chart of accounts, sales tax for the states you sell in, USD with multi-currency where you need it, and month-end reports your CPA can close from.</p>
                     </div>
                 </div>
             </div>

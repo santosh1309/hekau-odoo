@@ -1,16 +1,22 @@
 // Hekau Services — Figma "Frame 1594" + "Component 527" (Default/Hover).
+// Eight cards: three per row (two below xl), the last row centred.
 
 .s_hk_services {
     .hk-service-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 340px);
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
-        margin-top: 60px;
+        max-width: 3 * 340px + 2 * 16px;
+        margin: 60px auto 0;
+
+        > .hk-service-card { flex: 0 0 340px; }
     }
 
+    .hk-section-head .hk-lead { max-width: 640px; }
+
     @include media-breakpoint-down(xl) {
-        .hk-service-grid { grid-template-columns: repeat(2, minmax(0, 340px)); }
+        .hk-service-grid { max-width: 2 * 340px + 16px; }
     }
 
     // Figma mobile: heading at 1.4 line height, cards 340x300, 24px apart.
@@ -26,9 +32,16 @@
         .hk-section-head .hk-lead { font-weight: 400; }
 
         .hk-service-grid {
-            grid-template-columns: minmax(0, 340px);
+            flex-direction: column;
+            align-items: center;
             gap: 24px;
             margin-top: 32px;
+
+            > .hk-service-card {
+                flex: none;
+                width: 100%;
+                max-width: 340px;
+            }
         }
     }
 }
@@ -119,11 +132,14 @@
         justify-content: space-between;
         transition: transform $ease;
 
-        span:first-child {
+        .hk-service-projects {
             font-weight: 600;
             font-size: 15px;
             line-height: 1.45;
             color: #FFFFFF;
+            text-decoration: none;
+
+            &:hover { text-decoration: underline; }
         }
     }
 
@@ -227,7 +243,7 @@
                 top: 300px;
                 justify-content: flex-end;
 
-                span:first-child { display: none; }
+                .hk-service-projects { display: none; }
             }
 
             .hk-service-more {
@@ -239,6 +255,13 @@
                 color: transparent;
                 background: #FEFEFE url("#{$hk-img-from-snippet}/icons/arrow_right_16.svg") center / 20px 20px no-repeat;
                 transition: transform .3s $hk-ease-out-cubic;
+            }
+
+            // The text stays put on hover (the regular card slides it up to
+            // make room for its button row, which would run it into the title).
+            &:hover, &:focus-within {
+                .hk-service-text,
+                .hk-service-actions { transform: none; }
             }
 
             &:hover .hk-service-more { transform: translateX(4px); }

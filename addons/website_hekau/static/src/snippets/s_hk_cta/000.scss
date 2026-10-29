@@ -64,6 +64,24 @@
         line-height: normal;
     }
 
+    .hk-cta-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    // "Or download the System Disconnection Checklist"
+    .hk-cta-link {
+        font-size: 15px;
+        line-height: 21px;
+        color: #FCFCFC;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+
+        &:hover, &:focus-visible { color: $hk-yellow; }
+    }
+
     // Figma mobile: edge-to-edge 240px band, 24px title, 200x40 button.
     @include hk-mobile {
         .hk-container { padding-inline: 0; }
@@ -92,5 +110,7 @@
             min-width: 200px;
             font-size: 15px;
         }
+
+        .hk-cta-link { font-size: 14px; }
     }
 }

@@ -59,7 +59,22 @@
     background-color: $hk-surface;
     @include hk-inner-stroke($hk-line, 16px);
 
+    .hk-project-media {
+        display: block;
+        overflow: hidden;
+
+        &:hover .hk-project-img { transform: scale(1.03); }
+    }
+
+    h3 a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover { color: $hk-yellow; }
+    }
+
     .hk-project-img {
+        transition: transform .4s $hk-ease-out-cubic;
         display: block;
         width: 100%;
         height: 220px;

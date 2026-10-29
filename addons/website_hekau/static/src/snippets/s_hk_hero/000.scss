@@ -8,6 +8,7 @@
 .s_hk_service_hero,
 .s_hk_page_hero,
 .s_hk_case_hero,
+.s_hk_contact,
 .hk-blog-hero {
     .hk-hero-art {
         position: absolute;
@@ -132,9 +133,9 @@
     }
 
     .hk-btn-quote {
-        width: 160px;
+        width: auto;
         height: 40px;
-        padding: 0;
+        padding: 0 28px;
         border: 1px solid $hk-blue-border;
         border-radius: 24px;
         background-color: $hk-blue;
@@ -148,6 +149,18 @@
             background-color: lighten($hk-blue, 6%);
             box-shadow: 0 6px 24px rgba($hk-blue, .5);
         }
+    }
+
+    // "Or download the System Disconnection Checklist" under the button
+    .hk-hero-link {
+        margin-top: -16px; // 16px below the button
+        font-size: 15px;
+        line-height: 21px;
+        color: $hk-muted;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+
+        &:hover, &:focus-visible { color: $hk-yellow; }
     }
 
     @include media-breakpoint-down(lg) {
@@ -184,6 +197,11 @@
             font-size: 15px;
             line-height: 21px;
             letter-spacing: 0;
+        }
+
+        .hk-hero-link {
+            margin-top: -28px;
+            font-size: 14px;
         }
     }
 }

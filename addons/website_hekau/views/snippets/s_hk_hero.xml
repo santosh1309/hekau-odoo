@@ -14,9 +14,10 @@
                 <span class="hk-hero-fade"/>
             </div>
             <div class="hk-hero-content">
-                <h1>Custom Technology That Turns <span class="hk-gradient-text">Big Brands</span> <br/>Into Your Competitors</h1>
-                <p class="hk-hero-text">Enterprise-grade technology shouldn’t be out of reach for SMBs and startups. At Hekau, we’re changing that with industry-specific, custom IT solutions.</p>
-                <a href="/contactus" class="hk-btn hk-btn-quote">Quote Us</a>
+                <h1>Fix the <span class="hk-gradient-text">fragmented systems</span> <br/>slowing down your growth</h1>
+                <p class="hk-hero-text">Most $2M–$15M companies don’t have a software problem. They have a fragmented systems problem. We connect your ERP, CRM, workflows and data, so decisions run on today’s numbers, not last week’s spreadsheet.</p>
+                <a href="/book-a-call" class="hk-btn hk-btn-quote">Book a free systems audit</a>
+                <a href="/website_hekau/static/src/files/hekau-system-disconnection-checklist.pdf" class="hk-hero-link" download="">Or download the System Disconnection Checklist</a>
             </div>
         </section>
     </template>

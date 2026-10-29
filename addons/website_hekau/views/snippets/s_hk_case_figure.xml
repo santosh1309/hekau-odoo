@@ -7,8 +7,8 @@
         <section class="s_hk_case_figure hk-section" data-name="Hekau Case Image">
             <div class="hk-container hk-container-case">
                 <figure class="hk-case-figure">
-                    <img src="/website_hekau/static/src/img/projects/placeholder.webp" alt="" width="1226" height="685" loading="lazy"/>
-                    <figcaption>There was a clear need for a shared foundation. Something that could bring consistency, reduce back-and-forth, and support the pace of growth.</figcaption>
+                    <img src="/website_hekau/static/src/img/projects/the_arc.webp" alt="" width="1226" height="685" loading="lazy"/>
+                    <figcaption>A caption for the picture.</figcaption>
                 </figure>
             </div>
         </section>

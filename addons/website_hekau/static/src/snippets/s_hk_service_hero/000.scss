@@ -92,6 +92,8 @@
     }
 
     .hk-eyebrow-label {
+        max-width: 440px;
+        text-wrap: balance;
         font-family: "Inter", "DM Sans", sans-serif;
         font-weight: 700;
         font-size: 14px;
@@ -102,9 +104,10 @@
     }
 
     // Title: Inter Semi Bold 40px, gold to white from left to right
-    // (Figma paint: #FFD9A4 -> #FFC066 -> #F0A02F -> #F2F0F5 at 60%).
+    // (Figma paint: #FFD9A4 -> #FFC066 -> #F0A02F -> #F2F0F5 at 60%). The
+    // gradient runs along each line of a title that wraps.
     .hk-service-title {
-        display: inline-block;
+        display: block;
         margin: 24px 0 0;
         font-family: "Inter", "DM Sans", sans-serif;
         font-weight: 600;
@@ -112,10 +115,16 @@
         line-height: 62.4px;
         letter-spacing: -0.5px;
         color: #FFD9A4;
+        text-wrap: balance;
+    }
+
+    .hk-service-title-text {
         background: linear-gradient(90deg, #FFD9A4 0%, #FFC066 37.5%, #F0A02F 50%, #F2F0F5 59.7%, #F2F0F5 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
     }
 
     .hk-service-sub {
@@ -138,6 +147,18 @@
 
     .hk-btn-hero { margin-top: 24px; }
 
+    // Text link under the button (thank-you page)
+    .hk-hero-link {
+        margin-top: 16px;
+        font-size: 15px;
+        line-height: 21px;
+        color: $hk-muted;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+
+        &:hover, &:focus-visible { color: $hk-yellow; }
+    }
+
     // Figma mobile: content from y=176, 36px title on two lines, 15px text,
     // 44px above the button.
     @include hk-mobile {
@@ -152,6 +173,15 @@
         .hk-eyebrow-icons { gap: 12px; }
 
         .hk-eyebrow img { width: auto; height: 28px; }
+
+        // Tool names: no side lines, so they fit on one or two lines
+        .hk-eyebrow:has(.hk-eyebrow-label) .hk-eyebrow-line { display: none; }
+
+        .hk-eyebrow-label {
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: .6px;
+        }
         .hk-eyebrow img[width="40"] { height: 30px; }
 
         .hk-eyebrow-line {
@@ -163,14 +193,9 @@
         }
 
         .hk-service-title {
-            display: block;
             margin-top: 8px;
-            font-size: 36px;
-            line-height: var(--hk-title-lh-m, 54px);
-            // Figma mobile: first line gold, second line white
-            background: linear-gradient(180deg, #FFD9A4 0, #FFC066 50%, #F2F0F5 50%);
-            -webkit-background-clip: text;
-            background-clip: text;
+            font-size: 32px;
+            line-height: var(--hk-title-lh-m, 46px);
         }
 
         .hk-service-hero-content { padding-inline: 0; }

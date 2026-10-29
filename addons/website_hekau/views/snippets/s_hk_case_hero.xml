@@ -13,22 +13,22 @@
                 <span class="hk-hero-fade"/>
             </div>
             <div class="hk-container hk-container-case">
-                <h1 class="hk-case-title">Bringing Order to Speed: Web Development for The Arc</h1>
+                <h1 class="hk-case-title">The Arc: rescued mid-build, now 50,000+ monthly visitors</h1>
                 <div class="hk-case-cover">
-                    <img src="/website_hekau/static/src/img/projects/the_arc.webp" alt="Bringing Order to Speed: Web Development for The Arc" width="1226" height="749"/>
+                    <img src="/website_hekau/static/src/img/projects/the_arc.webp" alt="The Arc: rescued mid-build, now 50,000+ monthly visitors" width="1226" height="749"/>
                 </div>
                 <div class="hk-case-meta">
                     <div class="hk-case-meta-item">
-                        <span class="hk-badge">Project</span>
-                        <p class="hk-case-meta-value">Web Application Development</p>
+                        <span class="hk-badge">Service</span>
+                        <p class="hk-case-meta-value">Project Rescue, Custom Web Apps &amp; Portals</p>
                     </div>
                     <div class="hk-case-meta-item">
-                        <span class="hk-badge">Client Name</span>
-                        <p class="hk-case-meta-value">The Arc : copy, copy, copy</p>
+                        <span class="hk-badge">Client</span>
+                        <p class="hk-case-meta-value">The Arc</p>
                     </div>
                     <div class="hk-case-meta-item">
-                        <span class="hk-badge">Team Members</span>
-                        <p class="hk-case-meta-value">The Arc, copy, copy copu</p>
+                        <span class="hk-badge">Industry</span>
+                        <p class="hk-case-meta-value">Media</p>
                     </div>
                 </div>
             </div>

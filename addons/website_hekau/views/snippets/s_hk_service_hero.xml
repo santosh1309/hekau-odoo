@@ -16,13 +16,13 @@
             <div class="hk-container hk-service-hero-content">
                 <div class="hk-eyebrow">
                     <span class="hk-eyebrow-line hk-deco"/>
-                    <span class="hk-eyebrow-icons"><img src="/website_hekau/static/src/img/tech/kotlin.webp" alt="Kotlin" width="36" height="36"/><img src="/website_hekau/static/src/img/tech/flutter.webp" alt="Flutter" width="36" height="36"/><img src="/website_hekau/static/src/img/tech/react.webp" alt="React" width="36" height="36"/><img src="/website_hekau/static/src/img/tech/swift.webp" alt="Swift" width="36" height="36"/><img src="/website_hekau/static/src/img/tech/firebase.webp" alt="Database" width="36" height="36"/></span>
+                    <span class="hk-eyebrow-label">Odoo · HubSpot · WordPress · Next.js · APIs</span>
                     <span class="hk-eyebrow-line hk-eyebrow-line-end hk-deco"/>
                 </div>
-                <h1 class="hk-service-title">Web Application Development</h1>
-                <p class="hk-service-sub">Adjusts to Your Team</p>
-                <p class="hk-service-text">Hekau avoids this by using 12+ years of experience and the latest technologies to create unique. Poor mobile app development results in budget waste, bugs, and battery drain.</p>
-                <a href="/contactus" class="hk-btn hk-btn-hero">Book a Free Consultation</a>
+                <h1 class="hk-service-title"><span class="hk-service-title-text">ERP, CRM &amp; CMS Implementation</span></h1>
+                <p class="hk-service-sub">One source of truth for the whole business</p>
+                <p class="hk-service-text">Operations, sales and your website on systems that share the same data. We implement and connect ERP, CRM and content management platforms, so orders, customers and content stop living in separate spreadsheets.</p>
+                <a href="/book-a-call" class="hk-btn hk-btn-hero">Book a free systems audit</a>
             </div>
         </section>
     </template>

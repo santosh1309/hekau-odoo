@@ -22,11 +22,11 @@
             <div class="hk-container hk-page-hero-row">
                 <div class="hk-page-hero-copy">
                     <span class="hk-badge">Why Hekau?</span>
-                    <h1 class="hk-page-hero-title">Hekau is built on a <br class="hk-only-mobile"/>simple idea:</h1>
+                    <h1 class="hk-page-hero-title">Built for companies that <br class="hk-only-mobile"/>outgrew their tools</h1>
                     <div class="hk-page-hero-text">
-                        <p>Professional-grade technology should be accessible to everyone.</p>
-                        <p>Small businesses and startups shouldn’t have to spend all their time fixing operational inefficiencies. Not when the time can be delegated to optimizing products and serving customers.</p>
-                        <p>At Hekau, we build custom, innovative, and industry-specific solutions molded to your business needs. Our solutions strike a unique balance of creativity, functionality, and cost-effectiveness.</p>
+                        <p>Most growing companies don’t wake up one day and decide they need custom software. A process gets hard to manage. Teams build workarounds. Information ends up in five places, and decisions start waiting on follow-ups.</p>
+                        <p>That’s the moment we’re built for. Hekau is a Pune-based technology partner for $2M–$15M companies in India and abroad. We connect ERP, CRM, workflows and data, so the whole business runs on one version of the truth.</p>
+                        <p>We rarely start by asking what software to build. We start with what’s slowing the business down.</p>
                     </div>
                 </div>
                 <img class="hk-page-hero-img" src="/website_hekau/static/src/img/about/hero_icon.webp" alt="" width="357" height="378"/>

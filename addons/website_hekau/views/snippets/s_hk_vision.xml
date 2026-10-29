@@ -10,15 +10,18 @@
                     <h2 class="hk-h2 hk-h2-sm hk-h2-bold hk-h2-dm">Our Vision &amp; Mission</h2>
                 </div>
                 <div class="hk-vision-row">
-                    <img class="hk-vision-art" src="/website_hekau/static/src/img/about/squares.svg" alt="" width="456" height="456" loading="lazy"/>
+                    <div class="hk-vision-art hk-squares-art hk-deco o_not_editable" aria-hidden="true">
+                        <img src="/website_hekau/static/src/img/about/squares_frame.svg" alt="" width="456" height="456" loading="lazy"/>
+                        <span class="hk-logo-anim"><span class="hk-logo-arm-1"><span class="hk-logo-stem"/><span class="hk-logo-bar"/></span><span class="hk-logo-arm-2"><span class="hk-logo-stem"/><span class="hk-logo-bar"/></span></span>
+                    </div>
                     <div class="hk-vision-cards">
                         <div class="hk-vision-card">
                             <h3 class="hk-vision-title"><img src="/website_hekau/static/src/img/icons/vision.svg" alt="" width="40" height="40"/>Our Vision</h3>
-                            <p class="hk-vision-text">To be the #1 technology partner for startups and small businesses through innovative, tailored solutions, dedicated support, and exceptional service.</p>
+                            <p class="hk-vision-text">To be the technology partner growing companies trust to run on one connected system.</p>
                         </div>
                         <div class="hk-vision-card">
                             <h3 class="hk-vision-title"><img src="/website_hekau/static/src/img/icons/mission.svg" alt="" width="40" height="40"/>Our Mission</h3>
-                            <p class="hk-vision-text">To empower emerging businesses to reach new heights by building enterprise-grade technology that enables them to compete with industry giants.</p>
+                            <p class="hk-vision-text">To help businesses grow by using technology in a smarter, more strategic way, with systems that are scalable, reliable and built for each client, and that give them a clear operational and competitive advantage.</p>
                         </div>
                     </div>
                 </div>

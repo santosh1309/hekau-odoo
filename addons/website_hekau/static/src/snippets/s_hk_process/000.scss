@@ -60,6 +60,28 @@
         color: #DFDFDF;
     }
 
+    // Narrower screens (no Figma frame): two equal columns, then the heading
+    // above the steps.
+    @include media-breakpoint-down(xl) {
+        .hk-process-row {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 40px;
+            margin-right: 0;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-process-row {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 44px;
+        }
+
+        .hk-process-head {
+            position: relative;
+            top: auto;
+        }
+    }
+
     // Figma mobile: centred heading, steps below, 44px apart.
     @include hk-mobile {
         --hk-process-top: 0px;

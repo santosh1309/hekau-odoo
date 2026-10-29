@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Domains we serve (Figma "Frame 5022"): concentric rings with industry
+    <!-- Industries we know (Figma "Frame 5022"): concentric rings with industry
          pills placed around them. Each pill carries its desktop (x/y) and
          mobile (mx/my) position from the Figma frames. -->
     <template id="s_hk_domains" name="Hekau Domains">
         <section id="domains" class="s_hk_domains hk-section" data-name="Hekau Domains">
             <div class="hk-container hk-container-wide">
                 <div class="hk-section-head hk-glow-top">
-                    <h2 class="hk-h2">Domains We Serve</h2>
-                    <p class="hk-lead hk-domains-lead hk-only-desktop">Every industry has its distinctive set of challenges. Hekau solves them by combining cutting-edge technology with unique ideas.</p>
-                    <p class="hk-lead hk-domains-lead hk-only-mobile">Hekau solves distinctive challenges by combining cutting-edge technology with unique ideas.</p>
+                    <h2 class="hk-h2">Industries we know</h2>
+                    <p class="hk-lead hk-domains-lead hk-only-desktop">Different industries, same pattern: the work outgrows the tools. These are the sectors where we’ve already fixed it.</p>
+                    <p class="hk-lead hk-domains-lead hk-only-mobile">Sectors where we’ve already fixed fragmented systems.</p>
                 </div>
                 <div class="hk-domains-map">
                     <img class="hk-domains-rings hk-deco" src="/website_hekau/static/src/img/domains_rings.svg" alt="" width="400" height="400" loading="lazy"/>
                     <ul>
-                        <li class="hk-domain" style="--x: 147px; --y: 4px; --mx: 114px; --my: 0px;">Finance and Banking</li>
-                        <li class="hk-domain" style="--x: 372px; --y: 79px; --mx: 249px; --my: 68px;">Non-profits</li>
+                        <li class="hk-domain" style="--x: 147px; --y: 4px; --mx: 114px; --my: 0px;">B2B Services</li>
+                        <li class="hk-domain hk-domain-end" style="--r: 44px; --y: 79px; --mr: 0px; --my: 68px;">Non-Profits &amp; CSR</li>
                         <li class="hk-domain" style="--x: 24px; --y: 113px; --mx: 9px; --my: 65px;">Manufacturing</li>
-                        <li class="hk-domain" style="--x: 402px; --y: 189px; --mx: 238px; --my: 154px;">E-Commerce</li>
-                        <li class="hk-domain" style="--x: 0px; --y: 228px; --mx: 0px; --my: 154px;">Healthcare</li>
-                        <li class="hk-domain" style="--x: 336px; --y: 324px; --mx: 211px; --my: 218px;">Non-profits</li>
-                        <li class="hk-domain" style="--x: 137px; --y: 333px; --mx: 56px; --my: 225px;">Media</li>
+                        <li class="hk-domain hk-domain-end" style="--r: 0px; --y: 189px; --mr: 0px; --my: 154px;">E-Commerce &amp; D2C</li>
+                        <li class="hk-domain" style="--x: 0px; --y: 228px; --mx: 0px; --my: 154px;">Healthcare Services</li>
+                        <li class="hk-domain" style="--x: 137px; --y: 333px; --mx: 56px; --my: 225px;">Media &amp; Publishing</li>
                     </ul>
                 </div>
             </div>

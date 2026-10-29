@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Key figures (Figma "Frame 5027"). The Figma mobile frame leaves this
-         section out, so it is hidden below 768px. -->
+    <!-- Key figures (Figma "Frame 5027"), each from a case study. The Figma
+         mobile frame leaves this section out, so it is hidden below 768px. -->
     <template id="s_hk_stats" name="Hekau Stats">
         <section class="s_hk_stats hk-section" data-name="Hekau Stats">
             <div class="hk-section-head hk-glow-box">
-                <h2 class="hk-subhead">Our Long-Term Partners</h2>
+                <h2 class="hk-subhead">Proof in numbers</h2>
             </div>
             <div class="hk-container">
                 <div class="hk-stats-row">
                     <div class="hk-stat">
-                        <p class="hk-stat-value">50k+</p>
-                        <p class="hk-stat-label">Monthly Visitors Attracted to Client Page</p>
+                        <p class="hk-stat-value">50,000+</p>
+                        <p class="hk-stat-label">Monthly visitors on The Arc, the media platform we rescued and rebuilt</p>
                     </div>
                     <div class="hk-stat">
-                        <p class="hk-stat-value">12%</p>
-                        <p class="hk-stat-label">Customer Retention Rate</p>
+                        <p class="hk-stat-value">70%</p>
+                        <p class="hk-stat-label">Faster CSR campaigns at Inali Foundation: from 7 days to 2</p>
                     </div>
                     <div class="hk-stat">
-                        <p class="hk-stat-value">12k+</p>
-                        <p class="hk-stat-label">Users On Launch Day For Client Website</p>
+                        <p class="hk-stat-value">+30%</p>
+                        <p class="hk-stat-label">High-intent B2B leads for MaxintelB2B after their website rebuild</p>
                     </div>
                     <div class="hk-stat">
-                        <p class="hk-stat-value">20+</p>
-                        <p class="hk-stat-label">Clients Across The Globe</p>
+                        <p class="hk-stat-value">6,000</p>
+                        <p class="hk-stat-label">Regular users on Idamoss’s event ticketing platform</p>
                     </div>
                 </div>
             </div>

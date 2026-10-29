@@ -1,0 +1,255 @@
+// Hekau Contact — /contactus: intro and contact details next to the audit
+// request form (Odoo website form, creates a CRM lead). Same hero art as the
+// service pages; the form panel sits on the card surface.
+
+.s_hk_contact {
+    position: relative;
+    padding: 156px 24px 0;
+
+    .hk-hero-art {
+        bottom: auto;
+        height: 900px;
+        pointer-events: none;
+    }
+
+    .hk-contact-row {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 440px) minmax(0, 620px);
+        justify-content: center;
+        align-items: start;
+        gap: 64px;
+    }
+
+    .hk-contact-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding-top: 24px;
+    }
+
+    .hk-contact-title {
+        margin: 0;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 1.3;
+        letter-spacing: -0.32px;
+        color: #FFFFFF;
+    }
+
+    .hk-contact-text {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        color: $hk-text;
+    }
+
+    .hk-contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+        font-size: 15px;
+        line-height: 1.45;
+        color: $hk-text;
+
+        li {
+            display: grid;
+            grid-template-columns: 80px minmax(0, 1fr);
+            gap: 12px;
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 22px;
+            letter-spacing: .6px;
+            text-transform: uppercase;
+            color: $hk-lavender;
+        }
+
+        a {
+            color: $hk-white;
+            text-decoration: none;
+
+            &:hover { color: $hk-yellow; }
+        }
+    }
+
+    .hk-contact-panel {
+        padding: 32px;
+        border-radius: 16px;
+        background-color: rgba($hk-surface, .92);
+        @include hk-inner-stroke($hk-line, 16px);
+    }
+
+    // Odoo's form block brings its own container and spacing: neutralise them.
+    .s_website_form {
+        padding: 0;
+
+        .container { padding: 0; max-width: none; }
+    }
+
+    .hk-form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 16px;
+    }
+
+    // Fields (also the ones added in the website builder, which bring Odoo's
+    // col-12 / mb-3 classes): label above the input, one grid cell each.
+    // Hidden fields keep Odoo's own display rules.
+    .hk-form-grid > .s_website_form_field:not(.s_website_form_dnone) {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: auto;
+        margin: 0 !important; // Odoo's mb-3 utility on added fields
+        padding: 0;
+
+        &.hk-form-wide,
+        &.hk-form-check,
+        &[data-type="boolean"],
+        &[data-type="text"],
+        &[data-type="one2many"],
+        &[data-type="selection"] { grid-column: 1 / -1; }
+    }
+
+    .s_website_form_label {
+        width: auto !important;
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.4;
+        color: $hk-white;
+    }
+
+    .s_website_form_mark { color: $hk-yellow; }
+
+    .form-control,
+    .form-select {
+        min-height: 44px;
+        padding: 10px 14px;
+        border: 1px solid $hk-line;
+        border-radius: 8px;
+        background-color: $hk-bg;
+        color: $hk-white;
+        font-size: 15px;
+
+        &::placeholder { color: $hk-muted-2; }
+
+        &:focus {
+            border-color: $hk-lavender;
+            box-shadow: 0 0 0 3px rgba($hk-blue, .35);
+            background-color: $hk-bg;
+            color: $hk-white;
+        }
+    }
+
+    .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23EEEEEE' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+        option { background-color: $hk-surface; color: $hk-white; }
+    }
+
+    textarea.form-control { min-height: 120px; resize: vertical; }
+
+    // Checkboxes: box, then its label text, on one row
+    .hk-form-grid > .s_website_form_field[data-type="boolean"] {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+
+        .s_website_form_input { order: -1; }
+
+        .s_website_form_label {
+            font-weight: 400;
+            line-height: 1.45;
+            color: $hk-text;
+
+            a { color: $hk-white; text-decoration: underline; }
+        }
+
+        .form-check-input {
+            flex: none;
+            width: 20px;
+            height: 20px;
+            margin: 1px 0 0;
+            border: 1px solid $hk-line;
+            border-radius: 5px;
+            background-color: $hk-bg;
+
+            &:checked { border-color: $hk-blue; background-color: $hk-blue; }
+            &:focus { box-shadow: 0 0 0 3px rgba($hk-blue, .35); }
+        }
+    }
+
+    // Odoo marks invalid fields with .is-invalid after a submit attempt
+    .is-invalid .form-control,
+    .is-invalid .form-select,
+    .form-control.is-invalid,
+    .form-select.is-invalid { border-color: #F27A7A; }
+
+    .hk-form-submit {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 4px;
+
+        .s_website_form_send {
+            height: 48px;
+            padding: 0 28px;
+        }
+
+        #s_website_form_result { font-size: 14px; color: $hk-text; }
+    }
+
+    .hk-contact-aside {
+        margin: 20px 0 0;
+        font-size: 14px;
+        line-height: 1.45;
+        color: $hk-muted;
+
+        a { color: $hk-white; }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hk-contact-row {
+            grid-template-columns: minmax(0, 620px);
+            gap: 40px;
+        }
+    }
+
+    @include hk-mobile {
+        padding: 136px 16px 0;
+
+        .hk-hero-art { height: 768px; }
+        .hk-hero-stage { --hk-hero-scale: 0.8535; }
+        .hk-hero-fade { height: 256px; }
+
+        .hk-container { padding-inline: 0; }
+
+        .hk-contact-copy { padding-top: 0; gap: 16px; }
+
+        .hk-contact-title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        .hk-contact-text { font-size: 15px; }
+
+        .hk-contact-details li { grid-template-columns: 72px minmax(0, 1fr); }
+
+        .hk-contact-panel { padding: 20px; }
+
+        .hk-form-grid { grid-template-columns: minmax(0, 1fr); }
+
+        .hk-form-submit .s_website_form_send { width: 100%; }
+    }
+}

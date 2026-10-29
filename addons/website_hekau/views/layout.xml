@@ -12,21 +12,63 @@
         </xpath>
     </template>
 
-    <!-- Header call to action: "Let's Talk" (Figma nav bar). -->
+    <!-- Header call to action (Figma nav bar button): straight to the booking
+         calendar (the menu has a "Contact us" item for the enquiry form). -->
     <template id="header_call_to_action" inherit_id="website.header_call_to_action" name="Hekau Header CTA">
         <xpath expr="//a[hasclass('btn_cta')]" position="replace">
-            <a href="/contactus" class="oe_unremovable btn btn_cta">Let’s Talk</a>
+            <a href="/book-a-call" class="oe_unremovable btn btn_cta">Book a free audit</a>
         </xpath>
     </template>
 
-    <!-- Mobile bar: Figma shows "Let's Talk" next to the menu button. -->
+    <!-- Header text element (phone / email next to the menu). Turned off by
+         the module (the menu has "Contact us" instead); if it is switched back
+         on in the website builder it shows Hekau's details instead of Odoo's
+         placeholders, in every variant the header templates use. -->
+    <template id="header_text_element_contact" inherit_id="website.header_text_element" name="Hekau Header Contact">
+        <xpath expr="//t[contains(@t-elif, 'phone_mail')]/div" position="replace">
+            <div t-attf-class="s_text_block #{_div_class}" data-name="Text">
+                <a href="tel:+918149749282" class="nav-link o_nav-link_secondary">
+                    <small><i class="oi oi-1x oi-fw oi-filled me-1" data-icon="phone"/>͏ <span class="o_force_ltr">+91 81497 49282</span></small>
+                </a>
+                <a href="mailto:admin@hekautech.com" class="nav-link o_nav-link_secondary">
+                    <small><i class="oi oi-1x oi-fw oi-filled me-1" data-icon="mail"/> admin@hekautech.com</small>
+                </a>
+            </div>
+        </xpath>
+        <xpath expr="//t[contains(@t-elif, &quot;'mail'&quot;)]/div" position="replace">
+            <div t-attf-class="s_text_block #{_div_class}" data-name="Text">
+                <a href="mailto:admin@hekautech.com" class="nav-link o_nav-link_secondary">
+                    <small><i class="oi oi-1x oi-fw oi-filled me-1" data-icon="mail"/> admin@hekautech.com</small>
+                </a>
+            </div>
+        </xpath>
+        <xpath expr="//t[contains(@t-elif, 'mail_stretched')]/div" position="replace">
+            <div t-attf-class="s_text_block #{_div_class}" data-name="Text">
+                <a href="tel:+918149749282" class="nav-link o_nav-link_secondary p-2 o_navlink_background_hover d-flex align-items-center h-100 text-reset">
+                    <i class="oi oi-1x oi-fw i-filled me-1" data-icon="phone"/>
+                    <span class="o_force_ltr"><small>+91 81497 49282</small></span>
+                </a>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-else]/div" position="replace">
+            <div t-attf-class="s_text_block #{_div_class}" data-name="Text">
+                <a href="tel:+918149749282" class="nav-link o_nav-link_secondary p-2">
+                    <i class="oi oi-1x oi-fw oi-filled me-1" data-icon="phone"/>
+                    <span class="o_force_ltr"><small>+91 81497 49282</small></span>
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Mobile bar: the call to action next to the menu button (Figma). -->
     <template id="header_mobile_cta" inherit_id="website.template_header_mobile" name="Hekau Mobile Header CTA">
         <xpath expr="//ul[hasclass('o_header_mobile_buttons_wrap')]" position="inside">
             <t t-call="website.placeholder_header_call_to_action"/>
         </xpath>
     </template>
 
-    <!-- Footer: Figma "Fat Footer". Kept inside an editable structure. -->
+    <!-- Footer: Figma "Fat Footer". Kept inside an editable structure. The
+         copyright line replaces Odoo's copyright bar (hidden below). -->
     <template id="footer" inherit_id="website.footer_custom" name="Hekau Footer">
         <xpath expr="//div[@id='footer']" position="replace">
             <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
@@ -35,25 +77,32 @@
                         <div class="hk-footer-box">
                             <div class="hk-footer-brand">
                                 <img src="/website_hekau/static/src/img/logo_mark.svg" alt="Hekau" width="44" height="44" loading="lazy"/>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                                <p>Hekau connects the systems growing companies run on: ERP, CRM, workflows and data. So decisions run on today’s numbers, not last week’s spreadsheet.</p>
                             </div>
                             <nav class="hk-footer-links" aria-label="Footer">
                                 <ul>
                                     <li><a href="/services">Services</a></li>
                                     <li><a href="/projects">Projects</a></li>
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/blog">Blogs</a></li>
+                                    <li><a href="/about-us">About</a></li>
+                                    <li><a href="/how-we-work">How we work</a></li>
+                                    <li><a href="/blog">Blog</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="/terms">Terms and Conditions</a></li>
+                                    <li><a href="/contactus">Contact</a></li>
+                                    <li><a href="/book-a-call">Book a call</a></li>
+                                    <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
                                     <li><a href="/privacy">Privacy Policy</a></li>
                                 </ul>
                             </nav>
                             <div class="hk-footer-contact">
                                 <strong>Contact Us</strong>
-                                <a href="mailto:info@hekau.com">info@hekau.com</a>
+                                <a href="mailto:admin@hekautech.com">admin@hekautech.com</a>
+                                <a href="tel:+918149749282">+91 81497 49282</a>
+                                <address>Vijayashree, S. No. 33/92, near MSEB Office, Katraj, Pune 411046</address>
+                                <a href="https://www.linkedin.com/company/hekaubiz" target="_blank" rel="noopener">LinkedIn</a>
                             </div>
                         </div>
+                        <p class="hk-footer-copy">© 2026 Hekau Business Solutions Private Limited. All rights reserved.</p>
                     </div>
                 </section>
             </div>

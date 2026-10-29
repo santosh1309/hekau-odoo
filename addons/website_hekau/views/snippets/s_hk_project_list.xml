@@ -8,76 +8,208 @@
         <section class="s_hk_project_list hk-section" data-name="Hekau Project List">
             <div class="hk-container hk-container-work">
                 <div class="hk-section-head hk-glow-top">
-                    <h2 class="hk-h2 hk-h2-sm hk-h2-bold hk-h2-dm">Showcasing Our Expertise Through Our Impactful Projects</h2>
+                    <h2 class="hk-h2 hk-h2-sm hk-h2-bold hk-h2-dm">Filter by what you need</h2>
                 </div>
                 <div class="hk-filters" role="group" aria-label="Filter projects">
                     <span class="hk-filter-icon"><img src="/website_hekau/static/src/img/icons/filter.svg" alt="" width="20" height="20"/></span>
                     <span class="hk-filter-label">Filter:</span>
-                    <button type="button" class="hk-filter-pill" data-filter="web" aria-pressed="false">Web App</button>
-                    <button type="button" class="hk-filter-pill" data-filter="mobile" aria-pressed="false">Mobile App</button>
-                    <button type="button" class="hk-filter-pill" data-filter="ux" aria-pressed="false">UX/UI Design</button>
-                    <button type="button" class="hk-filter-pill" data-filter="cloud" aria-pressed="false">Cloud-Managed Services</button>
-                    <button type="button" class="hk-filter-pill" data-filter="bpa" aria-pressed="false">Business Process Automation</button>
-                    <button type="button" class="hk-filter-pill" data-filter="ai" aria-pressed="false">AI Solutions</button>
+                    <button type="button" class="hk-filter-pill" data-filter="erp" aria-pressed="false">ERP, CRM &amp; CMS</button>
+                    <button type="button" class="hk-filter-pill" data-filter="automation" aria-pressed="false">Automation</button>
+                    <button type="button" class="hk-filter-pill" data-filter="apps" aria-pressed="false">Web Apps &amp; Portals</button>
+                    <button type="button" class="hk-filter-pill" data-filter="ai" aria-pressed="false">AI &amp; Data</button>
+                    <button type="button" class="hk-filter-pill" data-filter="mobile" aria-pressed="false">Mobile Apps</button>
+                    <button type="button" class="hk-filter-pill" data-filter="ux" aria-pressed="false">UX &amp; Websites</button>
+                    <button type="button" class="hk-filter-pill" data-filter="cloud" aria-pressed="false">Cloud</button>
+                    <button type="button" class="hk-filter-pill" data-filter="rescue" aria-pressed="false">Project Rescue</button>
                 </div>
                 <div class="hk-work-list">
-                    <article class="hk-work-card" data-category="web">
-                        <a href="/projects/the-arc" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/the_arc.webp" alt="Bringing Order to Speed: Web Development for The Arc" width="1080" height="560" loading="lazy"/></a>
+                    <article class="hk-work-card" data-category="erp automation">
+                        <a href="/projects/odoo-manufacturing" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/odoo-manufacturing.webp" alt="One system for a manufacturing and projects company" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
-                            <div class="hk-work-tags"><span class="hk-badge">Web App</span><span class="hk-badge">Media</span><span class="hk-badge">Startup</span></div>
+                            <div class="hk-work-tags"><span class="hk-badge">ERP, CRM &amp; CMS</span><span class="hk-badge">Manufacturing</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects/the-arc">Bringing Order to Speed: Web Development for The Arc</a></h3>
-                                <p class="hk-work-text">A shared design and development foundation that brought consistency to a fast-growing new-media platform.</p>
+                                <h3 class="hk-work-title"><a href="/projects/odoo-manufacturing">One system for a manufacturing and projects company</a></h3>
+                                <p class="hk-work-text">Sales, purchasing, inventory, manufacturing, maintenance, projects and invoicing, all on Odoo.</p>
                             </div>
                         </div>
                     </article>
-                    <article class="hk-work-card" data-category="mobile">
-                        <a href="/projects" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/placeholder.webp" alt="Showcasing Our Expertise Through Our Impactful Projects" width="1080" height="560" loading="lazy"/></a>
+                    <article class="hk-work-card" data-category="mobile automation">
+                        <a href="/projects/inali-foundation" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/inali-foundation.webp" alt="Inali Foundation: CSR campaigns in 2 days, not 7" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
-                            <div class="hk-work-tags"><span class="hk-badge">Work</span><span class="hk-badge">Work</span><span class="hk-badge">Work</span></div>
+                            <div class="hk-work-tags"><span class="hk-badge">Mobile App</span><span class="hk-badge">Non-Profit</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects">Showcasing Our Expertise Through Our Impactful Projects</a></h3>
-                                <p class="hk-work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor.</p>
+                                <h3 class="hk-work-title"><a href="/projects/inali-foundation">Inali Foundation: CSR campaigns in 2 days, not 7</a></h3>
+                                <p class="hk-work-text">One app replaced the spreadsheets behind a non-profit’s patients, inventory and CSR campaigns.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="apps automation">
+                        <a href="/projects/idamoss-systems" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Web Platform</span><span class="hk-badge">Events</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                <p class="hk-work-text">A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="mobile automation cloud">
+                        <a href="/projects/manufacturing-test-records" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/manufacturing-test-records.webp" alt="Machine test results captured in real time" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Mobile App</span><span class="hk-badge">Manufacturing</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/manufacturing-test-records">Machine test results captured in real time</a></h3>
+                                <p class="hk-work-text">An Android app records test results at the machine, with secure storage and live dashboards.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="automation apps">
+                        <a href="/projects/mywanderloop" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/mywanderloop.webp" alt="MyWanderloop: notifications users actually receive" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Automation</span><span class="hk-badge">Integrations</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/mywanderloop">MyWanderloop: notifications users actually receive</a></h3>
+                                <p class="hk-work-text">Automated SMS and email through MSG91, tracked from send to delivery.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="rescue apps cloud erp">
+                        <a href="/projects/the-arc" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/the_arc.webp" alt="The Arc: rescued mid-build, now 50,000+ monthly visitors" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Project Rescue</span><span class="hk-badge">Media</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/the-arc">The Arc: rescued mid-build, now 50,000+ monthly visitors</a></h3>
+                                <p class="hk-work-text">We took over an abandoned media platform, rebuilt it on Next.js and gave journalists a custom CMS.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="apps">
+                        <a href="/projects/mccia" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/mccia.webp" alt="MCCIA: online event payments for Pune’s chamber of commerce" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Web Platform</span><span class="hk-badge">Industry Body</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/mccia">MCCIA: online event payments for Pune’s chamber of commerce</a></h3>
+                                <p class="hk-work-text">Razorpay payments and automatic receipts for a chamber of 3,000+ members.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="rescue apps">
+                        <a href="/projects/fashquik" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/fashquik.webp" alt="Fashquik: developers inside the team, a marketplace scaling again" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Dedicated Developers</span><span class="hk-badge">E-Commerce</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/fashquik">Fashquik: developers inside the team, a marketplace scaling again</a></h3>
+                                <p class="hk-work-text">Our developers joined Fashquik’s team to clean up the code and fix delivery.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="apps mobile">
+                        <a href="/projects/ragya" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/ragya.webp" alt="Ragya: one login across web and mobile" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Web &amp; Mobile</span><span class="hk-badge">Music</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/ragya">Ragya: one login across web and mobile</a></h3>
+                                <p class="hk-work-text">Unified accounts, subscriptions and playlists for a classical music platform.</p>
                             </div>
                         </div>
                     </article>
                     <article class="hk-work-card" data-category="ux">
-                        <a href="/projects" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/placeholder.webp" alt="Showcasing Our Expertise Through Our Impactful Projects" width="1080" height="560" loading="lazy"/></a>
+                        <a href="/projects/maxintelb2b" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/maxintelb2b.webp" alt="MaxintelB2B: 30% more high-intent leads" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
-                            <div class="hk-work-tags"><span class="hk-badge">Work</span><span class="hk-badge">Work</span><span class="hk-badge">Work</span></div>
+                            <div class="hk-work-tags"><span class="hk-badge">Website</span><span class="hk-badge">B2B Services</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects">Showcasing Our Expertise Through Our Impactful Projects</a></h3>
-                                <p class="hk-work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor.</p>
+                                <h3 class="hk-work-title"><a href="/projects/maxintelb2b">MaxintelB2B: 30% more high-intent leads</a></h3>
+                                <p class="hk-work-text">A rebuilt B2B website with segmented landing pages and HubSpot lead capture.</p>
                             </div>
                         </div>
                     </article>
-                    <article class="hk-work-card" data-category="cloud">
-                        <a href="/projects" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/placeholder.webp" alt="Showcasing Our Expertise Through Our Impactful Projects" width="1080" height="560" loading="lazy"/></a>
+                    <article class="hk-work-card" data-category="ux">
+                        <a href="/projects/fyhba-medical-billing" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/fyhba-medical-billing.webp" alt="FYHBA Medical Billing: 35% lower bounce rate, 32% more leads" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
-                            <div class="hk-work-tags"><span class="hk-badge">Work</span><span class="hk-badge">Work</span><span class="hk-badge">Work</span></div>
+                            <div class="hk-work-tags"><span class="hk-badge">Website</span><span class="hk-badge">Healthcare</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects">Showcasing Our Expertise Through Our Impactful Projects</a></h3>
-                                <p class="hk-work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor.</p>
+                                <h3 class="hk-work-title"><a href="/projects/fyhba-medical-billing">FYHBA Medical Billing: 35% lower bounce rate, 32% more leads</a></h3>
+                                <p class="hk-work-text">A conversion-focused website for a US medical billing company.</p>
                             </div>
                         </div>
                     </article>
-                    <article class="hk-work-card" data-category="bpa">
-                        <a href="/projects" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/placeholder.webp" alt="Showcasing Our Expertise Through Our Impactful Projects" width="1080" height="560" loading="lazy"/></a>
+                    <article class="hk-work-card" data-category="ux">
+                        <a href="/projects/yb-perfumes" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/yb-perfumes.webp" alt="YB Perfumes: from Instagram DMs to an online store" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
-                            <div class="hk-work-tags"><span class="hk-badge">Work</span><span class="hk-badge">Work</span><span class="hk-badge">Work</span></div>
+                            <div class="hk-work-tags"><span class="hk-badge">E-Commerce</span><span class="hk-badge">D2C</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects">Showcasing Our Expertise Through Our Impactful Projects</a></h3>
-                                <p class="hk-work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor.</p>
+                                <h3 class="hk-work-title"><a href="/projects/yb-perfumes">YB Perfumes: from Instagram DMs to an online store</a></h3>
+                                <p class="hk-work-text">A mobile-first store that grew a fragrance brand’s sales by 17%.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="ux cloud">
+                        <a href="/projects/quatch" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/quatch.webp" alt="Quatch: a luxury watch store that held up on launch day" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">E-Commerce</span><span class="hk-badge">Luxury</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/quatch">Quatch: a luxury watch store that held up on launch day</a></h3>
+                                <p class="hk-work-text">Premium e-commerce for a Vietnamese watch brand, with zero downtime at launch.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="mobile">
+                        <a href="/projects/indies" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/indies.webp" alt="Indies: NFC tags that help volunteers care for street dogs" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Mobile App</span><span class="hk-badge">Non-Profit</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/indies">Indies: NFC tags that help volunteers care for street dogs</a></h3>
+                                <p class="hk-work-text">An app and website that track street dogs, their health and the volunteers who feed them.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="mobile apps">
+                        <a href="/projects/temple-qr-passes" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/temple-qr-passes.webp" alt="QR passes that speed up entry" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Mobile &amp; Web</span><span class="hk-badge">Events</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/temple-qr-passes">QR passes that speed up entry</a></h3>
+                                <p class="hk-work-text">Passes issued online and scanned at the gate, with no duplicate entries.</p>
                             </div>
                         </div>
                     </article>
                     <article class="hk-work-card" data-category="ai">
-                        <a href="/projects" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/placeholder.webp" alt="Showcasing Our Expertise Through Our Impactful Projects" width="1080" height="560" loading="lazy"/></a>
+                        <a href="/projects/mohur" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/mohur.webp" alt="Mohur: AI that matches investors with the right startups" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
-                            <div class="hk-work-tags"><span class="hk-badge">Work</span><span class="hk-badge">Work</span><span class="hk-badge">Work</span></div>
+                            <div class="hk-work-tags"><span class="hk-badge">AI &amp; Data</span><span class="hk-badge">Startup Funding</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects">Showcasing Our Expertise Through Our Impactful Projects</a></h3>
-                                <p class="hk-work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor.</p>
+                                <h3 class="hk-work-title"><a href="/projects/mohur">Mohur: AI that matches investors with the right startups</a></h3>
+                                <p class="hk-work-text">A machine-learning engine that recommends startups to investors, and investors to startups.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="ai">
+                        <a href="/projects/job-post-scoring" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/job-post-scoring.webp" alt="Scoring that makes job posts better" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">AI &amp; Data</span><span class="hk-badge">HR Tech</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/job-post-scoring">Scoring that makes job posts better</a></h3>
+                                <p class="hk-work-text">A quality score for every job post, feeding the platform’s own AI model.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="apps automation">
+                        <a href="/projects/devdoot" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/devdoot.webp" alt="Devdoot: connecting 1,000+ people with donors during COVID-19" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Web Platform</span><span class="hk-badge">Non-Profit</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/devdoot">Devdoot: connecting 1,000+ people with donors during COVID-19</a></h3>
+                                <p class="hk-work-text">A verified donation platform built for an NGO in the lockdowns.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="hk-work-card" data-category="apps">
+                        <a href="/projects/secure-field-data-capture" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/secure-field-data-capture.webp" alt="Secure data capture for field investigations" width="1080" height="560" loading="lazy"/></a>
+                        <div class="hk-work-info">
+                            <div class="hk-work-tags"><span class="hk-badge">Custom Software</span><span class="hk-badge">Public Sector</span></div>
+                            <div class="hk-work-body">
+                                <h3 class="hk-work-title"><a href="/projects/secure-field-data-capture">Secure data capture for field investigations</a></h3>
+                                <p class="hk-work-text">A bootable, encrypted pen drive that captures data from devices in the field.</p>
                             </div>
                         </div>
                     </article>

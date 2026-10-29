@@ -16,9 +16,10 @@
                         <span class="hk-hero-fade"/>
                     </div>
                     <div class="hk-hero-content">
-                        <h1>Custom Technology That Turns <span class="hk-gradient-text">Big Brands</span> <br/>Into Your Competitors</h1>
-                        <p class="hk-hero-text">Enterprise-grade technology shouldn’t be out of reach for SMBs and startups. At Hekau, we’re changing that with industry-specific, custom IT solutions.</p>
-                        <a href="/contactus" class="hk-btn hk-btn-quote">Quote Us</a>
+                        <h1>Fix the <span class="hk-gradient-text">fragmented systems</span> <br/>slowing down your growth</h1>
+                        <p class="hk-hero-text">Most $2M–$15M companies don’t have a software problem. They have a fragmented systems problem. We connect your ERP, CRM, workflows and data, so decisions run on today’s numbers, not last week’s spreadsheet.</p>
+                        <a href="/book-a-call" class="hk-btn hk-btn-quote">Book a free systems audit</a>
+                        <a href="/website_hekau/static/src/files/hekau-system-disconnection-checklist.pdf" class="hk-hero-link" download="">Or download the System Disconnection Checklist</a>
                     </div>
                 </section>
                 <section class="s_hk_partners" data-snippet="s_hk_partners" data-name="Hekau Partners">
@@ -35,7 +36,7 @@
                             <img src="/website_hekau/static/src/img/brands/maxintel.png" alt="MaxIntel B2B" style="--w: 188px; --h: 50px;" loading="lazy"/>
                             <img src="/website_hekau/static/src/img/brands/inali_foundation.png" alt="Inali Foundation" style="--w: 92px; --h: 60px;" loading="lazy"/>
                             <img src="/website_hekau/static/src/img/brands/fybha.png" alt="FYHBA" style="--w: 179px; --h: 60px;" loading="lazy"/>
-                            <img src="/website_hekau/static/src/img/brands/f_brand.png" alt="Partner" style="--w: 45px; --h: 70px;" loading="lazy"/>
+                            <img src="/website_hekau/static/src/img/brands/f_brand.png" alt="Fashquik" style="--w: 45px; --h: 70px;" loading="lazy"/>
                         </div>
                     </div>
                 </section>
@@ -44,8 +45,8 @@
                         <div class="hk-why-row">
                             <div class="hk-why-visual">
                                 <div class="hk-why-head">
-                                    <h2 class="hk-h2">Why Partner With Hekau?</h2>
-                                    <p class="hk-why-sub hk-only-mobile">Enterprise-grade technology shouldn’t be out of</p>
+                                    <h2 class="hk-h2">Why growing companies choose Hekau</h2>
+                                    <p class="hk-why-sub hk-only-mobile">Technology should remove friction, not add it</p>
                                 </div>
                                 <div class="hk-squares-box hk-deco o_not_editable" aria-hidden="true">
                                     <div class="hk-squares">
@@ -54,10 +55,10 @@
                                         <img class="hk-sq-logo" src="/website_hekau/static/src/img/logo_mark_anim.svg" alt="" width="44" height="44"/>
                                         <div class="hk-sq-group hk-sq-business">
                                             <img class="hk-cursor" src="/website_hekau/static/src/img/icons/cursor_pink.svg" alt="" width="28" height="28"/>
-                                            <span class="hk-tag">Business</span>
+                                            <span class="hk-tag">Clarity</span>
                                         </div>
                                         <div class="hk-sq-group hk-sq-growth">
-                                            <span class="hk-tag">Growth</span>
+                                            <span class="hk-tag">Speed</span>
                                             <img class="hk-cursor" src="/website_hekau/static/src/img/icons/cursor_purple.svg" alt="" width="28" height="28"/>
                                         </div>
                                     </div>
@@ -66,16 +67,16 @@
                             <div class="hk-why-cards-wrap">
                                 <div class="hk-why-cards hk-scroller">
                                     <div class="hk-why-card">
-                                        <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_bulb.svg" alt="" width="36" height="36"/>Unique Tech Solutions</h3>
-                                        <p>Automating vendor contracts benefits event companies. NGOs can better manage their inventory if their system has an access hierarchy. Hekau customises specific tech features to solve your unique business roadblocks.</p>
+                                        <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_bulb.svg" alt="" width="36" height="36"/>We start with the business, not the software</h3>
+                                        <p>Before we suggest a tool, we map how work actually moves through your company: who waits on whom, where the spreadsheets live, which numbers nobody trusts. Sometimes the fix is an ERP. Sometimes it’s one automation.</p>
                                     </div>
                                     <div class="hk-why-card">
-                                        <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_growth.svg" alt="" width="36" height="36"/>Growth Without Compromise</h3>
-                                        <p>SMBs and startups shouldn’t have to sacrifice efficiency due to a limited budget. Our customised solutions have the same benefits as enterprise-grade technology— while remaining cost-effective.</p>
+                                        <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_growth.svg" alt="" width="36" height="36"/>One system, one version of the truth</h3>
+                                        <p>We connect sales, operations, inventory and finance so every team works from the same numbers. Odoo where it fits, custom software where it doesn’t, and integrations that keep the two in sync.</p>
                                     </div>
                                     <div class="hk-why-card">
-                                        <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_money.svg" alt="" width="36" height="36"/>Cost-Effective and Reliable</h3>
-                                        <p>What you’re quoted is what you pay. We don’t burden you with unnecessary costs or unexpected add-ons. With failsafe mechanisms and periodic maintenance, we ensure your business reaches new heights long after our initial agreement.</p>
+                                        <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_money.svg" alt="" width="36" height="36"/>Accountable long after launch</h3>
+                                        <p>Your team has to actually use what we build. We train them, stay on for support, and measure success by the friction we remove, not the features we ship. What you’re quoted is what you pay.</p>
                                     </div>
                                 </div>
                                 <div class="hk-scroll-indicator hk-only-mobile" aria-hidden="true"><span/></div>
@@ -85,25 +86,25 @@
                 </section>
                 <section class="s_hk_stats hk-section" data-snippet="s_hk_stats" data-name="Hekau Stats">
                     <div class="hk-section-head hk-glow-box">
-                        <h2 class="hk-subhead">Our Long-Term Partners</h2>
+                        <h2 class="hk-subhead">Proof in numbers</h2>
                     </div>
                     <div class="hk-container">
                         <div class="hk-stats-row">
                             <div class="hk-stat">
-                                <p class="hk-stat-value">50k+</p>
-                                <p class="hk-stat-label">Monthly Visitors Attracted to Client Page</p>
+                                <p class="hk-stat-value">50,000+</p>
+                                <p class="hk-stat-label">Monthly visitors on The Arc, the media platform we rescued and rebuilt</p>
                             </div>
                             <div class="hk-stat">
-                                <p class="hk-stat-value">12%</p>
-                                <p class="hk-stat-label">Customer Retention Rate</p>
+                                <p class="hk-stat-value">70%</p>
+                                <p class="hk-stat-label">Faster CSR campaigns at Inali Foundation: from 7 days to 2</p>
                             </div>
                             <div class="hk-stat">
-                                <p class="hk-stat-value">12k+</p>
-                                <p class="hk-stat-label">Users On Launch Day For Client Website</p>
+                                <p class="hk-stat-value">+30%</p>
+                                <p class="hk-stat-label">High-intent B2B leads for MaxintelB2B after their website rebuild</p>
                             </div>
                             <div class="hk-stat">
-                                <p class="hk-stat-value">20+</p>
-                                <p class="hk-stat-label">Clients Across The Globe</p>
+                                <p class="hk-stat-value">6,000</p>
+                                <p class="hk-stat-label">Regular users on Idamoss’s event ticketing platform</p>
                             </div>
                         </div>
                     </div>
@@ -111,81 +112,104 @@
                 <section id="services" class="s_hk_services hk-section" data-snippet="s_hk_services" data-name="Hekau Services">
                     <div class="hk-container">
                         <div class="hk-section-head hk-glow-top">
-                            <h2 class="hk-h2">Services That Drive Innovation and Growth</h2>
-                            <p class="hk-lead hk-lead-15 hk-only-desktop">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            <p class="hk-lead hk-lead-15 hk-only-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                            <h2 class="hk-h2">What we build and fix</h2>
+                            <p class="hk-lead hk-lead-15">Eight ways we remove friction from a growing company, from one automation to a full ERP rollout. Every engagement starts with a free systems audit.</p>
                         </div>
                         <div class="hk-service-grid">
-                            <div class="hk-service-card hk-service-narrow">
-                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
-                                <div class="hk-service-head">
-                                    <img src="/website_hekau/static/src/img/icons/svc_web.svg" alt="" width="44" height="44"/>
-                                    <h3 class="hk-nowrap">Web Application Development</h3>
-                                </div>
-                                <p class="hk-service-text">Web applications are the backbone of any business. Hekau designs scalable, user-centric web apps that are functional and visually pleasing across all platforms.</p>
-                                <div class="hk-service-actions">
-                                    <span>View Projects</span>
-                                    <a class="hk-service-more" href="/web-application-development">Learn More</a>
-                                </div>
-                            </div>
                             <div class="hk-service-card">
                                 <span class="hk-service-circle hk-deco" aria-hidden="true"/>
                                 <div class="hk-service-head">
-                                    <img src="/website_hekau/static/src/img/icons/svc_mobile.svg" alt="" width="44" height="44"/>
-                                    <h3 class="hk-nowrap">Mobile Application Development</h3>
+                                    <img src="/website_hekau/static/src/img/icons/svc_erp.svg" alt="" width="44" height="44"/>
+                                    <h3>ERP, CRM &amp; CMS Implementation</h3>
                                 </div>
-                                <p class="hk-service-text">Mobile apps serve as constant companions for both customers and employees — driving retention, boosting collaboration, and reinforcing brand loyalty across iOS and Android platforms.</p>
+                                <p class="hk-service-text">Operations, sales and your website on systems that share the same data. We implement ERP, CRM and CMS platforms, Odoo first, so nobody re-types an order again.</p>
                                 <div class="hk-service-actions">
-                                    <span>View Projects</span>
-                                    <a class="hk-service-more" href="/mobile-application-development">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="hk-service-card hk-service-narrow">
-                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
-                                <div class="hk-service-head">
-                                    <img src="/website_hekau/static/src/img/icons/svc_ux.svg" alt="" width="44" height="44"/>
-                                    <h3 class="hk-nowrap">UX/UI Design</h3>
-                                </div>
-                                <p class="hk-service-text">With endless choices, customers return for intuitive experiences. We design interfaces that make every interaction effortless and goal-driven.</p>
-                                <div class="hk-service-actions">
-                                    <span>View Projects</span>
-                                    <a class="hk-service-more" href="/ux-ui-design">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="hk-service-card hk-service-narrow">
-                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
-                                <div class="hk-service-head">
-                                    <img src="/website_hekau/static/src/img/icons/svc_cloud.svg" alt="" width="44" height="44"/>
-                                    <h3>Cloud-Managed Services</h3>
-                                </div>
-                                <p class="hk-service-text">Cloud-powered businesses benefit from lower costs, on-demand scalability, and advanced security. Whether migrating or optimizing, we handle complexities so you can focus on growth.</p>
-                                <div class="hk-service-actions">
-                                    <span>View Projects</span>
-                                    <a class="hk-service-more" href="/cloud-managed-services">Learn More</a>
+                                    <a class="hk-service-projects" href="/projects?filter=erp">View projects</a>
+                                    <a class="hk-service-more" href="/erp-crm-implementation">Learn more</a>
                                 </div>
                             </div>
                             <div class="hk-service-card">
                                 <span class="hk-service-circle hk-deco" aria-hidden="true"/>
                                 <div class="hk-service-head">
                                     <img src="/website_hekau/static/src/img/icons/svc_bpa.svg" alt="" width="44" height="44"/>
-                                    <h3>Business Process Automation</h3>
+                                    <h3>Workflow &amp; Process Automation</h3>
                                 </div>
-                                <p class="hk-service-text">Repetitive tasks will bog you down. Hekau automates the essential but time-consuming processes so you can turn your most creative endeavours into reality.</p>
+                                <p class="hk-service-text">Approvals, follow-ups, reports and data entry that run themselves. We automate the steps your team works around today, starting with the ones that cost the most time.</p>
                                 <div class="hk-service-actions">
-                                    <span>View Projects</span>
-                                    <a class="hk-service-more" href="/business-process-automation">Learn More</a>
+                                    <a class="hk-service-projects" href="/projects?filter=automation">View projects</a>
+                                    <a class="hk-service-more" href="/business-process-automation">Learn more</a>
                                 </div>
                             </div>
-                            <div class="hk-service-card hk-service-narrow hk-service-tight">
+                            <div class="hk-service-card">
+                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                                <div class="hk-service-head">
+                                    <img src="/website_hekau/static/src/img/icons/svc_web.svg" alt="" width="44" height="44"/>
+                                    <h3>Custom Web Applications &amp; B2B Portals</h3>
+                                </div>
+                                <p class="hk-service-text">Customer portals, vendor platforms and internal tools built around how your business actually works, not how a template assumes it does.</p>
+                                <div class="hk-service-actions">
+                                    <a class="hk-service-projects" href="/projects?filter=apps">View projects</a>
+                                    <a class="hk-service-more" href="/web-application-development">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="hk-service-card">
                                 <span class="hk-service-circle hk-deco" aria-hidden="true"/>
                                 <div class="hk-service-head">
                                     <img src="/website_hekau/static/src/img/icons/svc_ai.svg" alt="" width="44" height="44"/>
-                                    <h3>AI for business</h3>
+                                    <h3>Secure In-House AI &amp; Data</h3>
                                 </div>
-                                <p class="hk-service-text">AI solutions train on your business data and customer interactions. Use it to solve unique customer queries or get a personal assistant.</p>
+                                <p class="hk-service-text">AI that works on your own ERP and CRM data, inside your control. Flag margin risks and surface bottlenecks without sending data to public tools.</p>
                                 <div class="hk-service-actions">
-                                    <span>View Projects</span>
-                                    <a class="hk-service-more" href="/ai-solutions">Learn More</a>
+                                    <a class="hk-service-projects" href="/projects?filter=ai">View projects</a>
+                                    <a class="hk-service-more" href="/ai-solutions">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="hk-service-card">
+                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                                <div class="hk-service-head">
+                                    <img src="/website_hekau/static/src/img/icons/svc_mobile.svg" alt="" width="44" height="44"/>
+                                    <h3>Mobile App Development</h3>
+                                </div>
+                                <p class="hk-service-text">Field apps, customer apps and on-site data capture for Android and iOS, connected to the systems your office already runs on.</p>
+                                <div class="hk-service-actions">
+                                    <a class="hk-service-projects" href="/projects?filter=mobile">View projects</a>
+                                    <a class="hk-service-more" href="/mobile-application-development">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="hk-service-card">
+                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                                <div class="hk-service-head">
+                                    <img src="/website_hekau/static/src/img/icons/svc_ux.svg" alt="" width="44" height="44"/>
+                                    <h3>UX &amp; Conversion-Focused Websites</h3>
+                                </div>
+                                <p class="hk-service-text">Websites that turn visitors into enquiries: clear navigation, focused calls to action and lead capture wired straight into your CRM.</p>
+                                <div class="hk-service-actions">
+                                    <a class="hk-service-projects" href="/projects?filter=ux">View projects</a>
+                                    <a class="hk-service-more" href="/ux-ui-design">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="hk-service-card">
+                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                                <div class="hk-service-head">
+                                    <img src="/website_hekau/static/src/img/icons/svc_cloud.svg" alt="" width="44" height="44"/>
+                                    <h3>Cloud-Managed Services</h3>
+                                </div>
+                                <p class="hk-service-text">Hosting, monitoring, backups and security for the systems you depend on, so your team never has to think about servers.</p>
+                                <div class="hk-service-actions">
+                                    <a class="hk-service-projects" href="/projects?filter=cloud">View projects</a>
+                                    <a class="hk-service-more" href="/cloud-managed-services">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="hk-service-card">
+                                <span class="hk-service-circle hk-deco" aria-hidden="true"/>
+                                <div class="hk-service-head">
+                                    <img src="/website_hekau/static/src/img/icons/svc_rescue.svg" alt="" width="44" height="44"/>
+                                    <h3>Project Rescue &amp; Dedicated Developers</h3>
+                                </div>
+                                <p class="hk-service-text">Vendor walked away mid-build? We audit the code, finish what’s missing and stay on, or add experienced developers to your own team.</p>
+                                <div class="hk-service-actions">
+                                    <a class="hk-service-projects" href="/projects?filter=rescue">View projects</a>
+                                    <a class="hk-service-more" href="/project-rescue">Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -194,20 +218,19 @@
                 <section id="domains" class="s_hk_domains hk-section" data-snippet="s_hk_domains" data-name="Hekau Domains">
                     <div class="hk-container hk-container-wide">
                         <div class="hk-section-head hk-glow-top">
-                            <h2 class="hk-h2">Domains We Serve</h2>
-                            <p class="hk-lead hk-domains-lead hk-only-desktop">Every industry has its distinctive set of challenges. Hekau solves them by combining cutting-edge technology with unique ideas.</p>
-                            <p class="hk-lead hk-domains-lead hk-only-mobile">Hekau solves distinctive challenges by combining cutting-edge technology with unique ideas.</p>
+                            <h2 class="hk-h2">Industries we know</h2>
+                            <p class="hk-lead hk-domains-lead hk-only-desktop">Different industries, same pattern: the work outgrows the tools. These are the sectors where we’ve already fixed it.</p>
+                            <p class="hk-lead hk-domains-lead hk-only-mobile">Sectors where we’ve already fixed fragmented systems.</p>
                         </div>
                         <div class="hk-domains-map">
                             <img class="hk-domains-rings hk-deco" src="/website_hekau/static/src/img/domains_rings.svg" alt="" width="400" height="400" loading="lazy"/>
                             <ul>
-                                <li class="hk-domain" style="--x: 147px; --y: 4px; --mx: 114px; --my: 0px;">Finance and Banking</li>
-                                <li class="hk-domain" style="--x: 372px; --y: 79px; --mx: 249px; --my: 68px;">Non-profits</li>
+                                <li class="hk-domain" style="--x: 147px; --y: 4px; --mx: 114px; --my: 0px;">B2B Services</li>
+                                <li class="hk-domain hk-domain-end" style="--r: 44px; --y: 79px; --mr: 0px; --my: 68px;">Non-Profits &amp; CSR</li>
                                 <li class="hk-domain" style="--x: 24px; --y: 113px; --mx: 9px; --my: 65px;">Manufacturing</li>
-                                <li class="hk-domain" style="--x: 402px; --y: 189px; --mx: 238px; --my: 154px;">E-Commerce</li>
-                                <li class="hk-domain" style="--x: 0px; --y: 228px; --mx: 0px; --my: 154px;">Healthcare</li>
-                                <li class="hk-domain" style="--x: 336px; --y: 324px; --mx: 211px; --my: 218px;">Non-profits</li>
-                                <li class="hk-domain" style="--x: 137px; --y: 333px; --mx: 56px; --my: 225px;">Media</li>
+                                <li class="hk-domain hk-domain-end" style="--r: 0px; --y: 189px; --mr: 0px; --my: 154px;">E-Commerce &amp; D2C</li>
+                                <li class="hk-domain" style="--x: 0px; --y: 228px; --mx: 0px; --my: 154px;">Healthcare Services</li>
+                                <li class="hk-domain" style="--x: 137px; --y: 333px; --mx: 56px; --my: 225px;">Media &amp; Publishing</li>
                             </ul>
                         </div>
                     </div>
@@ -216,74 +239,64 @@
                     <div class="hk-container hk-container-narrow">
                         <div class="hk-projects-head hk-glow-top">
                             <div>
-                                <h2 class="hk-h2">See How We Bring Ideas to Life</h2>
-                                <p class="hk-lead">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                <h2 class="hk-h2">Proof, not promises</h2>
+                                <p class="hk-lead">Real problems, real fixes and real numbers from companies like yours.</p>
                             </div>
-                            <a href="/projects" class="hk-btn hk-btn-primary hk-only-desktop">View All Projects</a>
+                            <a href="/projects" class="hk-btn hk-btn-primary hk-only-desktop">View all projects</a>
                         </div>
                         <div class="hk-projects-grid">
                             <article class="hk-project-card">
-                                <img class="hk-project-img" src="/website_hekau/static/src/img/project_placeholder.webp" alt="Project preview" width="440" height="220" loading="lazy"/>
+                                <a href="/projects/inali-foundation" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/inali-foundation.webp" alt="Inali Foundation: CSR campaigns in 2 days, not 7" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3>Project Name</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <h3><a href="/projects/inali-foundation">Inali Foundation: CSR campaigns in 2 days, not 7</a></h3>
+                                        <p>A non-profit that has fitted thousands of prosthetic arms across India was running on spreadsheets. We gave CSR, clinical and inventory teams one app.</p>
                                     </div>
-                                    <a href="/projects" class="hk-arrow-btn" aria-label="Open project"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/inali-foundation" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                             <article class="hk-project-card">
-                                <img class="hk-project-img" src="/website_hekau/static/src/img/project_placeholder.webp" alt="Project preview" width="440" height="220" loading="lazy"/>
+                                <a href="/projects/the-arc" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/the_arc.webp" alt="The Arc: rescued mid-build, now 50,000+ monthly visitors" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3>Project Name</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <h3><a href="/projects/the-arc">The Arc: rescued mid-build, now 50,000+ monthly visitors</a></h3>
+                                        <p>A news platform left half-built by its previous vendor. We finished it, moved it to Next.js and built a custom CMS. It now serves 50,000+ visitors a month.</p>
                                     </div>
-                                    <a href="/projects" class="hk-arrow-btn" aria-label="Open project"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/the-arc" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                         </div>
-                        <a href="/projects" class="hk-btn hk-btn-primary hk-projects-all hk-only-mobile">View All Projects</a>
+                        <a href="/projects" class="hk-btn hk-btn-primary hk-projects-all hk-only-mobile">View all projects</a>
                     </div>
                 </section>
-                <section id="testimonials" class="s_hk_testimonials hk-section" data-snippet="s_hk_testimonials" data-name="Hekau Testimonials">
+                <section id="testimonials" class="s_hk_testimonials hk-section hk-testimonials-pair" data-snippet="s_hk_testimonials" data-name="Hekau Testimonials">
                     <div class="hk-container">
                         <div class="hk-testimonials-box">
                             <div class="hk-testimonials-head">
-                                <span class="hk-badge">Client Praises</span>
-                                <h2 class="hk-h2">What are they <br class="hk-only-mobile"/>saying about us?</h2>
-                                <p class="hk-lead">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                <span class="hk-badge">In our clients’ words</span>
+                                <h2 class="hk-h2">What working with <br class="hk-only-mobile"/>us is like</h2>
+                                <p class="hk-lead">From the companies we build and fix systems for.</p>
                             </div>
                             <div class="hk-quotes hk-scroller" tabindex="0" aria-label="Client testimonials">
                                 <figure class="hk-quote m-0">
                                     <header>
-                                        <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                        <img src="/website_hekau/static/src/img/testimonials/aditi_shrivastava.webp" alt="Aditi Shrivastava" width="48" height="48" loading="lazy"/>
                                         <div>
-                                            <h3>Aditi Verma</h3>
-                                            <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                            <h3>Aditi Shrivastava</h3>
+                                            <p class="hk-quote-role">Co-founder, The Arc</p>
                                         </div>
                                     </header>
-                                    <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                                    <blockquote>“Working with the Hekau team has been a great experience. They quickly understood our vision at The Arc and turned it into practical digital solutions. I really appreciate their professionalism, flexibility, and focus on delivering results.”</blockquote>
                                 </figure>
                                 <figure class="hk-quote m-0">
                                     <header>
-                                        <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                        <img src="/website_hekau/static/src/img/testimonials/ismail_shaikh.webp" alt="Ismail Shaikh" width="48" height="48" loading="lazy"/>
                                         <div>
-                                            <h3>Aditi Verma</h3>
-                                            <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                            <h3>Ismail Shaikh</h3>
+                                            <p class="hk-quote-role">Co-founder, FYHBA Medical Billing</p>
                                         </div>
                                     </header>
-                                    <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
-                                </figure>
-                                <figure class="hk-quote m-0">
-                                    <header>
-                                        <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
-                                        <div>
-                                            <h3>Aditi Verma</h3>
-                                            <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
-                                        </div>
-                                    </header>
-                                    <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                                    <blockquote>“Hekau has been an excellent partner for FYHBA. They not only understood our requirements clearly but also went the extra mile to deliver solutions that added real value to our business. Their proactive approach, attention to detail, and dependable support have made them a trusted partner for us.”</blockquote>
                                 </figure>
                             </div>
                             <div class="hk-scroll-indicator hk-only-mobile" aria-hidden="true"><span/></div>
@@ -298,10 +311,13 @@
                     <div class="hk-container">
                         <div class="hk-cta-box">
                             <div class="hk-cta-copy">
-                                <h2>Got An Idea?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                                <h2>Where is your business losing time?</h2>
+                                <p>Book a free systems audit. We’ll map where your tools and teams disconnect, and tell you what’s worth fixing first.</p>
                             </div>
-                            <a href="/contactus" class="hk-btn hk-btn-light">Book an Appointment</a>
+                            <div class="hk-cta-actions">
+                                <a href="/book-a-call" class="hk-btn hk-btn-light">Book a free systems audit</a>
+                                <a href="/website_hekau/static/src/files/hekau-system-disconnection-checklist.pdf" class="hk-cta-link" download="">Or download the System Disconnection Checklist</a>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -11,8 +11,8 @@
                 <div class="hk-why-row">
                     <div class="hk-why-visual">
                         <div class="hk-why-head">
-                            <h2 class="hk-h2">Why Partner With Hekau?</h2>
-                            <p class="hk-why-sub hk-only-mobile">Enterprise-grade technology shouldn’t be out of</p>
+                            <h2 class="hk-h2">Why growing companies choose Hekau</h2>
+                            <p class="hk-why-sub hk-only-mobile">Technology should remove friction, not add it</p>
                         </div>
                         <div class="hk-squares-box hk-deco o_not_editable" aria-hidden="true">
                             <div class="hk-squares">
@@ -21,10 +21,10 @@
                                 <img class="hk-sq-logo" src="/website_hekau/static/src/img/logo_mark_anim.svg" alt="" width="44" height="44"/>
                                 <div class="hk-sq-group hk-sq-business">
                                     <img class="hk-cursor" src="/website_hekau/static/src/img/icons/cursor_pink.svg" alt="" width="28" height="28"/>
-                                    <span class="hk-tag">Business</span>
+                                    <span class="hk-tag">Clarity</span>
                                 </div>
                                 <div class="hk-sq-group hk-sq-growth">
-                                    <span class="hk-tag">Growth</span>
+                                    <span class="hk-tag">Speed</span>
                                     <img class="hk-cursor" src="/website_hekau/static/src/img/icons/cursor_purple.svg" alt="" width="28" height="28"/>
                                 </div>
                             </div>
@@ -33,16 +33,16 @@
                     <div class="hk-why-cards-wrap">
                         <div class="hk-why-cards hk-scroller">
                             <div class="hk-why-card">
-                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_bulb.svg" alt="" width="36" height="36"/>Unique Tech Solutions</h3>
-                                <p>Automating vendor contracts benefits event companies. NGOs can better manage their inventory if their system has an access hierarchy. Hekau customises specific tech features to solve your unique business roadblocks.</p>
+                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_bulb.svg" alt="" width="36" height="36"/>We start with the business, not the software</h3>
+                                <p>Before we suggest a tool, we map how work actually moves through your company: who waits on whom, where the spreadsheets live, which numbers nobody trusts. Sometimes the fix is an ERP. Sometimes it’s one automation.</p>
                             </div>
                             <div class="hk-why-card">
-                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_growth.svg" alt="" width="36" height="36"/>Growth Without Compromise</h3>
-                                <p>SMBs and startups shouldn’t have to sacrifice efficiency due to a limited budget. Our customised solutions have the same benefits as enterprise-grade technology— while remaining cost-effective.</p>
+                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_growth.svg" alt="" width="36" height="36"/>One system, one version of the truth</h3>
+                                <p>We connect sales, operations, inventory and finance so every team works from the same numbers. Odoo where it fits, custom software where it doesn’t, and integrations that keep the two in sync.</p>
                             </div>
                             <div class="hk-why-card">
-                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_money.svg" alt="" width="36" height="36"/>Cost-Effective and Reliable</h3>
-                                <p>What you’re quoted is what you pay. We don’t burden you with unnecessary costs or unexpected add-ons. With failsafe mechanisms and periodic maintenance, we ensure your business reaches new heights long after our initial agreement.</p>
+                                <h3 class="hk-why-title"><img src="/website_hekau/static/src/img/icons/why_money.svg" alt="" width="36" height="36"/>Accountable long after launch</h3>
+                                <p>Your team has to actually use what we build. We train them, stay on for support, and measure success by the friction we remove, not the features we ship. What you’re quoted is what you pay.</p>
                             </div>
                         </div>
                         <div class="hk-scroll-indicator hk-only-mobile" aria-hidden="true"><span/></div>

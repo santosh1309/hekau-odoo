@@ -3,46 +3,37 @@
 
     <!-- Client praises (Figma "Frame 1601"). Desktop: arrow buttons scroll the
          cards (js/testimonials.js). Mobile: swipe, with the scroll indicator
-         (js/scroll_indicator.js). -->
+         (js/scroll_indicator.js). With two quotes (hk-testimonials-pair) both
+         cards share the row on desktop and the arrows are hidden. -->
     <template id="s_hk_testimonials" name="Hekau Testimonials">
-        <section id="testimonials" class="s_hk_testimonials hk-section" data-name="Hekau Testimonials">
+        <section id="testimonials" class="s_hk_testimonials hk-section hk-testimonials-pair" data-name="Hekau Testimonials">
             <div class="hk-container">
                 <div class="hk-testimonials-box">
                     <div class="hk-testimonials-head">
-                        <span class="hk-badge">Client Praises</span>
-                        <h2 class="hk-h2">What are they <br class="hk-only-mobile"/>saying about us?</h2>
-                        <p class="hk-lead">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                        <span class="hk-badge">In our clients’ words</span>
+                        <h2 class="hk-h2">What working with <br class="hk-only-mobile"/>us is like</h2>
+                        <p class="hk-lead">From the companies we build and fix systems for.</p>
                     </div>
                     <div class="hk-quotes hk-scroller" tabindex="0" aria-label="Client testimonials">
                         <figure class="hk-quote m-0">
                             <header>
-                                <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                <img src="/website_hekau/static/src/img/testimonials/aditi_shrivastava.webp" alt="Aditi Shrivastava" width="48" height="48" loading="lazy"/>
                                 <div>
-                                    <h3>Aditi Verma</h3>
-                                    <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                    <h3>Aditi Shrivastava</h3>
+                                    <p class="hk-quote-role">Co-founder, The Arc</p>
                                 </div>
                             </header>
-                            <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                            <blockquote>“Working with the Hekau team has been a great experience. They quickly understood our vision at The Arc and turned it into practical digital solutions. I really appreciate their professionalism, flexibility, and focus on delivering results.”</blockquote>
                         </figure>
                         <figure class="hk-quote m-0">
                             <header>
-                                <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
+                                <img src="/website_hekau/static/src/img/testimonials/ismail_shaikh.webp" alt="Ismail Shaikh" width="48" height="48" loading="lazy"/>
                                 <div>
-                                    <h3>Aditi Verma</h3>
-                                    <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
+                                    <h3>Ismail Shaikh</h3>
+                                    <p class="hk-quote-role">Co-founder, FYHBA Medical Billing</p>
                                 </div>
                             </header>
-                            <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
-                        </figure>
-                        <figure class="hk-quote m-0">
-                            <header>
-                                <img src="/website_hekau/static/src/img/icons/avatar_placeholder.svg" alt="" width="48" height="48"/>
-                                <div>
-                                    <h3>Aditi Verma</h3>
-                                    <p class="hk-quote-role">Explore Our Proven Track Record of Tailored IT Solutions</p>
-                                </div>
-                            </header>
-                            <blockquote>Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions. Explore Our Proven Track Record of Tailored IT Solutions.</blockquote>
+                            <blockquote>“Hekau has been an excellent partner for FYHBA. They not only understood our requirements clearly but also went the extra mile to deliver solutions that added real value to our business. Their proactive approach, attention to detail, and dependable support have made them a trusted partner for us.”</blockquote>
                         </figure>
                     </div>
                     <div class="hk-scroll-indicator hk-only-mobile" aria-hidden="true"><span/></div>
