@@ -128,6 +128,52 @@ SERVICES = {
                       'Sales, stock, manufacturing and accounting', 'Little custom code, so upgrades stay cheap',
                       'We run Hekau on it, this website included'],
         },
+        # Extra section of this page only: Odoo by industry.
+        'industries': {
+            'title': 'How Odoo works in your industry',
+            'lead': 'The same platform, set up around how each kind of business makes money. Here is where we '
+                    'usually start.',
+            'items': [
+                {'title': 'Manufacturing',
+                 'text': 'Sales orders drive purchasing and production. Bills of materials, work orders and maintenance '
+                         'keep the shop floor in step with what has been sold, and material and labor costs roll up to '
+                         'show real margins.',
+                 'apps': ['CRM', 'Sales', 'Manufacturing', 'Inventory', 'Purchase', 'Maintenance', 'Quality']},
+                {'title': 'Wholesale & distribution',
+                 'text': 'Stock across warehouses, reordering rules that buy before you run out, and pricelists for '
+                         'each customer. Picking, packing and shipping run on barcode scans, and invoices go out when '
+                         'goods ship.',
+                 'apps': ['Sales', 'Inventory', 'Purchase', 'Barcode', 'Accounting', 'CRM']},
+                {'title': 'E-commerce & D2C',
+                 'text': 'Your online store runs on the same products, stock and customers as your back office. Orders '
+                         'go straight to fulfillment, and email campaigns use real purchase history.',
+                 'apps': ['Website', 'eCommerce', 'Inventory', 'Email Marketing', 'Accounting']},
+                {'title': 'B2B services',
+                 'text': 'From lead to signed quote to delivery: accepted quotes become projects, the team logs time '
+                         'against them, and invoices follow milestones or hours worked.',
+                 'apps': ['CRM', 'Sales', 'Project', 'Timesheets', 'Invoicing', 'Helpdesk']},
+                {'title': 'Field services & construction',
+                 'text': 'Jobs scheduled by crew and location, materials drawn from stock, and work signed off on site '
+                         'from a phone. Every job tracks its costs against the quote.',
+                 'apps': ['Field Service', 'Project', 'Planning', 'Inventory', 'Purchase', 'Accounting']},
+                {'title': 'Healthcare services',
+                 'text': 'For clinics, care providers and billing companies: appointment booking, intake forms, staff '
+                         'schedules, client communication and billing in one place. Clinical records stay in your '
+                         'specialist system; Odoo runs the business around them.',
+                 'apps': ['Appointments', 'CRM', 'Helpdesk', 'Employees', 'Accounting']},
+                {'title': 'Non-profits & CSR',
+                 'text': 'Donors, volunteers and CSR partners in one CRM. Campaigns, events and programs are tracked '
+                         'with their costs, so every contribution can be accounted for and reported.',
+                 'apps': ['CRM', 'Events', 'Email Marketing', 'Project', 'Surveys', 'Accounting']},
+                {'title': 'Media & publishing',
+                 'text': 'Stories published from Odoo’s website builder, subscriptions that renew and invoice '
+                         'themselves, and advertising deals managed in a sales pipeline.',
+                 'apps': ['Website', 'Blog', 'Subscriptions', 'CRM', 'Sales', 'Email Marketing']},
+            ],
+            'note': 'Some apps, such as Field Service, Quality, Barcode, Planning, Appointments, Helpdesk and '
+                    'Subscriptions, are part of Odoo Enterprise. We tell you what your edition includes before you '
+                    'commit.',
+        },
         'process': {
             'heading': 'From spreadsheets to one system in five steps',
             'lead': 'Most rollouts go live in phases, so each team is productive before the next one moves.',
@@ -169,8 +215,8 @@ SERVICES = {
                 ('Connect what you already use',
                  'Your CRM, ERP, forms, email, SMS and spreadsheets pass data to each other directly, instead of through a person.'),
                 ('Proven where it matters',
-                 'Inali Foundation cut CSR campaign turnaround from 7 days to 2. Idamoss Systems generates every vendor '
-                 'contract automatically at sign-up.'),
+                 'Inali Foundation cut CSR campaign turnaround from 7 days to 2. An event ticketing marketplace we built '
+                 'generates every vendor contract automatically at sign-up.'),
             ),
         },
         'process': {
@@ -184,7 +230,7 @@ SERVICES = {
                 ('Monitor and improve', 'We watch them in daily use, fix edge cases and extend what works.'),
             ),
         },
-        'featured': ['idamoss-systems', 'mywanderloop'],
+        'featured': ['event-ticketing-marketplace', 'mywanderloop'],
     },
 
     'web': {
@@ -213,8 +259,8 @@ SERVICES = {
                  'We rebuilt The Arc on Next.js with a custom CMS. It now serves 50,000+ visitors a month with top '
                  'PageSpeed scores.'),
                 ('Payments, logins and integrations done right',
-                 'Razorpay event payments for MCCIA, one login across web and mobile for Ragya, contracts generated '
-                 'automatically for Idamoss. The plumbing that makes a platform work.'),
+                 'Razorpay event payments for MCCIA, one login across web and mobile for Ragya, vendor contracts '
+                 'generated automatically for an event ticketing marketplace. The plumbing that makes a platform work.'),
             ),
         },
         'process': {
@@ -568,18 +614,12 @@ CASES = [
         'related': ['devdoot', 'indies'],
     },
     {
-        'slug': 'idamoss-systems', 'categories': ['apps', 'automation'], 'tags': ['Web Platform', 'Events'],
-        'card_title': 'Idamoss Systems: event ticketing with contracts that write themselves',
+        # Client asked not to be named: no name, logo or name in the URL.
+        'slug': 'event-ticketing-marketplace', 'categories': ['apps', 'automation'], 'tags': ['Web Platform', 'Events'],
+        'card_title': 'Event ticketing with vendor contracts that write themselves',
         'card_text': 'A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.',
-        'service': 'Custom Web Apps & Portals, Workflow Automation', 'client': 'Idamoss Systems', 'industry': 'Events and entertainment',
-        'about': 'Idamoss Systems runs a marketplace where organizers sell tickets for festivals, raves and parties.',
-        'challenge': 'Every new vendor meant collecting details and drafting a contract by hand, and the platform '
-                     'needed full e-commerce and analytics to grow.',
-        'built': 'Self-service vendor registration; a contract generated automatically from the registration details '
-                 'and emailed to both the vendor and Idamoss; ticket listings, payments through several gateways and '
-                 'ticket delivery; and Google Analytics with Microsoft Clarity to show how users behave.',
-        'impact': 'The platform serves 6,000 regular users and a growing vendor base, and onboarding a vendor no '
-                  'longer needs anyone to draft a contract.',
+        'service': 'Custom Web Apps & Portals, Workflow Automation', 'client': 'An event ticketing marketplace',
+        'industry': 'Events and entertainment',
         'quote': 'Every vendor contract is generated the moment registration is complete.',
         'related': ['mccia', 'mywanderloop'],
     },
@@ -610,7 +650,7 @@ CASES = [
         'impact': 'Onboarding and security checks run automatically, and every message is delivered quickly and '
                   'tracked, with real-time logs.',
         'quote': 'Every SMS and email tracked from send to delivery.',
-        'related': ['idamoss-systems', 'devdoot'],
+        'related': ['event-ticketing-marketplace', 'devdoot'],
     },
     {
         'slug': 'the-arc', 'categories': ['rescue', 'apps', 'cloud', 'erp'], 'tags': ['Project Rescue', 'Media'],
@@ -647,7 +687,7 @@ CASES = [
         'impact': 'MCCIA handles more registrations without extra admin work, attendees get instant confirmation, and '
                   'finance reconciles event payments far more easily.',
         'quote': 'Book, pay and get a receipt in one step.',
-        'related': ['idamoss-systems', 'temple-qr-passes'],
+        'related': ['event-ticketing-marketplace', 'temple-qr-passes'],
     },
     {
         'slug': 'fashquik', 'categories': ['rescue', 'apps'], 'tags': ['Dedicated Developers', 'E-Commerce'],
@@ -763,7 +803,7 @@ CASES = [
                  'the pass details instantly; and a back end that tracks issued passes and blocks duplicate entries.',
         'impact': 'Entry is faster, verification errors are gone, and staff can see how many passes have been issued and used.',
         'quote': 'Scan, verify, enter.',
-        'related': ['mccia', 'idamoss-systems'],
+        'related': ['mccia', 'event-ticketing-marketplace'],
     },
     {
         'slug': 'mohur', 'categories': ['ai'], 'tags': ['AI & Data', 'Startup Funding'],
@@ -777,7 +817,7 @@ CASES = [
                  'directions, startups for investors and investors for startups; and models that keep learning as data grows.',
         'impact': 'More relevant matches, more engagement from investors and founders, and a matching process that scales with the platform.',
         'quote': 'The right investor, suggested before anyone has to search.',
-        'related': ['job-post-scoring', 'idamoss-systems'],
+        'related': ['job-post-scoring', 'event-ticketing-marketplace'],
     },
     {
         'slug': 'job-post-scoring', 'categories': ['ai'], 'tags': ['AI & Data', 'HR Tech'],
@@ -823,7 +863,10 @@ CASES = [
         'related': ['manufacturing-test-records', 'mohur'],
     },
 ]
+from hk_cases import CASE_DETAILS  # noqa: E402  long-form case studies
+
 for _c in CASES:
+    _c.update(CASE_DETAILS[_c['slug']])
     _c.setdefault('image', f'projects/{_c["slug"]}.webp')
     _c.setdefault('featured_text', _c['card_text'])
     _c['quote_image'] = f'projects/{_c["slug"]}_quote.webp'

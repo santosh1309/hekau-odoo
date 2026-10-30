@@ -18,7 +18,7 @@ Implements the "Hekau WIP" Figma design on Odoo 20 Website:
 Page content stays editable in the website builder, and new pages can be built by
 dragging Hekau blocks.
     """,
-    'version': '20.0.5.4.0',
+    'version': '20.0.5.5.0',
     'category': 'Website/Website',
     'author': 'Hekau Business Solutions',
     'website': 'https://www.hekautech.com',
@@ -49,6 +49,7 @@ dragging Hekau blocks.
         'views/snippets/s_hk_case_hero.xml',
         'views/snippets/s_hk_case_text.xml',
         'views/snippets/s_hk_case_figure.xml',
+        'views/snippets/s_hk_industries.xml',
         'views/snippets/snippets.xml',
         # Pages
         'views/homepage.xml',

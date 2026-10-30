@@ -44,11 +44,11 @@
                         </div>
                     </article>
                     <article class="hk-work-card" data-category="apps automation">
-                        <a href="/projects/idamoss-systems" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="1080" height="560" loading="lazy"/></a>
+                        <a href="/projects/event-ticketing-marketplace" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="1080" height="560" loading="lazy"/></a>
                         <div class="hk-work-info">
                             <div class="hk-work-tags"><span class="hk-badge">Web Platform</span><span class="hk-badge">Events</span></div>
                             <div class="hk-work-body">
-                                <h3 class="hk-work-title"><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                <h3 class="hk-work-title"><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                 <p class="hk-work-text">A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                             </div>
                         </div>

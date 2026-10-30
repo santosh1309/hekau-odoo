@@ -440,6 +440,57 @@
                         </div>
                     </div>
                 </section>
+                <section class="s_hk_industries hk-section" data-snippet="s_hk_industries" data-name="Hekau Industries" style="--hk-pt: 160px; --hk-pt-m: 128px;">
+                    <div class="hk-container">
+                        <div class="hk-section-head hk-glow-top">
+                            <h2 class="hk-h2 hk-h2-sm hk-h2-bold">How Odoo works in your industry</h2>
+                            <p class="hk-lead">The same platform, set up around how each kind of business makes money. Here is where we usually start.</p>
+                        </div>
+                        <div class="hk-industries-grid">
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">Manufacturing</h3>
+                                <p class="hk-industry-text">Sales orders drive purchasing and production. Bills of materials, work orders and maintenance keep the shop floor in step with what has been sold, and material and labor costs roll up to show real margins.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>CRM</li><li>Sales</li><li>Manufacturing</li><li>Inventory</li><li>Purchase</li><li>Maintenance</li><li>Quality</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">Wholesale &amp; distribution</h3>
+                                <p class="hk-industry-text">Stock across warehouses, reordering rules that buy before you run out, and pricelists for each customer. Picking, packing and shipping run on barcode scans, and invoices go out when goods ship.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>Sales</li><li>Inventory</li><li>Purchase</li><li>Barcode</li><li>Accounting</li><li>CRM</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">E-commerce &amp; D2C</h3>
+                                <p class="hk-industry-text">Your online store runs on the same products, stock and customers as your back office. Orders go straight to fulfillment, and email campaigns use real purchase history.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>Website</li><li>eCommerce</li><li>Inventory</li><li>Email Marketing</li><li>Accounting</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">B2B services</h3>
+                                <p class="hk-industry-text">From lead to signed quote to delivery: accepted quotes become projects, the team logs time against them, and invoices follow milestones or hours worked.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>CRM</li><li>Sales</li><li>Project</li><li>Timesheets</li><li>Invoicing</li><li>Helpdesk</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">Field services &amp; construction</h3>
+                                <p class="hk-industry-text">Jobs scheduled by crew and location, materials drawn from stock, and work signed off on site from a phone. Every job tracks its costs against the quote.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>Field Service</li><li>Project</li><li>Planning</li><li>Inventory</li><li>Purchase</li><li>Accounting</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">Healthcare services</h3>
+                                <p class="hk-industry-text">For clinics, care providers and billing companies: appointment booking, intake forms, staff schedules, client communication and billing in one place. Clinical records stay in your specialist system; Odoo runs the business around them.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>Appointments</li><li>CRM</li><li>Helpdesk</li><li>Employees</li><li>Accounting</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">Non-profits &amp; CSR</h3>
+                                <p class="hk-industry-text">Donors, volunteers and CSR partners in one CRM. Campaigns, events and programs are tracked with their costs, so every contribution can be accounted for and reported.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>CRM</li><li>Events</li><li>Email Marketing</li><li>Project</li><li>Surveys</li><li>Accounting</li></ul>
+                            </article>
+                            <article class="hk-industry">
+                                <h3 class="hk-industry-title">Media &amp; publishing</h3>
+                                <p class="hk-industry-text">Stories published from Odoo’s website builder, subscriptions that renew and invoice themselves, and advertising deals managed in a sales pipeline.</p>
+                                <ul class="hk-industry-apps" aria-label="Apps"><li>Website</li><li>Blog</li><li>Subscriptions</li><li>CRM</li><li>Sales</li><li>Email Marketing</li></ul>
+                            </article>
+                        </div>
+                        <p class="hk-industries-note">Some apps, such as Field Service, Quality, Barcode, Planning, Appointments, Helpdesk and Subscriptions, are part of Odoo Enterprise. We tell you what your edition includes before you commit.</p>
+                    </div>
+                </section>
                 <section class="s_hk_process hk-section" data-snippet="s_hk_process" data-name="Hekau Process" style="--hk-pt: 180px; --hk-pt-m: 128px;">
                     <div class="hk-container">
                         <div class="hk-process-row">
@@ -657,7 +708,7 @@
                             <div class="hk-feature-card">
                                 <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_bpa_3.svg" alt="" width="44" height="44"/>
                                 <h3 class="hk-feature-title">Proven where it matters</h3>
-                                <p class="hk-feature-text">Inali Foundation cut CSR campaign turnaround from 7 days to 2. Idamoss Systems generates every vendor contract automatically at sign-up.</p>
+                                <p class="hk-feature-text">Inali Foundation cut CSR campaign turnaround from 7 days to 2. An event ticketing marketplace we built generates every vendor contract automatically at sign-up.</p>
                             </div>
                         </div>
                     </div>
@@ -720,13 +771,13 @@
                         </div>
                         <div class="hk-projects-grid">
                             <article class="hk-project-card">
-                                <a href="/projects/idamoss-systems" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="440" height="220" loading="lazy"/></a>
+                                <a href="/projects/event-ticketing-marketplace" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                        <h3><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                         <p>A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                                     </div>
-                                    <a href="/projects/idamoss-systems" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/event-ticketing-marketplace" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                             <article class="hk-project-card">
@@ -891,7 +942,7 @@
                             <div class="hk-feature-card">
                                 <img class="hk-feature-icon" src="/website_hekau/static/src/img/svc/feat_web_3.svg" alt="" width="44" height="44"/>
                                 <h3 class="hk-feature-title">Payments, logins and integrations done right</h3>
-                                <p class="hk-feature-text">Razorpay event payments for MCCIA, one login across web and mobile for Ragya, contracts generated automatically for Idamoss. The plumbing that makes a platform work.</p>
+                                <p class="hk-feature-text">Razorpay event payments for MCCIA, one login across web and mobile for Ragya, vendor contracts generated automatically for an event ticketing marketplace. The plumbing that makes a platform work.</p>
                             </div>
                         </div>
                     </div>

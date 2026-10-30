@@ -211,3 +211,137 @@
         }
     }
 }
+
+// Long case studies: reading-width column, sub-sections and lists.
+.s_hk_case_text .hk-case-text.hk-case-long,
+.s_hk_case_gist .hk-case-long { max-width: 880px + 2 * 24px; }
+
+.s_hk_case_text {
+    .hk-case-long .hk-case-group + .hk-case-group { margin-top: 48px; }
+
+    .hk-case-h2 + p,
+    .hk-case-h2 + .hk-case-list { margin-top: 0; }
+
+    p + .hk-case-list,
+    .hk-case-list + p { margin-top: 16px; }
+
+    .hk-case-list {
+        margin: 0;
+        padding-left: 22px;
+
+        li {
+            font-size: 16px;
+            line-height: 1.5;
+            color: $hk-text;
+
+            &::marker { color: $hk-lavender; }
+        }
+
+        li + li { margin-top: 10px; }
+    }
+
+    strong {
+        font-weight: 600;
+        color: $hk-white;
+    }
+
+    .hk-case-item { margin-top: 28px; }
+
+    .hk-case-h3 {
+        margin: 0 0 8px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: .2px;
+        color: $hk-white;
+    }
+
+    @include hk-mobile {
+        .hk-case-long .hk-case-group + .hk-case-group { margin-top: 36px; }
+
+        .hk-case-list li { font-size: 15px; }
+
+        .hk-case-item { margin-top: 24px; }
+
+        .hk-case-h3 {
+            font-size: 17px;
+            line-height: 25px;
+        }
+    }
+}
+
+// "At a glance": the project in three sentences, under the hero.
+.s_hk_case_gist {
+    .hk-case-gist {
+        position: relative;
+        padding: 32px;
+        border-radius: 16px;
+        background-color: $hk-surface;
+        @include hk-inner-stroke(rgba($hk-lavender, .25), 16px);
+    }
+
+    .hk-case-gist-title {
+        margin: 0 0 24px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: $hk-yellow;
+    }
+
+    .hk-case-gist-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px;
+    }
+
+    .hk-case-gist-label {
+        margin: 0 0 8px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: .8px;
+        text-transform: uppercase;
+        color: $hk-lavender;
+    }
+
+    .hk-case-gist-text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $hk-white;
+    }
+
+    .hk-case-gist-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        margin: 24px 0 0;
+        padding-top: 20px;
+        border-top: 1px solid $hk-line-soft;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $hk-muted;
+
+        span {
+            font-weight: 600;
+            color: $hk-lavender;
+        }
+    }
+
+    @include hk-mobile {
+        .hk-container { padding-inline: 16px; }
+
+        .hk-case-gist { padding: 20px; }
+
+        .hk-case-gist-title { margin-bottom: 16px; }
+
+        .hk-case-gist-grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+        }
+
+        .hk-case-gist-text { font-size: 15px; }
+    }
+}

@@ -319,6 +319,28 @@ def vision(title, items):
     return section('s_hk_vision hk-section', 'Hekau Vision', ind(body, 4))
 
 
+# --- Industries (ERP, CRM & CMS page) ----------------------------------------------------------
+
+def industries(title, lead, items, note=None):
+    """Cards: industry, how the platform fits it, and the apps involved."""
+    cards = []
+    for it in items:
+        apps = ''.join(f'<li>{t(x)}</li>' for x in it['apps'])
+        cards.append(f'''<article class="hk-industry">
+    <h3 class="hk-industry-title">{t(it["title"])}</h3>
+    <p class="hk-industry-text">{t(it["text"])}</p>
+    <ul class="hk-industry-apps" aria-label="Apps">{apps}</ul>
+</article>''')
+    note_html = f'\n    <p class="hk-industries-note">{t(note)}</p>' if note else ''
+    body = f'''<div class="hk-container">
+{ind(heading(title, 'hk-h2 hk-h2-sm hk-h2-bold', lead=lead), 4)}
+    <div class="hk-industries-grid">
+{ind(chr(10).join(cards), 8)}
+    </div>{note_html}
+</div>'''
+    return section('s_hk_industries hk-section', 'Hekau Industries', ind(body, 4))
+
+
 # --- Project list -----------------------------------------------------------------------------------
 
 def project_list(title, filters, projects):
@@ -372,22 +394,74 @@ def case_hero(title, image, meta):
     return section('s_hk_case_hero', 'Hekau Case Hero', ind(body, 4))
 
 
-def case_text(groups, eyebrow=None, heading=None, small=False):
-    """Titled paragraphs. `heading`: section title above them (FAQ, legal
-    pages); `small`: smaller group titles (h3) for long documents."""
+def rich(text, cls=None):
+    """Paragraphs separated by blank lines. A block whose lines all start with
+    "- " becomes a bullet list; **text** becomes bold."""
+    attr = f' class="{cls}"' if cls else ''
+    out = []
+    for block in text.split('\n\n'):
+        block = block.strip()
+        if not block:
+            continue
+        lines = [ln.strip() for ln in block.split('\n')]
+        if all(ln.startswith('- ') for ln in lines):
+            items = ''.join(f'<li>{_bold(t(ln[2:]))}</li>' for ln in lines)
+            out.append(f'<ul class="hk-case-list">{items}</ul>')
+        else:
+            out.append(f'<p{attr}>{_bold(t(" ".join(lines)))}</p>')
+    return '\n'.join(out)
+
+
+def _bold(html):
+    parts = html.split('**')
+    return ''.join(f'<strong>{p}</strong>' if i % 2 else p for i, p in enumerate(parts))
+
+
+def case_text(groups, eyebrow=None, heading=None, small=False, long=False):
+    """Titled text groups. `heading`: section title above them (FAQ, legal
+    pages); `small`: smaller group titles (h3) for long documents; `long`:
+    reading-width column (case studies). A group can add `items`: titled
+    sub-sections (title, text) under its own text."""
     parts = []
     tag = 'h3' if heading else 'h2'
     for g in groups:
+        items = ''
+        for title, text in g.get('items', ()):
+            items += f'''
+    <div class="hk-case-item">
+        <h3 class="hk-case-h3">{t(title)}</h3>
+{ind(rich(text), 8)}
+    </div>'''
+        text_html = f'\n{ind(rich(g["text"]), 4)}' if g.get('text') else ''
         parts.append(f'''<div class="hk-case-group">
-    <{tag} class="hk-case-h2{' hk-case-h2-sm' if small else ''}">{t(g["title"])}</{tag}>
-{ind(paragraphs(g["text"]), 4)}
+    <{tag} class="hk-case-h2{' hk-case-h2-sm' if small else ''}">{t(g["title"])}</{tag}>{text_html}{items}
 </div>''')
     eyebrow_html = f'\n    <p class="hk-case-eyebrow">{t(eyebrow)}</p>' if eyebrow else ''
     heading_html = f'\n    <h2 class="hk-h2 hk-h2-sm hk-h2-bold hk-case-heading">{t(heading)}</h2>' if heading else ''
-    body = f'''<div class="hk-container hk-container-case hk-case-text">{eyebrow_html}{heading_html}
+    long_cls = ' hk-case-long' if long else ''
+    body = f'''<div class="hk-container hk-container-case hk-case-text{long_cls}">{eyebrow_html}{heading_html}
 {ind(chr(10).join(parts), 4)}
 </div>'''
     return section('s_hk_case_text hk-section', 'Hekau Case Text', ind(body, 4))
+
+
+def case_gist(items, tools=None, title='At a glance'):
+    """Case study summary panel: (label, text) columns and an optional
+    "Built with" line."""
+    cols = '\n'.join(f'''<div class="hk-case-gist-item">
+    <p class="hk-case-gist-label">{t(label)}</p>
+    <p class="hk-case-gist-text">{t(text)}</p>
+</div>''' for label, text in items)
+    tools_html = (f'\n        <p class="hk-case-gist-tools"><span>Built with</span>{t(tools)}</p>' if tools else '')
+    body = f'''<div class="hk-container hk-container-case hk-case-long">
+    <div class="hk-case-gist">
+        <p class="hk-case-gist-title">{t(title)}</p>
+        <div class="hk-case-gist-grid">
+{ind(cols, 12)}
+        </div>{tools_html}
+    </div>
+</div>'''
+    return section('s_hk_case_text s_hk_case_gist hk-section', 'Hekau Case Summary', ind(body, 4))
 
 
 def case_figure(image, caption, alt='', natural=False, size=(1226, 685)):

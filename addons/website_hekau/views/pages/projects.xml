@@ -67,11 +67,11 @@
                                 </div>
                             </article>
                             <article class="hk-work-card" data-category="apps automation">
-                                <a href="/projects/idamoss-systems" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="1080" height="560" loading="lazy"/></a>
+                                <a href="/projects/event-ticketing-marketplace" class="hk-work-media"><img src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="1080" height="560" loading="lazy"/></a>
                                 <div class="hk-work-info">
                                     <div class="hk-work-tags"><span class="hk-badge">Web Platform</span><span class="hk-badge">Events</span></div>
                                     <div class="hk-work-body">
-                                        <h3 class="hk-work-title"><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                        <h3 class="hk-work-title"><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                         <p class="hk-work-text">A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                                     </div>
                                 </div>
@@ -335,16 +335,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Sales, purchasing, stock, production, maintenance and billing lived in separate tools, and month-end meant reconciling numbers that didn’t match.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">One Odoo system for sales, purchasing, inventory, manufacturing, maintenance, projects, timesheets and invoicing, with each step feeding the next.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Work is visible across teams, invoices follow completed work, and there are far fewer “which number is correct?” conversations.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Odoo: Sales, Purchase, Inventory, Manufacturing, Maintenance, Project, Timesheets, Invoicing</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A growing company that manufactures, maintains equipment and delivers projects for its customers.</p>
+                            <p>A growing company that does three kinds of work for its customers: it manufactures products, maintains equipment and delivers projects. Each has its own rhythm, its own paperwork and its own people, and all three have to end in an accurate invoice.</p>
+                            <p>Like many companies at this stage, it had grown one tool at a time: a sales tracker here, a stock spreadsheet there, and separate ways to log maintenance work and project hours.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Sales, purchasing, stock, production, maintenance and billing each lived in a different tool or spreadsheet. Month-end meant reconciling numbers that didn’t match.</p>
+                            <p>Every team had its own version of the truth. When something changed in one place, someone had to remember to update it everywhere else.</p>
+                            <ul class="hk-case-list"><li><strong>Sales and operations weren’t connected.</strong> A confirmed order didn’t tell purchasing what to buy or production what to build.</li><li><strong>Stock and maintenance drifted apart.</strong> Parts used on maintenance jobs weren’t always reflected in inventory.</li><li><strong>Project effort was estimated, not recorded.</strong> Hours lived in separate sheets, so project profitability was a guess.</li><li><strong>Month-end was a reconciliation exercise.</strong> Numbers had to be matched across tools before invoices and reports could go out.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -356,14 +380,75 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>An Odoo implementation with sales, purchasing, inventory, manufacturing, maintenance, projects, timesheets and invoicing on one platform. Sales orders connect directly to procurement and production, inventory and maintenance data stay in sync, and timesheets record real effort rather than estimates.</p>
+                            <p>We implemented Odoo as the single system for the whole operation, set up around how the company already works, and connected each step to the next so data is entered once.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Sales connected to procurement and production</h3>
+                                <p>A confirmed sales order now drives what happens next: what needs to be bought and what needs to be made. Sales can see where an order stands without asking.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Inventory that stays accurate</h3>
+                                <p>Receipts, production and deliveries update stock as they happen, so every team looks at the same quantities.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Manufacturing and maintenance in step</h3>
+                                <p>Manufacturing orders and maintenance work sit in the same system as inventory, so parts and materials used on a job come out of the same stock records.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Projects with real timesheets</h3>
+                                <p>Project tasks are planned in Odoo and the team logs hours against them, so each project shows the effort that actually went into it, not an estimate.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Invoicing that follows the work</h3>
+                                <p>Delivered goods, completed project work and logged hours flow into invoices. Billing became a result of finished work instead of a separate task at month-end.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Work became visible across teams. Invoicing now follows completed work instead of being a separate exercise, with fewer gaps, fewer reconciliations and fewer “which number is correct?” conversations.</p>
+                            <p>There is nothing dramatic about one system, and that is the point. The improvements show up in everyday work:</p>
+                            <ul class="hk-case-list"><li><strong>Work is visible across teams.</strong> Sales, operations and finance see the same orders, stock and progress.</li><li><strong>Fewer gaps and reconciliations.</strong> Data is entered once and flows on, so there is less to cross-check.</li><li><strong>Real project effort.</strong> Timesheets record actual hours, not estimates.</li><li><strong>Invoices follow completed work.</strong> Billing is no longer a separate exercise.</li></ul>
+                        </div>
+                        <div class="hk-case-group">
+                            <h2 class="hk-case-h2">What else Odoo can do for a company like this</h2>
+                            <p>This rollout covered the core of the business. Because Odoo runs dozens of apps on one database, a company like this can keep adding capability without bringing in another disconnected tool. Some of these are Odoo Enterprise apps; we tell you what your edition includes, and what each addition involves, before you commit.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Quality control</h3>
+                                <p>Quality checks at chosen production steps, with pass or fail results recorded against each manufacturing order and alerts when something fails.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Barcode scanning in the warehouse</h3>
+                                <p>Receipts, picking, packing and stock counts done by scanning, which cuts typing errors and speeds up the warehouse.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Field service</h3>
+                                <p>Maintenance jobs at customer sites scheduled for technicians, with parts, time and the customer’s signature captured on a phone and invoiced from the same record.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Helpdesk</h3>
+                                <p>Customer issues logged as tickets and linked to the customer’s orders and equipment, with response targets the team can track.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Product lifecycle management</h3>
+                                <p>Engineering changes to products and bills of materials, versioned and approved before they reach the shop floor.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Customer and vendor portals</h3>
+                                <p>Customers check orders, deliveries and invoices online; vendors confirm purchase orders and delivery dates without email back-and-forth.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Website and online store</h3>
+                                <p>A website and online store that use the same products, prices and stock as the back office.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Dashboards and reporting</h3>
+                                <p>Live dashboards for sales, margins, stock value and production, built on the data teams already enter.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -459,16 +544,41 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Patients, appointments, CSR campaigns, inventory and staff tasks ran on paper and spreadsheets, and campaign reports took days.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">One mobile and web app with role-based dashboards for patients, appointments, campaigns, inventory, vendors and leads.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">CSR campaigns are finalized in 2 days instead of 7, and every team works from the same live data.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Mobile app · Web app · Role-based access</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A non-profit that has provided thousands of accessible prosthetic arms across India, funded through CSR partnerships.</p>
+                            <p>Inali Foundation is a non-profit that has provided thousands of accessible prosthetic arms to people across India. Its work is funded through CSR partnerships, so it answers to two groups at once: the patients it fits and supports, and the partners who want to see what their funding achieves.</p>
+                            <p>Doing both well takes close coordination between doctors, CSR managers, inventory staff, supervisors and the people bringing in new leads.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Patient registration, appointments, CSR campaigns, inventory and staff tasks all ran on paper and spreadsheets. Pulling a campaign report took days, and the foundation nearly lost a major recurring CSR partner because of it. The founder couldn’t see inventory, fitments or campaign status without waiting for someone to compile the data.</p>
+                            <p>Almost everything ran on paper and spreadsheets. As the foundation grew, manual work started to hold it back:</p>
+                            <ul class="hk-case-list"><li><strong>Registration and appointments were manual,</strong> which made booking fittings slow and patient history hard to find.</li><li><strong>Campaigns, inventory and staff tasks were managed separately,</strong> with no single view of what was happening.</li><li><strong>Leads weren’t tracked centrally,</strong> so follow-ups depended on memory.</li><li><strong>Teams communicated through calls and messages,</strong> which caused delays and misunderstandings.</li></ul>
+                            <p>The cost was real. Pulling a campaign report took days, and the foundation nearly lost a major recurring CSR partner because of it. The founder couldn’t see inventory, fitments or campaign status without waiting for someone to compile the data.</p>
                         </div>
                     </div>
                 </section>
@@ -480,14 +590,43 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>One mobile and web app for the whole operation: patient registration and records, appointment booking with automatic reminders, CSR campaign tracking with updates for partners, real-time inventory, vendor and partner profiles, and role-based dashboards for CSR managers, doctors, supervisors, lead managers and inventory managers.</p>
+                            <p>We designed and built the Inali App, one mobile and web platform for the whole operation. Each person sees what their role needs, and every update reaches the people who depend on it.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Patient registration and records</h3>
+                                <p>Registration collects everything the clinical team needs and stores it securely. Each patient’s medical history, fitment procedures and rehabilitation progress are organized on a personal dashboard.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Appointments with automatic reminders</h3>
+                                <p>Staff book fittings and follow-ups in a few taps. Patients and staff get reminders and updates automatically, which cuts no-shows and phone calls.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">CSR campaign management</h3>
+                                <p>Campaigns are launched, tracked and reported in the app, and partners receive progress updates, so they see the impact of their funding without asking for a report.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Role-based dashboards</h3>
+                                <p>CSR managers, lead managers, inventory managers, supervisors and doctors each have their own dashboard and access level. People see what they need, and sensitive data stays with those allowed to see it.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Inventory, vendors and partners</h3>
+                                <p>Stock levels update in real time, so components are replenished before they run out. Vendor and CSR partner profiles, including vendor performance, live in the same system.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Tasks and leads</h3>
+                                <p>Daily tasks are assigned and tracked to completion, and leads are managed in a built-in CRM so none fall through the cracks.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Campaign turnaround fell from 7 days to 2. Every team works from the same live data, partners see progress without asking, and the foundation can serve more people.</p>
+                            <p>The app replaced paperwork with one live view of the foundation’s work:</p>
+                            <ul class="hk-case-list"><li><strong>CSR campaigns finalized in 2 days instead of 7.</strong></li><li><strong>Better coordination.</strong> Role-based dashboards keep departments working from the same information.</li><li><strong>Transparency for partners and leadership.</strong> Real-time updates show inventory, fitments and campaign progress without waiting for a report.</li><li><strong>More people served.</strong> With less time on admin, the team spends more on its mission.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -551,7 +690,7 @@
         <field name="website_meta_description">Inali Foundation: CSR campaigns in 2 days, not 7. One app replaced the spreadsheets behind a non-profit’s patients, inventory and CSR campaigns.</field>
     </record>
 
-    <template id="page_project_idamoss_systems" name="Project: Idamoss Systems: event ticketing with contracts that write themselves">
+    <template id="page_project_event_ticketing_marketplace" name="Project: Event ticketing with vendor contracts that write themselves">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure hk-page" style="--hk-grid-top: 1409px; --hk-grid-height: 1800px;">
                 <section class="s_hk_case_hero" data-snippet="s_hk_case_hero" data-name="Hekau Case Hero">
@@ -563,9 +702,9 @@
                         <span class="hk-hero-fade"/>
                     </div>
                     <div class="hk-container hk-container-case">
-                        <h1 class="hk-case-title">Idamoss Systems: event ticketing with contracts that write themselves</h1>
+                        <h1 class="hk-case-title">Event ticketing with vendor contracts that write themselves</h1>
                         <div class="hk-case-cover">
-                            <img src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="1226" height="749"/>
+                            <img src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="1226" height="749"/>
                         </div>
                         <div class="hk-case-meta">
                             <div class="hk-case-meta-item">
@@ -574,7 +713,7 @@
                             </div>
                             <div class="hk-case-meta-item">
                                 <span class="hk-badge">Client</span>
-                                <p class="hk-case-meta-value">Idamoss Systems</p>
+                                <p class="hk-case-meta-value">An event ticketing marketplace</p>
                             </div>
                             <div class="hk-case-meta-item">
                                 <span class="hk-badge">Industry</span>
@@ -583,35 +722,87 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Every new organizer meant collecting details and drafting a contract by hand, and the platform needed full e-commerce to grow.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">Self-service vendor sign-up with contracts generated automatically, plus ticket listings, payments, delivery and behavior analytics.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">A marketplace serving 6,000 regular users and a growing number of vendors, with no contract drafting.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Multiple payment gateways · Google Analytics · Microsoft Clarity</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>Idamoss Systems runs a marketplace where organizers sell tickets for festivals, raves and parties.</p>
+                            <p>Our client runs an online marketplace where event organizers sell tickets for festivals, raves and parties. Organizers, the platform’s vendors, list their events; fans discover them, buy tickets and receive them online.</p>
+                            <p>A marketplace like this grows on two things: how easily new organizers can join, and how easily fans can buy.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Every new vendor meant collecting details and drafting a contract by hand, and the platform needed full e-commerce and analytics to grow.</p>
+                            <p>The client needed a platform that could run both sides of the marketplace without a team doing paperwork in between:</p>
+                            <ul class="hk-case-list"><li><strong>Vendor onboarding was manual.</strong> Each new organizer meant collecting details and drafting a contract by hand.</li><li><strong>Selling tickets needed real e-commerce.</strong> Listings, ticket inventory, payments and delivery all had to work smoothly.</li><li><strong>The team couldn’t see how people used the site,</strong> so it was hard to know where buyers dropped off or what to improve next.</li></ul>
                         </div>
                     </div>
                 </section>
                 <section class="s_hk_case_figure hk-section" data-snippet="s_hk_case_figure" data-name="Hekau Case Image" style="--hk-pt: 60px; --hk-pt-m: 32px;">
                     <div class="hk-container hk-container-case">
                         <figure class="hk-case-figure hk-case-figure-natural">
-                            <img src="/website_hekau/static/src/img/projects/idamoss-systems_quote.webp" alt="Every vendor contract is generated the moment registration is complete." width="1840" height="1124" loading="lazy"/>
+                            <img src="/website_hekau/static/src/img/projects/event-ticketing-marketplace_quote.webp" alt="Every vendor contract is generated the moment registration is complete." width="1840" height="1124" loading="lazy"/>
                         </figure>
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Self-service vendor registration; a contract generated automatically from the registration details and emailed to both the vendor and Idamoss; ticket listings, payments through several gateways and ticket delivery; and Google Analytics with Microsoft Clarity to show how users behave.</p>
+                            <p>We designed and built the marketplace end to end, with the vendor side as automated as the buyer side.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Self-service vendor registration</h3>
+                                <p>Organizers sign up through a guided form that captures everything needed to start selling, so onboarding no longer waits on the client’s team.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Contracts that write themselves</h3>
+                                <p>As soon as a vendor completes registration, the platform builds their contract from the details they entered and emails it to both the vendor and the client. Everyone has a copy, and nobody drafts it by hand.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Ticket listings and inventory</h3>
+                                <p>Vendors list their events and manage ticket availability themselves, and counts update as tickets sell.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Payments and ticket delivery</h3>
+                                <p>Buyers pay through several payment gateways and receive their tickets online, with a smooth checkout from start to finish.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Behavior analytics</h3>
+                                <p>Google Analytics and Microsoft Clarity show how visitors browse, where they hesitate and where they drop off, so the team improves the platform with data rather than guesses.</p>
+                            </div>
                         </div>
                         <div class="hk-case-group">
+                            <h2 class="hk-case-h2">How it works</h2>
+                            <ul class="hk-case-list"><li>An organizer registers and receives their contract by email as soon as they finish.</li><li>They list an event and set ticket availability.</li><li>Fans find the event, pay through their preferred gateway and get their tickets online.</li><li>The client follows sales and behavior in analytics and keeps refining the platform.</li></ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
+                        <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>The platform serves 6,000 regular users and a growing vendor base, and onboarding a vendor no longer needs anyone to draft a contract.</p>
+                            <ul class="hk-case-list"><li><strong>6,000 regular users</strong> buy tickets on the platform.</li><li><strong>A growing vendor base,</strong> helped by onboarding without paperwork.</li><li><strong>No manual contract drafting.</strong> Every vendor contract is generated the moment registration is complete.</li><li><strong>Decisions based on data,</strong> with analytics showing how buyers actually use the site.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -666,13 +857,13 @@
             </div>
         </t>
     </template>
-    <record id="page_project_idamoss_systems_page" model="website.page">
-        <field name="url">/projects/idamoss-systems</field>
-        <field name="view_id" ref="page_project_idamoss_systems"/>
+    <record id="page_project_event_ticketing_marketplace_page" model="website.page">
+        <field name="url">/projects/event-ticketing-marketplace</field>
+        <field name="view_id" ref="page_project_event_ticketing_marketplace"/>
         <field name="is_published">True</field>
         <field name="header_overlay">True</field>
         <field name="track">True</field>
-        <field name="website_meta_description">Idamoss Systems: event ticketing with contracts that write themselves. A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</field>
+        <field name="website_meta_description">Event ticketing with vendor contracts that write themselves. A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</field>
     </record>
 
     <template id="page_project_manufacturing_test_records" name="Project: Machine test results captured in real time">
@@ -707,16 +898,41 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Test results were written down by hand: slow, error-prone and hard to analyze.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">An Android app that records results straight from the testing machines, secure central storage and a web platform with dashboards.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">No manual entry errors, results available the moment a test finishes, and trends visible on dashboards.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Android app · Encrypted data transfer · Web platform with dashboards</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A manufacturer that tests every unit it builds against strict quality standards and keeps the records for its stakeholders.</p>
+                            <p>Our client is an industrial manufacturer whose products are tested against strict quality standards. Every test produces results that have to be stored safely and made available to the people responsible for quality and production.</p>
+                            <p>The company manages these results on a dedicated record-keeping platform used across its manufacturing units.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Test results were written down by hand: slow, error-prone and hard to analyze. Quality teams needed the data captured at the machine, stored securely and easy to read.</p>
+                            <p>Recording tests by hand doesn’t scale:</p>
+                            <ul class="hk-case-list"><li><strong>Manual entry caused errors,</strong> and every error in a test record is a quality risk.</li><li><strong>Results took time to reach people,</strong> because they had to be written up first.</li><li><strong>Data was hard to analyze.</strong> Spotting a trend or an anomaly meant digging through records.</li><li><strong>Access had to be controlled.</strong> Different people needed different data sets, and nothing more.</li></ul>
+                            <p>The client wanted results captured digitally at the machine, stored securely in one place and presented in a way people could actually read.</p>
                         </div>
                     </div>
                 </section>
@@ -728,14 +944,42 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>An Android app that connects to the testing machines and records results in real time, encrypted transfer to a central server, a web platform with role-based access, and dashboards each team can arrange for itself.</p>
+                            <p>We built a system that takes test data from the machine to a dashboard without anyone retyping it.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Data capture at the machine</h3>
+                                <p>An Android app connects directly to the testing machines and records results in real time, so the number in the system is the number the machine produced.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Secure transfer and storage</h3>
+                                <p>Captured results travel to a central server over encrypted connections and are stored there, ready for future access and analysis.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Web platform with access control</h3>
+                                <p>Authorized users log in to a web platform to see the data. Access is managed per user, so each person sees only the data sets relevant to them.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Insights and charts</h3>
+                                <p>Results are turned into graphs and charts that make trends, anomalies and performance easy to see, including for teams monitoring remotely.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Custom dashboards</h3>
+                                <p>Each user arranges a dashboard with the line charts, bar graphs and pie charts that matter to their role.</p>
+                            </div>
                         </div>
                         <div class="hk-case-group">
+                            <h2 class="hk-case-h2">How it works</h2>
+                            <ul class="hk-case-list"><li>A test runs on the machine.</li><li>The Android app records the result and sends it, encrypted, to the central server.</li><li>The result appears on the web platform for users with access.</li><li>Dashboards update, so managers see trends without compiling anything.</li></ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
+                        <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Manual entry errors are gone, results are available the moment a test finishes, and managers spot trends and anomalies on dashboards instead of in spreadsheets.</p>
+                            <ul class="hk-case-list"><li><strong>Accurate records.</strong> Automated capture removed manual entry errors.</li><li><strong>Faster decisions.</strong> Results are available as soon as a test finishes, and charts make them easy to interpret.</li><li><strong>Less effort</strong> for technical staff and managers, who no longer write up or compile results.</li><li><strong>Secure, personal access.</strong> Each user sees the data they need on their own dashboard.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -831,16 +1075,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">The platform depends on real-time SMS and email, and needed fast, high-volume delivery without a complicated setup.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">MSG91 integrated into the back end: automated SMS on DLT-compliant templates, transactional email, webhooks and delivery logs.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Sign-up and security checks run automatically, and every message is delivered quickly and tracked.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>MSG91 SMS and email APIs · Webhooks · DLT-compliant templates</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>MyWanderloop’s platform depends on real-time messages: sign-up verification, transactional alerts and user updates.</p>
+                            <p>MyWanderloop runs a consumer platform that depends on messages arriving on time. Sign-up verification codes, transactional alerts and account updates reach users by SMS or email, and each one matters at the moment it is sent.</p>
+                            <p>A verification code that arrives late is a user who gives up.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>They needed fast, high-volume SMS and email delivery without delays or a complicated setup to run themselves.</p>
+                            <p>MyWanderloop needed messaging that was fast, reliable and simple to run:</p>
+                            <ul class="hk-case-list"><li><strong>High volume without delays.</strong> Codes and alerts had to go out immediately, even at busy times.</li><li><strong>India’s telecom rules.</strong> Transactional SMS in India has to use registered DLT templates to be delivered.</li><li><strong>Visibility.</strong> The team needed to know a message was delivered, not just sent.</li><li><strong>Low operational overhead.</strong> The setup couldn’t need constant attention from the team.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -852,14 +1120,34 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>MSG91 integrated into their back end, with automated SMS workflows on DLT-compliant templates (India’s telecom rules), transactional email pipelines, and webhook and API routing.</p>
+                            <p>We integrated MSG91’s cloud communication APIs into the platform’s back end and automated every message the platform sends.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Automated SMS workflows</h3>
+                                <p>Verification codes, alerts and updates trigger automatically from events in the platform, using DLT-compliant templates.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Transactional email pipelines</h3>
+                                <p>Account and transaction emails go out through the same integration, with consistent templates.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Webhooks and API routing</h3>
+                                <p>Delivery events come back to the platform through webhooks, so the system knows what happened to each message.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Delivery tracking and real-time logs</h3>
+                                <p>Every SMS and email is logged from send to delivery, which makes problems easy to spot and support questions easy to answer.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Onboarding and security checks run automatically, and every message is delivered quickly and tracked, with real-time logs.</p>
+                            <ul class="hk-case-list"><li><strong>Smoother onboarding.</strong> Sign-up verification runs on its own, with codes delivered quickly.</li><li><strong>Security checks without manual steps.</strong></li><li><strong>Full delivery visibility,</strong> with real-time logs for every message.</li><li><strong>Low maintenance,</strong> so the team spends its time on the product, not the plumbing.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -874,13 +1162,13 @@
                         </div>
                         <div class="hk-projects-grid">
                             <article class="hk-project-card">
-                                <a href="/projects/idamoss-systems" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="440" height="220" loading="lazy"/></a>
+                                <a href="/projects/event-ticketing-marketplace" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                        <h3><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                         <p>A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                                     </div>
-                                    <a href="/projects/idamoss-systems" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/event-ticketing-marketplace" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                             <article class="hk-project-card">
@@ -955,16 +1243,41 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">The previous vendor abandoned the platform mid-build, leaving editorial, internal and reader-facing features unfinished.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">We finished and refined the platform, moved the reader site to Next.js and built a custom CMS with rich article components.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">The Arc now serves 50,000+ visitors a month, with PageSpeed scores ahead of its competitors.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Next.js · Custom CMS</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A seed-funded news platform covering India’s high-growth companies, with research-backed reporting for general readers and executives.</p>
+                            <p>The Arc is a seed-funded news platform covering India’s high-growth companies, with research-backed reporting for general readers and executives. Its journalists publish news and insights for an audience that follows the startup ecosystem closely.</p>
+                            <p>For a publisher, two things decide success: how easily journalists can publish good work, and how quickly readers and search engines can find it.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>The previous IT vendor abandoned the platform mid-development. Editorial, organizational and reader-facing features were left unfinished, and the team struggled to publish and run daily operations.</p>
+                            <p>The Arc’s previous IT vendor walked away in the middle of development. That left the team with a platform they depended on but couldn’t fully use:</p>
+                            <ul class="hk-case-list"><li><strong>Editorial tools were incomplete,</strong> which made writing and managing articles harder than it should be.</li><li><strong>Internal features were unfinished,</strong> including organizational information and daily team operations.</li><li><strong>The reader-facing site had to perform.</strong> For a news platform, speed and search visibility drive audience growth.</li></ul>
+                            <p>The Arc needed a partner who could take over someone else’s code, finish it properly and raise the standard.</p>
                         </div>
                     </div>
                 </section>
@@ -976,14 +1289,34 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>We audited the existing code and finished the incomplete features, then moved the reader-facing site to Next.js for speed and search visibility. Journalists got a custom CMS with rich formatting; articles gained components for company financials, shareholding and author insights; and the team got tools to manage organizational information and track progress.</p>
+                            <p>We started with a thorough audit of what had been built, refined the existing features until they worked as intended, then rebuilt the parts that mattered most for growth.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A faster site on Next.js</h3>
+                                <p>We moved the reader-facing website to Next.js, which renders pages quickly and is easy for search engines to index. For a news platform, that means more readers finding stories through search.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A custom CMS for journalists</h3>
+                                <p>The editorial team got a content management system built around how they write, with rich formatting such as bold, italics and links, so articles are well structured and easy to read.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Article components that add depth</h3>
+                                <p>Articles can include author insights, company financials and shareholding details, giving readers context alongside the story.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Organizational management</h3>
+                                <p>Internal tools to manage organizational information and track the team’s progress, so the newsroom runs from one place.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>The Arc now serves 50,000+ visitors a month, with PageSpeed scores ahead of its competitors.</p>
+                            <ul class="hk-case-list"><li><strong>50,000+ visitors a month.</strong></li><li><strong>PageSpeed scores ahead of competitors,</strong> which helps readers and search rankings alike.</li><li><strong>A newsroom that publishes without fighting its tools.</strong></li><li><strong>A platform ready to grow,</strong> after starting from an abandoned build.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1079,16 +1412,41 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Event registration and payment were manual, causing delays for members and extra work for staff.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">Razorpay integrated into MCCIA’s event system, with a simple booking flow, automatic receipts and real-time booking sync.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">More registrations handled without extra admin, instant confirmation for attendees and easier reconciliation.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Razorpay</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>Pune’s chamber of commerce, with over 80 years of history and 3,000+ members across sectors. It runs seminars, workshops, networking sessions and conferences all year.</p>
+                            <p>The Mahratta Chamber of Commerce, Industries and Agriculture (MCCIA) is Pune’s chamber of commerce, with more than 80 years of history and over 3,000 members across sectors. From the MCCIA Trade Tower in Pune, a team of around 90 professionals works on business associations, advocacy and services for members.</p>
+                            <p>Events are central to that work: industry seminars, workshops, networking sessions and conferences run throughout the year, for members and non-members alike.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Event registration and payment were manual, which meant delays for members and extra work for staff.</p>
+                            <p>As the event calendar grew, the manual booking process couldn’t keep up:</p>
+                            <ul class="hk-case-list"><li><strong>Registration and payment happened offline,</strong> which meant delays for attendees and follow-ups for staff.</li><li><strong>Confirmations and receipts were handled by hand.</strong></li><li><strong>Bookings weren’t synced with event availability,</strong> so seats had to be checked manually.</li><li><strong>Reconciling event payments took effort.</strong></li></ul>
+                            <p>MCCIA wanted a secure, simple way for anyone to book and pay for an event online.</p>
                         </div>
                     </div>
                 </section>
@@ -1100,14 +1458,38 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Razorpay integrated into MCCIA’s event system, accepting cards, net banking and wallets; a simple booking flow for members and non-members; automatic confirmation emails and receipts; real-time sync of bookings and seats; and PCI DSS-compliant handling of payment data.</p>
+                            <p>We integrated a payment gateway into MCCIA’s existing event platform and automated everything that happens after someone pays.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Razorpay payment gateway</h3>
+                                <p>Attendees pay by credit or debit card, net banking or mobile wallet, whichever they prefer.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A simple booking flow</h3>
+                                <p>Custom registration and confirmation screens take members and non-members from choosing an event to paying in a few steps.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Automatic confirmations and receipts</h3>
+                                <p>As soon as a payment succeeds, the attendee receives a confirmation email and a receipt, with no staff involvement.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Real-time sync with the event system</h3>
+                                <p>Bookings update event availability instantly, so MCCIA always knows how many seats are taken.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Secure payments</h3>
+                                <p>Payments run over encrypted connections and follow PCI DSS standards for handling card data.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>MCCIA handles more registrations without extra admin work, attendees get instant confirmation, and finance reconciles event payments far more easily.</p>
+                            <ul class="hk-case-list"><li><strong>More registrations, no extra admin.</strong> Staff no longer process bookings by hand.</li><li><strong>Instant confirmation for attendees,</strong> which encourages more people to register online.</li><li><strong>Easier financial management.</strong> Automated payment tracking makes reconciling event revenue simpler.</li><li><strong>A better experience for members,</strong> who book and pay in one go.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1122,13 +1504,13 @@
                         </div>
                         <div class="hk-projects-grid">
                             <article class="hk-project-card">
-                                <a href="/projects/idamoss-systems" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="440" height="220" loading="lazy"/></a>
+                                <a href="/projects/event-ticketing-marketplace" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                        <h3><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                         <p>A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                                     </div>
-                                    <a href="/projects/idamoss-systems" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/event-ticketing-marketplace" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                             <article class="hk-project-card">
@@ -1203,16 +1585,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Technical debt and performance bottlenecks were slowing development just as vendor onboarding needed to scale.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">Our developers joined Fashquik’s team to optimize the codebase, re-engineer vendor management and rebuild delivery dispatch.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">A faster, more stable marketplace, ready to scale, with delivery that vendors and customers can rely on.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A marketplace that helps local vendors sell to customers in their own neighborhood, with its own delivery service.</p>
+                            <p>Fashquik is an e-commerce marketplace that helps local vendors sell to customers in their own neighborhood. Unlike a typical online store, it also runs the delivery, so products reach customers quickly from shops nearby.</p>
+                            <p>That model depends on two things working well: onboarding and managing many small vendors, and reliable local delivery.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Technical debt and performance bottlenecks were slowing development just as vendor onboarding needed to scale, and the delivery integration was unreliable.</p>
+                            <p>Fashquik hit development hurdles just as it needed to grow:</p>
+                            <ul class="hk-case-list"><li><strong>Technical debt and performance bottlenecks</strong> made the platform slow and every new feature harder to build.</li><li><strong>Vendor management needed work</strong> to support onboarding more local merchants.</li><li><strong>The delivery integration was unreliable,</strong> and delivery is the core of the business model.</li></ul>
+                            <p>Fashquik needed experienced developers who could join their team and work inside their roadmap.</p>
                         </div>
                     </div>
                 </section>
@@ -1224,14 +1630,34 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Our developers joined Fashquik’s own team. Together we reviewed and optimized the codebase for speed, refined the vendor management features and rebuilt the local delivery dispatch integration.</p>
+                            <p>Our developers joined Fashquik’s own team and worked alongside their developers on one roadmap.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Code review and optimization</h3>
+                                <p>We reviewed the existing codebase, refactored the parts causing bottlenecks and optimized it for speed and scalability.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Vendor management features</h3>
+                                <p>With Fashquik’s developers, we re-engineered the vendor management features so onboarding and managing local merchants matches the business goals.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Reliable delivery dispatch</h3>
+                                <p>We rebuilt the local delivery dispatch integration so orders reach delivery reliably, for vendors and customers alike.</p>
+                            </div>
                         </div>
                         <div class="hk-case-group">
+                            <h2 class="hk-case-h2">How we worked</h2>
+                            <p>Embedded developers only help if they fit the team. Ours adapted to Fashquik’s tools, standards and planning, picked up context quickly and contributed to the existing team rather than working beside it.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
+                        <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>The platform is faster, more stable and ready to scale, with delivery that vendors and customers can rely on.</p>
+                            <ul class="hk-case-list"><li><strong>A faster, more stable platform</strong> after the code clean-up.</li><li><strong>Ready to scale</strong> local vendor onboarding.</li><li><strong>Delivery that vendors and customers can rely on.</strong></li><li><strong>One team, one roadmap,</strong> with our developers working as part of Fashquik’s team.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1327,16 +1753,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">The app and the website behaved like separate products: separate accounts, playlists that didn’t sync and no proper way to subscribe.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">One login across web and mobile, subscription billing, real-time sync of playlists and listening history, and stronger security.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">One experience on every device and a smoother path from free listening to a premium subscription.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A streaming platform for classical music, with a mobile app and a website.</p>
+                            <p>Ragya is a streaming platform for classical music, much like Spotify but focused on traditional and classical genres. Listeners use its mobile app and its website to explore the collection.</p>
+                            <p>For a subscription product, the experience across devices is the product: listeners expect to pick up where they left off, wherever they are.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>The app and the website behaved like separate products. Listeners had separate accounts, playlists didn’t follow them between devices, and there was no proper way to subscribe or pay.</p>
+                            <p>Ragya’s app and website had grown up separately:</p>
+                            <ul class="hk-case-list"><li><strong>Separate accounts.</strong> Listeners couldn’t use the same login on the app and the website.</li><li><strong>Nothing followed them between devices.</strong> Playlists and preferences on one platform didn’t appear on the other.</li><li><strong>No robust payment system,</strong> which made it hard to subscribe, buy music or unlock premium features.</li></ul>
+                            <p>To stay competitive, Ragya needed the two platforms to work as one.</p>
                         </div>
                     </div>
                 </section>
@@ -1348,14 +1798,34 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>One login across web and mobile, a subscription and payment system, real-time sync of playlists and listening history, and stronger security for accounts and transactions.</p>
+                            <p>We unified Ragya’s web and mobile platforms around a single account and a single subscription.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">One login, every device</h3>
+                                <p>A unified authentication system lets listeners sign in with the same account on the app and the website.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Subscriptions and payments</h3>
+                                <p>A secure, simple payment system for subscriptions and purchases, so upgrading to premium takes a few taps.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Cross-platform sync</h3>
+                                <p>Playlists, preferences and listening history sync in real time, so the experience continues from phone to laptop.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Security for accounts and transactions</h3>
+                                <p>Stronger security measures protect personal data and payments.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>One experience on every device, and a smoother path from free listening to a premium subscription.</p>
+                            <ul class="hk-case-list"><li><strong>A unified experience</strong> across mobile and web.</li><li><strong>More premium subscriptions,</strong> with a simpler path to upgrade.</li><li><strong>Better retention,</strong> as listeners find their library wherever they are.</li><li><strong>Consistent data</strong> across platforms.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1451,16 +1921,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">The site had traffic but few leads: confusing navigation, scattered calls to action and a poor mobile experience.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A research-led redesign: new navigation, a landing page for each audience segment, responsive design and HubSpot lead capture.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Conversions up 15%, high-intent leads up 30%, and far fewer visitors dropping off on mobile.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>HubSpot · Heatmaps and behavior analytics</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A B2B data and lead generation company that helps its clients build their revenue pipeline.</p>
+                            <p>MaxintelB2B is a B2B data and lead generation company that helps its clients build their revenue pipeline. Its own website is one of its most important sales tools: if a lead generation company can’t generate leads from its own site, prospects notice.</p>
+                            <p>They came to us to revamp the website so it would engage visitors, capture more leads and convert better.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Traffic wasn’t turning into leads. Navigation was confusing, calls to action were scattered, and the site worked poorly on mobile.</p>
+                            <p>Traffic wasn’t the problem. Turning it into leads was:</p>
+                            <ul class="hk-case-list"><li><strong>Low conversion rates.</strong> Visitors arrived and left without getting in touch.</li><li><strong>Confusing navigation</strong> made the right service hard to find.</li><li><strong>Scattered, ineffective calls to action</strong> gave visitors no clear next step.</li><li><strong>No proper mobile experience,</strong> which lost a large share of visitors.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1472,14 +1966,39 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Heatmaps, surveys and behavior tracking to find where visitors dropped off; a new navigation and content structure; a landing page for each audience segment with one focused call to action; a fully responsive design; and HubSpot forms for lead capture.</p>
+                            <p>We started with research, not design, so every change targeted a real drop-off point.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">User research</h3>
+                                <p>Surveys, heatmap analysis and behavior tracking showed where visitors hesitated, what they looked for and where they left.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Navigation and content redesign</h3>
+                                <p>We rebuilt the navigation and restructured the content so each visitor finds the relevant service quickly.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A landing page for each segment</h3>
+                                <p>Each audience segment got its own landing page with one focused call to action, instead of a generic page for everyone.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Mobile optimization</h3>
+                                <p>A fully responsive design gives mobile visitors the same experience as desktop.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">HubSpot lead capture</h3>
+                                <p>HubSpot forms capture leads straight into the CRM, making it easy for visitors to get in touch and for the sales team to follow up.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Conversions rose 15% and high-intent leads 30%, with far fewer visitors dropping off on mobile.</p>
+                            <ul class="hk-case-list"><li><strong>15% more conversions</strong> across the site.</li><li><strong>30% more high-intent B2B leads.</strong></li><li><strong>Lower bounce rates</strong> as navigation improved.</li><li><strong>Far fewer mobile drop-offs.</strong></li></ul>
+                            <p>The work stayed cost-effective by focusing on the changes that mattered to MaxintelB2B’s users, not on a rebuild for its own sake.</p>
                         </div>
                     </div>
                 </section>
@@ -1575,16 +2094,39 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">The website had traffic but few leads, a complicated interface, unclear services and no mobile support.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A research-led redesign with simpler navigation, clear service pages, responsive design, lead forms and appointment scheduling.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">32% more leads and a 35% lower bounce rate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A medical billing and coding company in Westwood, New Jersey, offering billing management, consulting and revenue cycle services to medical practices.</p>
+                            <p>FYHBA Medical Billing is a medical billing and coding company based in Westwood, New Jersey. It offers billing management, consulting and revenue cycle services to medical practices.</p>
+                            <p>Its buyers are practice owners and managers who need to trust a billing partner quickly, so the website has to explain the services clearly and make it easy to start a conversation.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>The website had traffic but few leads. The interface was complicated, the services weren’t clearly explained, and the site didn’t work on mobile.</p>
+                            <p>FYHBA’s website was getting visitors, but not turning them into enquiries:</p>
+                            <ul class="hk-case-list"><li><strong>Low lead generation</strong> despite substantial traffic.</li><li><strong>A complicated interface</strong> discouraged visitors from exploring the services.</li><li><strong>No mobile responsiveness,</strong> so visitors on phones had a poor experience.</li><li><strong>Services weren’t clearly presented,</strong> so visitors missed important information.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1596,14 +2138,38 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Buyer research through surveys and behavior analysis; simpler navigation; service pages restructured around what practices need to know; a responsive design; lead forms and calls to action where visitors make decisions; and automated appointment scheduling.</p>
+                            <p>We redesigned the site around what practices need to know before they get in touch.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Buyer research</h3>
+                                <p>Surveys and behavior analysis showed who visits the site, what they look for and where they get stuck.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Simpler navigation</h3>
+                                <p>A streamlined structure and interface, so visitors find and understand FYHBA’s services quickly.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Clear service pages</h3>
+                                <p>Content restructured to present every service in detail, so visitors get the information they came for.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Responsive design</h3>
+                                <p>The new site works on every device, from desktop to phone.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Lead capture and scheduling</h3>
+                                <p>Simple forms and calls to action where visitors make decisions, and automated appointment scheduling so prospects can book a call without back-and-forth.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Leads rose 32% and the bounce rate fell 35%.</p>
+                            <ul class="hk-case-list"><li><strong>32% more leads</strong> captured through the site.</li><li><strong>35% lower bounce rate,</strong> with visitors staying longer.</li><li><strong>More engagement,</strong> as visitors spend more time exploring the services.</li><li><strong>A stronger platform for growth,</strong> positioning FYHBA to attract and convert new clients.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1699,16 +2265,38 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Every sale ran through Instagram direct messages, so orders got lost and buyers dropped off before paying.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A mobile-first online store with catalog browsing, a quick checkout, automated order management and CRM integration.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Sales grew 17%, and repeat purchases rose as followers became regular customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A premium fragrance brand selling directly to customers.</p>
+                            <p>YB Perfumes is a premium fragrance brand that sells directly to its customers. Like many young D2C brands, it built its audience on Instagram, where followers discovered new scents and asked about them in direct messages.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Every sale ran through Instagram direct messages, so orders got lost and interested buyers dropped off before paying.</p>
+                            <p>Selling through direct messages works until interest grows. Then the manual process starts to cost sales:</p>
+                            <ul class="hk-case-list"><li><strong>Orders got lost</strong> in long message threads.</li><li><strong>Buyers dropped off</strong> between asking a question and paying.</li><li><strong>Every order meant manual work,</strong> from confirming details to tracking payment.</li><li><strong>Customer details were scattered across chats,</strong> which made repeat purchases hard to encourage.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1720,14 +2308,38 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>A mobile-first online store with collections for him and for her, a quick checkout, automated order management and CRM integration.</p>
+                            <p>We moved the brand from direct messages to its own mobile-first online store, designed for people arriving from Instagram on their phones.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A mobile-first store</h3>
+                                <p>Designed for the phone first, because that is where the brand’s audience finds it.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Interactive catalog</h3>
+                                <p>Browsing the collections, including collections for him and for her, is quick and visual, so buyers find a scent without having to ask.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A quick checkout</h3>
+                                <p>A short, dynamic checkout that turns interest into a paid order in a few taps.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Automated order management</h3>
+                                <p>Orders are recorded and processed automatically, so nothing depends on a chat thread.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">CRM integration</h3>
+                                <p>Customer details and purchases flow into a CRM, giving the brand what it needs to bring customers back.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Sales grew 17%, and repeat purchases rose as casual followers became regular customers.</p>
+                            <ul class="hk-case-list"><li><strong>17% more sales.</strong></li><li><strong>More repeat customers,</strong> as casual followers became regular buyers.</li><li><strong>Orders no longer get lost</strong> in message threads.</li><li><strong>Less manual work</strong> for the team on every order.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1823,16 +2435,39 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">The old site didn’t feel premium, browsing was confusing and checkout took too many steps.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">With Quatch’s design team: a luxury design, clearer navigation, a shorter checkout, recommendations and secure multi-currency payments.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">A store that matches the brand, better engagement, smoother purchases and zero downtime on launch day.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A luxury watch brand rooted in Vietnam’s cultural heritage.</p>
+                            <p>Quatch is a luxury watch brand rooted in Vietnam’s cultural heritage, known for elegance and exclusivity. Its customers expect the online experience to feel as refined as the watches themselves.</p>
+                            <p>To protect and raise its premium status, Quatch wanted a store that reflects the brand and makes buying a watch online a pleasure.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>The old website didn’t feel premium, browsing the collection was confusing, and checkout took too many steps.</p>
+                            <p>The existing website fell short of the brand:</p>
+                            <ul class="hk-case-list"><li><strong>An inconsistent brand experience.</strong> The site lacked the premium look and cohesive design of Quatch’s identity.</li><li><strong>Unintuitive navigation</strong> made the collection hard to explore.</li><li><strong>A cumbersome checkout</strong> with too many steps.</li><li><strong>Limited e-commerce features</strong> for customers used to luxury retail.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1844,14 +2479,38 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Working with Quatch’s design team: a premium visual design true to the brand, clearer navigation through the collections, a shorter checkout, personalized recommendations and curated collections, secure multi-currency payments and real-time inventory.</p>
+                            <p>We worked closely with Quatch’s design team on a store that feels premium and is easy to buy from.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A premium design</h3>
+                                <p>High-quality imagery, refined typography and a harmonious color palette, with every element true to Quatch’s identity and the feel of its physical stores.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Navigation built around the collection</h3>
+                                <p>A clearer layout lets customers explore the collections and find the watch they want without effort.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A shorter checkout</h3>
+                                <p>Fewer steps from choosing a watch to completing the purchase.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Recommendations and curated collections</h3>
+                                <p>Personalized product recommendations and curated collections for luxury shoppers.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Secure, multi-currency payments</h3>
+                                <p>Secure payment gateways with multi-currency checkout and real-time inventory updates, so customers buy with confidence.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>A store that matches the brand, longer browsing, smoother purchases, and launch-day traffic handled with zero downtime.</p>
+                            <ul class="hk-case-list"><li><strong>A refined brand image</strong> that matches Quatch’s luxury positioning.</li><li><strong>Better engagement,</strong> with customers exploring more of the collection.</li><li><strong>Smoother purchases</strong> thanks to the shorter checkout.</li><li><strong>Zero downtime at launch,</strong> with the platform handling high launch-day traffic.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1947,16 +2606,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Volunteers caring for street dogs had no way to find dogs, track feeding and medical care, or coordinate with each other.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">With a partner company: an app and website with NFC tags on collars, dog and volunteer profiles, and self-help groups with messaging.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Volunteers find dogs faster, feeding and care stay on schedule, and the network coordinates in one place.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>NFC tags · Mobile app · Website</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>Indies supports street dogs and the volunteers who feed and care for them.</p>
+                            <p>Indies is an initiative of the NGO Sare Jahan Se Acha to improve the lives of street dogs and support the volunteers who look after them. Volunteers feed the dogs, take them for treatment and keep an eye on their health.</p>
+                            <p>We built the platform together with a partner development company.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Volunteers needed a way to find dogs, keep track of feeding and medical care, and coordinate with each other.</p>
+                            <p>Caring for street dogs at scale is a coordination problem. The platform had to:</p>
+                            <ul class="hk-case-list"><li><strong>Track each dog’s location,</strong> so volunteers can find them for feeding and treatment.</li><li><strong>Keep a profile for every dog,</strong> with medical records and feeding schedules.</li><li><strong>Help volunteers coordinate,</strong> manage their activities and form self-help groups.</li><li><strong>Manage volunteer profiles,</strong> so the NGO knows who is doing what.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -1968,14 +2651,34 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>With a partner company, an app and website with NFC chips on dog collars to locate each dog; a profile for every dog with vaccinations, health status, treatment and feeding schedules; volunteer profiles and activity tracking; and self-help groups with messaging and notifications.</p>
+                            <p>Together with our partner, we built a mobile app and a website that give every dog and every volunteer a profile, connected by NFC.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">NFC tags on collars</h3>
+                                <p>Each dog wears a collar with an NFC chip. Volunteers see a dog’s coordinates on the platform, find dogs that need feeding and reach those that need medical attention.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A profile for every dog</h3>
+                                <p>Vaccination history, health status, treatment schedules and feeding schedules in one place.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Volunteer profiles</h3>
+                                <p>Volunteers create profiles, track their activities and manage their involvement.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Self-help groups and messaging</h3>
+                                <p>Volunteers create and join self-help groups, with built-in messaging and notifications to coordinate care.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Volunteers find dogs faster, feeding and medical care happen on schedule, and the NGO coordinates its whole volunteer network in one place.</p>
+                            <ul class="hk-case-list"><li><strong>Better care for dogs,</strong> with feeding and treatment happening on time.</li><li><strong>Easier coordination</strong> between volunteers through groups and notifications.</li><li><strong>One system</strong> for dog and volunteer profiles, medical records and feeding schedules.</li><li><strong>A stronger volunteer community</strong> around the NGO’s work.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2071,16 +2774,39 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Passes were checked by hand at the entrance: slow, error-prone and frustrating at busy events.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">QR passes issued online, scanning at the gate by scanner or phone, and a back end that blocks duplicate entries.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Faster entry, no verification errors and a clear record of passes issued and used.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>QR codes · Hardware and mobile scanners</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A temple that issues passes for visitors to attend its events and ceremonies.</p>
+                            <p>Our client is a temple that issues passes for visitors to attend its events and ceremonies. On busy days, many visitors arrive in a short window, and every pass has to be checked.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Passes were checked by hand at the entrance: slow, error-prone and frustrating for visitors at busy events.</p>
+                            <p>The existing process relied on people checking passes at the gate:</p>
+                            <ul class="hk-case-list"><li><strong>Manual verification</strong> was slow and prone to errors.</li><li><strong>Distributing and checking passes</strong> took effort and caused delays.</li><li><strong>Visitors waited</strong> at exactly the moments the temple wanted entry to feel calm and welcoming.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2092,14 +2818,38 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>Passes with unique QR codes carrying visitor and event details, issued online through the temple’s website or app and sent by email; QR scanning at the gate, by hardware scanner or phone, that shows the pass details instantly; and a back end that tracks issued passes and blocks duplicate entries.</p>
+                            <p>We built a QR pass system that covers the whole journey, from issuing a pass online to checking it at the gate.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">QR passes</h3>
+                                <p>Each pass carries a unique QR code with the visitor’s name and age and the event’s date, time and details.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Passes issued online</h3>
+                                <p>Visitors get their passes through the temple’s website or app, by email or in the app.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Scanning at the gate</h3>
+                                <p>Staff scan passes with a hardware scanner or a phone, and the pass details appear instantly, so checking a pass is quick.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Back-end management</h3>
+                                <p>The temple tracks every pass issued, checks each scan against the issued passes and blocks duplicate entries.</p>
+                            </div>
                         </div>
                         <div class="hk-case-group">
+                            <h2 class="hk-case-h2">How it works</h2>
+                            <ul class="hk-case-list"><li>A visitor gets a pass online, by email or in the app.</li><li>At the gate, staff scan the QR code.</li><li>The system shows the visitor and event details and confirms the pass hasn’t been used.</li><li>The visitor walks in, and the entry is recorded.</li></ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
+                        <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Entry is faster, verification errors are gone, and staff can see how many passes have been issued and used.</p>
+                            <ul class="hk-case-list"><li><strong>Faster entry</strong> for visitors at events.</li><li><strong>No manual verification errors,</strong> and no duplicate entries.</li><li><strong>Better pass management,</strong> with a clear record of passes issued and used.</li><li><strong>Less admin</strong> for temple staff.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2124,13 +2874,13 @@
                                 </div>
                             </article>
                             <article class="hk-project-card">
-                                <a href="/projects/idamoss-systems" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="440" height="220" loading="lazy"/></a>
+                                <a href="/projects/event-ticketing-marketplace" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                        <h3><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                         <p>A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                                     </div>
-                                    <a href="/projects/idamoss-systems" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/event-ticketing-marketplace" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                         </div>
@@ -2195,16 +2945,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">As the platform grew, matching investors with the right startups by hand became slow and inconsistent.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A machine-learning recommendation engine that suggests startups to investors, and investors to startups, and keeps learning.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">More relevant matches, more engagement and a matching process that scales with the platform.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Machine learning · Recommendation models</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A platform that connects investors with startups looking for funding.</p>
+                            <p>Mohur is a platform that connects investors with startups looking for funding. By bringing both sides into one place, it makes it easier for startups to raise money and for investors to find promising companies.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>As the platform grew, matching investors with the right startups by hand became slow and inconsistent.</p>
+                            <p>Matching by hand worked while the platform was small. With growth, it didn’t:</p>
+                            <ul class="hk-case-list"><li><strong>A diverse pool of startups</strong> across sectors and stages.</li><li><strong>Investors with different interests,</strong> investment sizes and track records.</li><li><strong>Manual matching was slow and inconsistent,</strong> and good matches were easy to miss.</li></ul>
+                            <p>Mohur needed a system that reads investor profiles, past investments and current interests, and suggests the most relevant matches automatically.</p>
                         </div>
                     </div>
                 </section>
@@ -2216,14 +2990,34 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>A data pipeline over investment history, investor profiles and startup information; machine-learning models that weigh industry preference, investment size and growth potential; recommendations in both directions, startups for investors and investors for startups; and models that keep learning as data grows.</p>
+                            <p>We built an AI/ML recommendation system on Mohur’s own data.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Data collection and analysis</h3>
+                                <p>We brought together historical investment data, investor profiles and startup information from the platform, the foundation for training the models.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Machine-learning models</h3>
+                                <p>Models analyze investment patterns and current interests, weighing industry preference, investment size and growth potential to predict good matches.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Recommendations in both directions</h3>
+                                <p>Investors see startups that match their history and interests; startups see the investors most likely to be interested in their sector and stage.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Continuous learning</h3>
+                                <p>As more data comes in, the models refine their predictions and become more accurate over time.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>More relevant matches, more engagement from investors and founders, and a matching process that scales with the platform.</p>
+                            <ul class="hk-case-list"><li><strong>More relevant matches</strong> between investors and startups.</li><li><strong>Higher engagement,</strong> with recommendations personal to each user.</li><li><strong>Matching that scales</strong> as the number of users grows.</li><li><strong>More value from the platform</strong> for both sides.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2248,13 +3042,13 @@
                                 </div>
                             </article>
                             <article class="hk-project-card">
-                                <a href="/projects/idamoss-systems" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/idamoss-systems.webp" alt="Idamoss Systems: event ticketing with contracts that write themselves" width="440" height="220" loading="lazy"/></a>
+                                <a href="/projects/event-ticketing-marketplace" class="hk-project-media"><img class="hk-project-img" src="/website_hekau/static/src/img/projects/event-ticketing-marketplace.webp" alt="Event ticketing with vendor contracts that write themselves" width="440" height="220" loading="lazy"/></a>
                                 <div class="hk-project-body">
                                     <div>
-                                        <h3><a href="/projects/idamoss-systems">Idamoss Systems: event ticketing with contracts that write themselves</a></h3>
+                                        <h3><a href="/projects/event-ticketing-marketplace">Event ticketing with vendor contracts that write themselves</a></h3>
                                         <p>A ticketing marketplace for 6,000 regular users, with vendor contracts generated at sign-up.</p>
                                     </div>
-                                    <a href="/projects/idamoss-systems" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
+                                    <a href="/projects/event-ticketing-marketplace" class="hk-arrow-btn" aria-label="Read the case study"><img src="/website_hekau/static/src/img/icons/arrow_right_21.svg" alt="" width="21" height="21"/></a>
                                 </div>
                             </article>
                         </div>
@@ -2319,16 +3113,39 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Job post quality varied widely, and the platform’s own AI model needed an objective quality signal.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A scoring system that rates every post on quality, relevance, completeness and industry norms, feeding the AI model and employers’ dashboards.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Better posts, listings improved automatically and jobs that reach more qualified candidates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A job board that connects employers with job seekers.</p>
+                            <p>Our client runs a job posting website that connects employers with job seekers. Listing quality matters to both sides: a clear, complete post attracts better candidates, and better listings make the site more useful to job seekers.</p>
+                            <p>The client already used an AI/ML model to enrich job post content, and wanted to give it a better input.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Job post quality varied widely, and the platform’s own AI model needed an objective quality signal to improve listings.</p>
+                            <p>The client needed an objective way to judge job posts:</p>
+                            <ul class="hk-case-list"><li><strong>Quality varied widely,</strong> from detailed descriptions to a few lines.</li><li><strong>The AI model needed a numerical signal</strong> to know which posts to improve.</li><li><strong>Employers had no feedback</strong> on how good their posts were.</li><li><strong>Scoring had to fit the existing AI/ML process</strong> without disrupting it.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2340,14 +3157,30 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>A scoring system that rates each job post on description quality, keyword relevance, completeness and industry norms; scores passed straight into the client’s existing AI/ML model; and the score, with tips to improve it, shown to employers in their dashboard.</p>
+                            <p>We designed and implemented a job post scoring system that plugs into the client’s existing website and model.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A score built on clear criteria</h3>
+                                <p>Each post is rated on description quality (clarity, detail and completeness), keyword relevance, completeness of information such as responsibilities, qualifications and company details, and alignment with industry norms.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Integration with the AI/ML model</h3>
+                                <p>Scores pass straight into the client’s existing model, which uses them to enrich and optimize the post content.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Feedback for employers</h3>
+                                <p>Employers see each post’s score in their dashboard, with recommendations on how to improve it.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Employers write better posts, the AI model improves listings automatically, and jobs reach more qualified candidates.</p>
+                            <ul class="hk-case-list"><li><strong>Better job posts,</strong> as employers improve listings against clear criteria.</li><li><strong>Content optimized automatically</strong> by the AI model, using the scores.</li><li><strong>More visible listings</strong> that attract a larger pool of qualified candidates.</li><li><strong>A more engaging experience</strong> for employers, who can see how their posts rate.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2443,16 +3276,40 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Lockdowns broke the usual ways of distributing aid: donors couldn’t reach people in need, and requests went unanswered.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A donation platform with simple forms, admin verification, automatic sharing on Telegram and Facebook, and privacy-preserving matching.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">More than 1,000 people received verified help, from laptops and phones to food and essentials.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Web platform · Telegram · Facebook</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>Devdoot was launched during the COVID-19 pandemic to connect people who wanted to donate with people in urgent need.</p>
+                            <p>Devdoot was launched in 2021, during the COVID-19 pandemic, by the NGO Sare Jahan Se Acha. Its purpose was simple: connect people who wanted to donate with people who urgently needed help.</p>
+                            <p>Many individuals and families faced shortages of basic necessities, while traditional aid channels were overwhelmed.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Lockdowns broke the usual ways of distributing aid. Donors couldn’t reach the people who needed help, and requests went unanswered.</p>
+                            <p>During the lockdowns, the gap between donors and recipients grew:</p>
+                            <ul class="hk-case-list"><li><strong>Traditional aid distribution was overwhelmed.</strong></li><li><strong>Lockdowns and social distancing</strong> made it hard for donors and recipients to connect.</li><li><strong>Requests needed checking,</strong> so donations reached genuine needs.</li><li><strong>Offers needed reach,</strong> so they found the right people quickly.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2464,14 +3321,39 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>A platform where donors offer items (laptops, phones, stationery, food) and recipients ask for help through simple forms with OTP verification; an admin check on every request; verified posts shared automatically on Telegram and Facebook; and donor–recipient matching that protects privacy.</p>
+                            <p>We built Devdoot as a web platform that handles the matching, the checking and the outreach.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Simple forms for both sides</h3>
+                                <p>Donors offer items such as laptops, mobile phones, stationery or food; recipients describe what they need. Both use short forms with OTP verification.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Admin verification</h3>
+                                <p>The NGO’s admin team reviews every submission, and only verified offers and requests appear on the site.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Automatic sharing on social media</h3>
+                                <p>Verified posts are shared on Telegram and Facebook, extending their reach far beyond the website.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Privacy-preserving matching</h3>
+                                <p>Donors and recipients are matched without exposing personal details publicly.</p>
+                            </div>
                         </div>
                         <div class="hk-case-group">
+                            <h2 class="hk-case-h2">How it works</h2>
+                            <ul class="hk-case-list"><li>A donor or recipient fills in a form on the website.</li><li>The admin team verifies the submission.</li><li>The verified offer or request is published on the site and shared on Telegram and Facebook.</li><li>Donors and recipients connect, and the item reaches the person who needs it.</li></ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
+                        <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>More than 1,000 people received verified help, from laptops and phones to food and essentials.</p>
+                            <ul class="hk-case-list"><li><strong>More than 1,000 people</strong> received verified help.</li><li><strong>Donations ranged</strong> from laptops and phones to paper, pens and food.</li><li><strong>A structured, trusted way</strong> for people to help their communities during one of the hardest periods in recent memory.</li></ul>
+                            <p>Devdoot showed how a simple, well-run platform can turn goodwill into help that actually arrives.</p>
                         </div>
                     </div>
                 </section>
@@ -2567,16 +3449,39 @@
                         </div>
                     </div>
                 </section>
-                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                <section class="s_hk_case_text s_hk_case_gist hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Summary" style="--hk-pt: 60px; --hk-pt-m: 32px;">
+                    <div class="hk-container hk-container-case hk-case-long">
+                        <div class="hk-case-gist">
+                            <p class="hk-case-gist-title">At a glance</p>
+                            <div class="hk-case-gist-grid">
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The challenge</p>
+                                    <p class="hk-case-gist-text">Officers needed a portable tool that works on almost any computer, runs without user input and keeps captured data secure.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">What we built</p>
+                                    <p class="hk-case-gist-text">A customized operating system on a bootable pen drive that captures data automatically, with viewing tools and encryption.</p>
+                                </div>
+                                <div class="hk-case-gist-item">
+                                    <p class="hk-case-gist-label">The result</p>
+                                    <p class="hk-case-gist-text">Quick data capture in the field without bulky equipment, with every capture encrypted and intact.</p>
+                                </div>
+                            </div>
+                            <p class="hk-case-gist-tools"><span>Built with</span>Custom bootable OS · Encryption</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <p class="hk-case-eyebrow">Project details</p>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">About the client</h2>
-                            <p>A law enforcement agency that collects data from electronic devices during field operations.</p>
+                            <p>Our client is a law enforcement agency that collects data from electronic devices such as laptops and PCs during field operations. The work has to be quick, consistent and secure, often where specialist equipment isn’t practical.</p>
                         </div>
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The challenge</h2>
-                            <p>Officers needed a portable tool that works on almost any laptop or PC, runs without user input, and keeps captured data secure and intact.</p>
+                            <p>The agency needed a field tool that met four requirements at once:</p>
+                            <ul class="hk-case-list"><li><strong>Portability.</strong> Easy to carry and deploy anywhere.</li><li><strong>Automation.</strong> Runs on its own once connected, without user intervention.</li><li><strong>Data security.</strong> Captured data must stay confidential and intact.</li><li><strong>Compatibility.</strong> Works across many devices and operating systems.</li></ul>
                         </div>
                     </div>
                 </section>
@@ -2588,14 +3493,38 @@
                     </div>
                 </section>
                 <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 60px; --hk-pt-m: 32px;">
-                    <div class="hk-container hk-container-case hk-case-text">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">What we built</h2>
-                            <p>A customized operating system that boots from a pen drive and starts capturing automatically; tools to extract and view files and logs; encryption and tamper-resistant storage; and compatibility with a wide range of devices and operating systems.</p>
+                            <p>We built a bootable mechanism on a pen drive: a customized operating system that does the capture work itself.</p>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">A bootable OS on a pen drive</h3>
+                                <p>A customized operating system starts from the pen drive and runs automatically when connected, with preconfigured settings and scripts so every capture is done the same way.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Automated data capture</h3>
+                                <p>Once running, it extracts files, logs and other relevant information from the connected device without manual steps.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Built-in viewing tools</h3>
+                                <p>Officers view and analyze captured data directly from the pen drive.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Encryption and secure storage</h3>
+                                <p>Captured data is encrypted and stored to prevent unauthorized access, tampering or accidental deletion.</p>
+                            </div>
+                            <div class="hk-case-item">
+                                <h3 class="hk-case-h3">Broad compatibility</h3>
+                                <p>Designed to work with a wide range of devices and operating systems.</p>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                <section class="s_hk_case_text hk-section" data-snippet="s_hk_case_text" data-name="Hekau Case Text" style="--hk-pt: 80px; --hk-pt-m: 48px;">
+                    <div class="hk-container hk-container-case hk-case-text hk-case-long">
                         <div class="hk-case-group">
                             <h2 class="hk-case-h2">The impact</h2>
-                            <p>Officers capture data quickly in the field without bulky equipment, and every capture stays encrypted and intact.</p>
+                            <ul class="hk-case-list"><li><strong>Efficient data capture</strong> in the field.</li><li><strong>Portable,</strong> with no bulky equipment to carry.</li><li><strong>Secure by design,</strong> with encryption keeping data confidential and intact.</li><li><strong>Works across devices,</strong> so one tool covers different situations.</li></ul>
                         </div>
                     </div>
                 </section>

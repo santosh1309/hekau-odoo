@@ -289,7 +289,7 @@ PT = {
     'ux': [160, 211, 240, 180, 160, 160],
     'cloud': [160, 249, 220, 200, 200],
     'bpa': [160, 209, 200, 180, 160, 160],
-    'odoo': [160, 209, 160, 180, 180, 160, 160],  # + preferred platform after the features
+    'odoo': [160, 209, 160, 160, 180, 180, 160, 160],  # + preferred platform and industries after the features
     'ai': [156, 160, 200, 180, 160, 160],
     'rescue': [160, 150, 180, 160, 140, 140],
 }
@@ -301,7 +301,7 @@ PT_M = {
     'ux': [204, 64, 128, 64, 128, 128],
     'cloud': [172, 128, 64, 128, 128],
     'bpa': [152, 128, 128, 64, 128, 128],
-    'odoo': [152, 128, 128, 128, 128, 128, 128],
+    'odoo': [152, 128, 128, 128, 128, 128, 128, 128],
     'ai': [178, 108, 128, 64, 128, 128],
     'rescue': [184, 108, 128, 64, 128, 128],
 }
@@ -323,6 +323,9 @@ def service_page(key, url, name):
     if c.get('preferred'):
         pref = c['preferred']
         sections.append(R.attributes(pref['badge'], pref['title'], pref['lead'], pref['items']))
+    if c.get('industries'):
+        ind_ = c['industries']
+        sections.append(R.industries(ind_['title'], ind_['lead'], ind_['items'], ind_.get('note')))
     p = c['process']
     sections.append(R.process(p['heading'], p['lead'], p['steps']))
     sections.append(featured(c['featured']))
@@ -418,7 +421,15 @@ def projects_page():
 
 
 def case_page(c):
+    """Case study: hero, "At a glance", the client and the challenge, the
+    pull-quote card, what we built (and how it works), the impact, related
+    projects."""
     xmlid = 'page_project_' + c['slug'].replace('-', '_')
+    built = [{'title': 'What we built', 'text': c['built'], 'items': c.get('features', [])}]
+    if c.get('how'):
+        built.append({'title': c['how']['title'], 'text': c['how']['text']})
+    impact = [{'title': 'The impact', 'text': c['impact']}] + list(c.get('extra', []))
+    problem, solution, result = c['gist']
     return dict(
         xmlid=xmlid, name=f'Project: {c["card_title"]}', url=c['url'],
         description=f'{c["card_title"]}. {c["card_text"]}',
@@ -426,16 +437,18 @@ def case_page(c):
         sections=[
             R.case_hero(c['card_title'], c['image'],
                         [('Service', c['service']), ('Client', c['client']), ('Industry', c['industry'])]),
+            R.case_gist([('The challenge', problem), ('What we built', solution), ('The result', result)],
+                        tools=c.get('tools')),
             R.case_text([{'title': 'About the client', 'text': c['about']},
-                         {'title': 'The challenge', 'text': c['challenge']}], eyebrow='Project details'),
+                         {'title': 'The challenge', 'text': c['challenge']}], eyebrow='Project details', long=True),
             R.case_figure(c['quote_image'], None, alt=c['quote'], natural=True, size=(1840, 1124)),
-            R.case_text([{'title': 'What we built', 'text': c['built']},
-                         {'title': 'The impact', 'text': c['impact']}]),
+            R.case_text(built, long=True),
+            R.case_text(impact, long=True),
             featured(c['related'], heading='More work like this', lead='Related projects from our portfolio.'),
             's_hk_cta',
         ],
-        pt=[80, 60, 60, 160, 160],
-        pt_m=[32, 32, 32, 128, 128],
+        pt=[60, 80, 60, 60, 80, 160, 160],
+        pt_m=[32, 48, 32, 32, 48, 128, 128],
     )
 
 
@@ -545,7 +558,11 @@ def block_templates():
     write_block_template('s_hk_case_hero', 'Hekau Case Hero',
                          'Case study hero (Figma "Frame 1686557860"): title, cover image and project facts.', cs[0])
     write_block_template('s_hk_case_text', 'Hekau Case Text',
-                         'Case study text (Figma "Frame 15"): optional eyebrow, titled paragraphs.', cs[1])
+                         'Case study text (Figma "Frame 15"): optional eyebrow, titled paragraphs.', cs[2])
+    odoo_ind = SERVICES['odoo']['industries']
+    write_block_template('s_hk_industries', 'Hekau Industries',
+                         'Industries (ERP, CRM & CMS page): how the platform fits each industry, with its apps.',
+                         R.industries(odoo_ind['title'], odoo_ind['lead'], odoo_ind['items'], odoo_ind.get('note')))
     write_block_template('s_hk_case_figure', 'Hekau Case Image',
                          'Case study image (Figma "Frame 1686557868"): rounded picture and caption.',
                          R.case_figure('projects/the_arc.webp', 'A caption for the picture.'))

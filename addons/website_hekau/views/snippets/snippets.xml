@@ -76,6 +76,9 @@
             <t t-snippet="website_hekau.s_hk_case_figure" string="Hekau Case Image" group="hekau">
                 <keywords>hekau, case study, image, picture, caption</keywords>
             </t>
+            <t t-snippet="website_hekau.s_hk_industries" string="Hekau Industries" group="hekau">
+                <keywords>hekau, industries, sectors, odoo, apps, cards</keywords>
+            </t>
         </xpath>
     </template>
 
