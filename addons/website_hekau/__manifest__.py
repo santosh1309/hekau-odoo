@@ -12,13 +12,13 @@ Implements the "Hekau WIP" Figma design on Odoo 20 Website:
 * Pages assembled from those blocks: Home, Services and the eight service pages,
   About Us, How we work, Projects and nineteen case studies, Terms and Conditions
 * Contact page with an audit request form that creates a CRM lead (website_crm),
-  thank-you page with the System Disconnection Checklist, privacy policy
+  tagged with the service asked for and its source, thank-you page with the System Disconnection Checklist, privacy policy
 * Blog listing (website_blog) in the Hekau design, with sample posts
 
 Page content stays editable in the website builder, and new pages can be built by
 dragging Hekau blocks.
     """,
-    'version': '20.0.5.5.0',
+    'version': '20.0.5.6.0',
     'category': 'Website/Website',
     'author': 'Hekau Business Solutions',
     'website': 'https://www.hekautech.com',

@@ -939,6 +939,7 @@ HOW = {
 # Contact, thank-you, legal
 # --------------------------------------------------------------------------------------------
 
+# Labels here and in CONTACT['sources'] are mapped to lead tags and sources in models/crm_lead.py.
 SERVICE_CHOICES = [
     'ERP, CRM & CMS Implementation', 'Workflow & Process Automation', 'Custom Web Applications & B2B Portals',
     'Secure In-House AI & Data', 'Mobile App Development', 'UX & Conversion-Focused Websites',

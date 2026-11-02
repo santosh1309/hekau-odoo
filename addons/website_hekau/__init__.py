@@ -1,3 +1,4 @@
+from . import models
 from odoo.tools import BinaryBytes
 from odoo.tools.misc import file_open
 
