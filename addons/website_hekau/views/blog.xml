@@ -3,12 +3,16 @@
 
     <!-- Blog listing: Figma Dev Handoff "Blogs Page" (desktop 1440px, mobile
          390px). The newest post is featured over the hero animation, the
-         others are listed below (image left, category, title, teaser, author
-         and date). Posts are written in Website > Blog as usual. -->
+         others are listed below (image left, topic, title, teaser, author
+         and date), with the Topics tags as filters above the list. Posts are
+         written in Website > Blog as usual. -->
     <template id="blog_listing" name="Hekau Blog Listing">
         <t t-set="hk_first_page" t-value="not tag and not date_begin and not search and pager['page']['num'] == 1"/>
         <t t-set="hk_featured" t-value="posts[:1] if hk_first_page else posts[:0]"/>
         <t t-set="hk_list" t-value="posts[1:] if hk_first_page else posts"/>
+        <!-- Each post's Topic tag is its category; the topics filter the list -->
+        <t t-set="hk_topics" t-value="request.env.ref('website_hekau.blog_tag_category_topics', raise_if_not_found=False)"/>
+        <t t-set="hk_topic_tags" t-value="hk_topics and tags_by_category.get(hk_topics.id)"/>
         <div class="hk-blog-index">
             <section class="hk-blog-hero">
                 <div class="hk-hero-art hk-deco o_not_editable" aria-hidden="true">
@@ -48,14 +52,23 @@
                         <p>No blog post yet.</p>
                         <p groups="website.group_website_designer">Click on “New” in the top-right corner to write your first blog post.</p>
                     </div>
+                    <nav t-if="hk_topic_tags" class="hk-blog-topics" aria-label="Topics">
+                        <a href="/blog" t-attf-class="hk-blog-topic #{'' if active_tag_ids else 'active'}">All topics</a>
+                        <t t-foreach="hk_topic_tags" t-as="hk_tag">
+                            <a t-att-href="blog_url(tag=tags_list([], hk_tag.id))"
+                               t-attf-class="hk-blog-topic #{'active' if hk_tag.id in active_tag_ids else ''}"
+                               t-out="hk_tag.name"/>
+                        </t>
+                    </nav>
                     <div class="hk-blog-list">
                         <t t-foreach="hk_list" t-as="blog_post">
                             <article class="hk-blog-row" name="blog_post">
                                 <t t-call="website_blog.post_cover_image" _link_classes.f="hk-blog-cover"/>
                                 <div class="hk-blog-row-copy">
-                                    <a t-if="blog_post.tag_ids" class="hk-blog-category"
-                                       t-att-href="blog_url(tag=tags_list([], blog_post.tag_ids[0].id))"
-                                       t-out="blog_post.tag_ids[0].name"/>
+                                    <t t-set="hk_topic" t-value="blog_post.tag_ids.filtered(lambda t: hk_topics and t.category_id.id == hk_topics.id)[:1] or blog_post.tag_ids[:1]"/>
+                                    <a t-if="hk_topic" class="hk-blog-category"
+                                       t-att-href="blog_url(tag=tags_list([], hk_topic.id))"
+                                       t-out="hk_topic.name"/>
                                     <a t-att-href="blog_post.website_url" class="hk-blog-title-link">
                                         <h2 class="hk-blog-title" t-field="blog_post.name"/>
                                         <img class="hk-blog-arrow" src="/website_hekau/static/src/img/icons/arrow_up_right.svg" alt="" width="25" height="25"/>

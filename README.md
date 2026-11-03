@@ -201,10 +201,15 @@ Pages shipped with the module (all built from the blocks, all editable):
 | `/projects/the-arc` | Sample case study — duplicate it (**Site → Pages**) for each new project |
 | `/blog` | Blog (Odoo's Blog app in the Hekau design); write posts in **Website → Blog** |
 
-The blog came with five sample posts (Figma placeholder copy, author "Hekau Team"):
-replace or unpublish them in **Website → Blog → Blog Posts**. The newest post is the
-"Featured Post" at the top of the blog; each post's first tag is the category shown
-above its title; the picture is the post's cover.
+The blog holds the 20 Hekau articles (November 2026, author Santosh Yadav), written in
+**Website → Blog → Blog Posts** like any post. The newest post is the "Featured Post" at
+the top of the blog. Each post has one **Topics** tag (Connected Systems, ERP &
+Manufacturing, Automation & AI, Leadership & Strategy, Websites & Platforms): it is the
+category shown above the title, and the topics are the filters above the list. Its other
+tags are in the **Keywords** tag category. A post without a cover picture shows a Hekau
+gradient card in the list and no cover on its page; add a picture from the cover's
+options in **Edit** mode. Each post's SEO title, description and keywords are set
+(**Site → Optimize SEO** on the post page).
 
 After editing the module:
 - `.scss` / `.js` changes: refresh the page (assets rebuild in dev mode).
@@ -232,7 +237,8 @@ Layout of the module:
 | `views/snippets/snippets.xml` | Registers the blocks under **Blocks → Hekau** |
 | `views/homepage.xml`, `views/pages/*.xml` | Home and the other pages — generated from the blocks by `scripts/build_pages.py` |
 | `scripts/hk_render.py`, `scripts/hk_content.py` | Markup of the inner-page blocks; text of the inner pages |
-| `views/blog.xml`, `static/src/scss/hk_blog.scss`, `data/blog_data.xml` | Blog listing in the Hekau design; sample posts (created once) |
+| `views/blog.xml`, `static/src/scss/hk_blog.scss` | Blog listing and post page in the Hekau design, topic filters |
+| `data/blog_data.xml`, `data/blog_posts.xml` | Blog, author, topics and the 20 articles (created once, then edited in Odoo) |
 | `views/layout.xml` | Font loading, "Let's Talk" button (desktop + mobile bar), footer, hidden copyright bar, blog header overlay |
 | `static/src/js/*.js` | Testimonial arrows, mobile swipe indicators, process timeline, project filter |
 | `__init__.py`, `migrations/` | Install/upgrade hooks: logo, main menu, header options, header-over-hero, blog name |

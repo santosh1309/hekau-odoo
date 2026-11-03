@@ -374,3 +374,254 @@
 
     .breadcrumb a { color: $hk-lavender; }
 }
+
+//------------------------------------------------------------------------------
+// Topics (the blog's "Topics" tag category) as filters above the list
+//------------------------------------------------------------------------------
+
+.hk-blog-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 80px;
+
+    @include hk-mobile {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin: 0 -16px 40px;
+        padding: 0 16px 4px;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar { display: none; }
+    }
+}
+
+.hk-blog-topic {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    height: 37px;
+    padding: 0 15px;
+    border: 1px solid $hk-line-soft;
+    border-radius: 24px;
+    background-color: $hk-surface;
+    font-size: 15px;
+    line-height: 21px;
+    color: $hk-muted;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s;
+
+    &:hover { color: $hk-white; }
+
+    &.active {
+        background-color: $hk-blue;
+        font-weight: 500;
+        color: $hk-white;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $hk-lavender;
+        outline-offset: 2px;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Covers without a picture yet: a Hekau gradient card in the list, and no
+// empty cover band on the post page (it reappears in edit mode, so a picture
+// can be added from the cover's options).
+//------------------------------------------------------------------------------
+
+.hk-blog-cover:has(.o_record_cover_image[style*="background-image: none"]) {
+    border: 1px solid $hk-line-soft;
+    background-color: $hk-surface;
+}
+
+// The same card in the list and in a post's "Recommended" box
+.hk-blog-cover,
+.website_blog .o_wblog_post_content_footer_recommended,
+.website_blog #o_wblog_post_content {
+    .o_record_cover_image[style*="background-image: none"] {
+        background:
+            radial-gradient(90% 80% at 88% 0%, rgba($hk-blue, .6) 0%, rgba($hk-blue, 0) 70%),
+            radial-gradient(70% 60% at 0% 100%, rgba($hk-lavender, .22) 0%, rgba($hk-lavender, 0) 70%),
+            url("#{$hk-img}/bg/grid_a.svg") center / 720px 450px repeat,
+            $hk-surface !important;
+    }
+}
+
+body:not(.editor_enable) .o_wblog_post_page_cover:has(> .o_record_cover_image[style*="background-image: none"]) {
+    display: none !important;
+}
+
+//------------------------------------------------------------------------------
+// Blog post page: header and text in one column, table of contents beside it
+//------------------------------------------------------------------------------
+
+.website_blog {
+    @include media-breakpoint-up(lg) {
+        // Header (breadcrumb, title, tags, author) starts where the text starts
+        #o_wblog_post_top .o_wblog_post_regular_cover_container > .row > .col-lg-8.offset-lg-2 {
+            margin-left: 8.333333%;
+        }
+
+        // Text 7 columns wide (about 70 characters a line), contents 3 columns
+        #o_wblog_post_content.col-lg-6.offset-lg-1 { width: 58.333333%; }
+    }
+
+    .o_wblog_post_subtitle {
+        color: $hk-muted;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .badge.o_tag {
+        padding: 6px 12px;
+        border: 1px solid $hk-pill-border;
+        border-radius: 24px;
+        background-color: transparent !important;
+        font-weight: 500;
+        font-size: 13px;
+        color: $hk-muted !important;
+
+        &:hover { color: $hk-white !important; border-color: $hk-blue-border; }
+    }
+
+    .o_wblog_post_content_field {
+        font-size: 18px;
+        line-height: 30px;
+        color: $hk-text;
+
+        p { margin-bottom: 20px; }
+
+        h2 {
+            margin: 56px 0 16px;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 38px;
+            color: $hk-white;
+        }
+
+        h3 {
+            margin: 36px 0 12px;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 30px;
+            color: $hk-white;
+        }
+
+        ul, ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 4px;
+
+            &::marker { color: $hk-lavender; }
+        }
+
+        ol > li::marker { font-weight: 600; }
+
+        strong, b {
+            font-weight: 600;
+            color: $hk-white;
+        }
+
+        a {
+            color: $hk-lavender;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+
+            &:hover { color: $hk-white; }
+        }
+
+        // Pull quotes
+        blockquote {
+            margin: 40px 0;
+            padding: 6px 0 6px 28px;
+            border-left: 3px solid $hk-blue-border;
+
+            p {
+                margin: 0;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+                color: $hk-white;
+            }
+        }
+
+        // "Related on our site": the article's pages, as link cards
+        ul.hk-related {
+            display: grid;
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                padding: 16px 20px;
+                border: 1px solid $hk-line-soft;
+                border-radius: 12px;
+                background-color: $hk-surface;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: $hk-white;
+                text-decoration: none;
+                transition: border-color .2s;
+
+                &::after {
+                    content: "";
+                    flex: none;
+                    width: 20px;
+                    height: 20px;
+                    background: url("#{$hk-img}/icons/arrow_up_right.svg") center / contain no-repeat;
+                }
+
+                &:hover { border-color: $hk-blue-border; }
+            }
+        }
+
+        @include hk-mobile {
+            font-size: 16px;
+            line-height: 26px;
+
+            h2 { margin-top: 40px; font-size: 24px; line-height: 32px; }
+            h3 { margin-top: 28px; font-size: 19px; line-height: 26px; }
+            blockquote { margin: 32px 0; padding-left: 20px; }
+            blockquote p { font-size: 20px; line-height: 30px; }
+        }
+    }
+
+    // Table of contents ("On this page")
+    .o_wblog_toc {
+        h2, .h6 { color: $hk-white; }
+
+        .o_wblog_toc_nav .list-group::before { background-color: $hk-line; }
+
+        .o_wblog_toc_link {
+            border: 0;
+            background-color: transparent;
+            font-size: 14px;
+            line-height: 20px;
+            color: $hk-muted;
+
+            &:hover, &:focus, &.active { color: $hk-white; }
+            &.active::before { background-color: $hk-blue-border; }
+        }
+    }
+
+    .o_wblog_toc_mobile {
+        border-color: $hk-line-soft !important;
+        background-color: $hk-surface;
+    }
+}
